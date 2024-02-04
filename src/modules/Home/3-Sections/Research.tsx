@@ -6,10 +6,10 @@ export default function Research() {
       <div className="grid grid-cols-2 gap-4 my-12">
 
         <div className="col-span-1">
-          <img src="/code.svg" className="h-[15rem] mt-4" />
+          <img src="/code.svg" className="h-[15rem] mt-8" />
         </div>
         <div className="col-span-1 mr-10">
-          <h1 className="lg:text-3xl font-bold lg:leading-normal"> Shh.. it's a Secret: <br/> Research on ZK Proofs</h1>
+          <h1 className="lg:text-5xl font-bold lg:leading-normal"> Shh.. it's a Secret: <br/> ZK Research</h1>
           <p className="text-zinc-500 mb-8">
           <br />
           In the realm of Innovation, 

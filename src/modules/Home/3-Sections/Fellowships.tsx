@@ -6,10 +6,10 @@ export default function Fellowships() {
       <div className="grid grid-cols-2 gap-4 my-12">
 
         <div className="col-span-1">
-          <img src="/hands on shield.svg" className="h-[20rem] mt-4" />
+          <img src="/hands on shield.svg" className="h-[24rem] mt-8" />
         </div>
         <div className="col-span-1 mr-10">
-          <h1 className="lg:text-3xl font-bold lg:leading-normal"> Our Fellowships: <br/> The Trial by Fire Saga </h1>
+          <h1 className="lg:text-5xl font-bold lg:leading-normal"> Our Fellowships: <br/> The Trial by Fire Saga </h1>
           <p className="text-zinc-500 mb-8">
           <br />
           Applicants flood in, seeking to join our ranks, 
