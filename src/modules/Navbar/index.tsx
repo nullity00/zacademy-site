@@ -27,7 +27,7 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
             Members
           </button>
         </Link>
-        <a href="https://reports.yacademy.dev/">
+        <a href="https://reports.zAcademy.dev/">
           <button className="px-6 py-3 rounded-xl text-md text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
             Audits
           </button>
