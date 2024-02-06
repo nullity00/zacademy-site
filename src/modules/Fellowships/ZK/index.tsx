@@ -1,46 +1,50 @@
 import { Link } from "react-router-dom";
 
-function SmartContracts() {
+function ZK() {
   return (
-    <div id="smart-contract">
-      <h1 className="lg:text-4xl md:text-3xl sm:text-3xl font-bold mb-4">
-        Smart Contract Fellowship
+    <div id="zero-knowledge">
+      <h1 className="lg:text-4xl md:text-3xl sm:text-3xl font-bold mb-8">
+        Zero Knowledge Fellowship
       </h1>
 
       <div className="grid grid-cols-2 gap-16 my-4">
         <div className="col-span-1 flex flex-col gap-8 justify-center">
           <div>
             <h2 className="text-semibold text-xl mb-4">
-              A typical week in the fellowship program
+              Highlights
             </h2>
             <p className="text-zinc-500">
               <ul className="list-disc list-inside">
                 <li>
-                  The auditing sprint starts on Monday with an overview session
-                  delivered by one of our resident auditors, a guest auditor, or
-                  the codebase author.
+                  The fellowship is 3-4 months, and will includes theory
+                  sessions, code overview sessions, retreat sessions with
+                  leading experts in the field, office hours with devs and/or
+                  our residents, and ad-hoc sessions self-organized by groups of
+                  fellows. There are usually also be some quizzes and puzzles
+                  throughout.
                 </li>
                 <br />
                 <li>
-                  During the week, async discussion take place between fellows,
-                  mentors, guest auditors, residents, and codebase devs.
+                  The fellowship leads up to an audit security review report (eg
+                  [1] [2]) contributed to collaboratively by everyone involved:
+                  fellows, residents, and mentors.
                 </li>
                 <br />
                 <li>
-                  Fellows work in groups during the week. Groups may meet during
-                  the week over calls.
+                  No prior ZK knowledge is required, but proof of work else
+                  where is.
                 </li>
                 <br />
                 <li>
-                  At the end of the week (or second week for larger codebases),
-                  fellows present their findings and receive feedback from our
-                  residents, mentors, and codebase authors.
+                  Before applying, please make sure you have read and understood
+                  the general structure and guidelines of our programs.
                 </li>
                 <br />
                 <li>
-                  The auditing sprint ends with a retreat session where we
-                  invite a prominent guest for a lecture or AMA with the
-                  fellows.
+                  You can review our pilot ZK auditing fellowship to: Get a
+                  sense of what the fellowship is like and Level up your
+                  understanding of ZK tailored to give aspiring auditors the
+                  minimum viable theory to get to the code.
                 </li>
               </ul>
             </p>
@@ -62,7 +66,7 @@ function SmartContracts() {
                 Duration
               </p>
               <p className="text-sm font-semibold leading-6 text-darkgreen">
-                4-6 weeks
+                3-4 months
               </p>
             </div>
             <div className="border col-span-1 rounded-xl p-4">
@@ -74,11 +78,11 @@ function SmartContracts() {
               </p>
             </div>
           </div>
-          <img src="/contract-window.svg" className="py-4 h-[32rem]" />
+          <img src="/rust-window.svg" className="py-4 h-[32rem]" />
         </div>
       </div>
     </div>
   );
 }
 
-export default SmartContracts;
+export default ZK;

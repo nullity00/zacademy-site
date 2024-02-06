@@ -9,7 +9,7 @@ export default function FellowshipsPage() {
       <div className="mx-40 h-full relative">
         <Stats />
         <Summary />
-        <SmartContracts />
+        {/* <SmartContracts /> */}
       </div>
       <Footer />
     </>
