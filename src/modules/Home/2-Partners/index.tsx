@@ -1,10 +1,57 @@
+import React from 'react';
 
-export default function Partners() {
+const ClientSection: React.FC = () => {
+  const clients = [
+    { name: 'Yearn', logo: 'yearn.png', website: 'https://yearn.fi/' },
+    { name: 'Superfluid', logo: 'superfluid.png', website: 'https://www.superfluid.finance/' },
+    { name: 'Get Protocol', logo: 'getprotocol.png', website: 'https://www.get-protocol.io/' },
+    { name: 'Llama Pay', logo: 'llamapay.png', website: 'https://llamapay.io/' },
+    { name: 'Lamalend', logo: 'lamalend.png', website: 'https://llamalendnft.com/' },
+    { name: 'Exit10', logo: 'exit10.png', website: 'https://exit10.com/' },
+    { name: 'Vmex', logo: 'vmex.png', website: 'https://vmex.finance/' },
+    { name: 'Personae Lab', logo: 'personaelab.png', website: 'https://www.personaelabs.xyz/' },
+    { name: 'Privacy & Scaling Explorations', logo: 'pse.png', website: 'https://pse.dev/en' },
+    
+  ];
+
   return (
-    <>
-      { <div className="grid grid-cols-2 gap-4 m-12 p-12 rounded-2xl bg-zinc-100">
-        
-      </div> }
-    </>
+    <section className="bg-white py-8">
+      <div className="container mx-auto">
+        <h2 className="text-5xl font-bold mb-10 text-left">Our Clients</h2>
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-4">
+          {clients.map((client, index) => (
+            <div
+              key={index}
+              className="bg-gray-100 p-4 rounded relative hover:bg-opacity-5 duration-700"
+            >
+              {/* Logo */}
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                className="mx-left ml-4 mt-4 mb-4 w-12 h-12"
+              />
+              {/* Client Name */}
+              <p className="text-gray-800 text-left font-bold text-lg ml-4 mb-4">{client.name}</p>
+              {/* Client Website Link */}
+              <a
+                href={client.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-0 right-0 text-blue-500 hover:underline mt-2 mr-2 flex items-center"
+              >
+                
+                <img
+                  src="maximize.png" // Replace with your external link icon
+                  alt="External Link"
+                  className="ml-1 w-4 h-4"
+                />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default ClientSection;
