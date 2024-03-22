@@ -9,16 +9,16 @@ const data = [
 export default function Stats() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 my-32">
-        <div className="col-span-1">
-          <h1 className="lg:text-5xl font-bold lg:leading-normal">
+      <div className="grid grid-cols-2 gap-4 my-32 sm:my-16 sm:mx-6 sm:text-center">
+        <div className="col-span-1 sm:col-span-3">
+          <h1 className="lg:text-5xl sm:text-lg font-bold lg:leading-normal">
             Ama<span className="text-emeraldlight">zzz</span>ing Stats
           </h1>
-          <div className="grid grid-cols-3 gap-2 mb-6 mt-12">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6 mt-12">
             {data.map((item) => {
               return (
                 <div className="col-span-1">
-                  <h3 className="text-5xl font-semibold leading-6">
+                  <h3 className="text-5xl sm:text-3xl font-semibold leading-6">
                     {item.number}
                   </h3>
                   <p className="text-sm font-semibold text-darkgreen mt-3">
@@ -39,7 +39,7 @@ export default function Stats() {
             </button>
           </a>
         </div>
-        <div className="col-span-1 ml-20">
+        <div className="col-span-1 sm:col-span-3 ml-20 sm:ml-0">
           <img src="/track record.svg" className="h-[20rem] mt-8" />
         </div>
       </div>
