@@ -12,13 +12,16 @@ export const GradientWord = styled.span`
 
 function HeroSection() {
   return (
-    <div className="h-full relative">
-      <div className="grid grid-cols-5 ml-40 text-left items-left">
-        <div className="col-span-2  flex flex-col py-4 my-40">
+    <div className="h-full relative sm:my-16">
+      <div className="grid grid-cols-5 sm:grid-cols-2 ml-40 sm:mx-auto text-left sm:text-center items-left">
+        <div className="sm:col-span-3 sm:my-0 md:hidden lg:hidden">
+          <Lottie animationData={logo}/>
+        </div>
+        <div className="col-span-2  flex flex-col py-4 my-40 sm:mb-0 sm:mt-10">
           <h1 className="lg:leading-normal lg:text-7xl font-bold">
             Your Shield in the <GradientWord>ZK</GradientWord> realm
           </h1>
-          <h2 className="text-left my-4 text-zinc-500">
+          <h2 className="text-left sm:text-center my-4 text-zinc-500">
             Don’t let a soundness bug rekt your protocol
           </h2>
           <Link to={"/fellowships"}>
@@ -29,7 +32,7 @@ function HeroSection() {
             </button>
           </Link>
         </div>
-        <div className="col-span-3 my-20">
+        <div className="col-span-3 my-20 sm:hidden">
           <Lottie animationData={logo}/>
         </div>
       </div>
