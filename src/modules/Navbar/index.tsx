@@ -70,7 +70,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
   }, [inputRef, setMenuOpen]);
   return (
     <div
-      className="w-full h-full bg-gradientTwo z-40 duration-700"
+      className="w-full h-full bg-gradientThree z-40 duration-700"
       ref={inputRef}
     >
       <div className="mt-8 mx-auto flex flex-col p-8 gap-8">
@@ -78,30 +78,35 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
           onClick={() => {
             setMenuOpen(false);
           }}
-          className="text-zinc-400"
+          className="text-green-400"
         >
           <CloseCircleOutlined style={{ fontSize: "2rem" }} />
         </button>
-        <Link to={"/pricing"}>
+        <Link to={"/members"}>
           <button
             onClick={() => {
               setMenuOpen(false);
             }}
             className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700"
           >
-            Pricing
+            Members
           </button>
         </Link>
         <a href="https://docs.spect.network/spect-docs/introduction/faq">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
-            FAQ
+            Audits
           </button>
         </a>
-        <a href="https://docs.spect.network/spect-docs/introduction/how-it-works">
-          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
-            Docs
+        <Link to={"/fellowships"}>
+          <button
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700"
+          >
+            Fellowships
           </button>
-        </a>
+        </Link>
         <a href="https://circles.spect.network/">
           <button className="p-6 rounded-xl w-full text-xl text-purple text-bold hover:bg-purple hover:bg-opacity-5 duration-700">
             Launch App
