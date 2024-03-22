@@ -11,15 +11,15 @@ export default function Core() {
       <h1 className="text-4xl mb-8">Core</h1>
       <ul
         role="list"
-        className="flex flex-row gap-16"
+        className="grid grid-cols-3 md:grid-cols-3 gap-4 gap-y-8"
       >
         {core_members.map((person) => (
           <li key={person.name}>
-            <div className="flex flex-row items-center gap-x-6">
+            <div className="flex flex-row sm:grid items-center gap-x-6">
               <img
-                className="h-16 w-16 rounded-full"
-                src={person.twitter}
-                alt=""
+                className="h-11 w-11 rounded-full"
+                src={Math.floor(Math.random()*14).toString()+".png"}
+                alt="Core"
               />
               <div>
                 <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900 hover:underline">
