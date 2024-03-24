@@ -2,7 +2,7 @@
 export default function PartnerUp() {
   return (
     <>
-      <div className="grid grid-cols-2sm:flex sm:flex-col gap-4 m-12 sm:m-6 p-12 sm:p-4 rounded-2xl bg-[#E8FFF8]" id="contactform">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 m-12 sm:m-6 p-12 sm:p-4 rounded-2xl bg-[#E8FFF8]" id="contactform">
         <div className="col-span-1 mr-12 sm:mr-0 bg-white rounded-2xl p-16 border-b border-gray-900/10">
           <h1 className="lg:text-4xl md:text-4xl sm:text-4xl font-bold">
             Contact Us
