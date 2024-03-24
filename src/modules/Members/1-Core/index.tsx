@@ -22,10 +22,10 @@ export function Template({
   const randoms = generateUniqueRandoms(25);
   return (
     <div className="my-16">
-      <h1 className="text-4xl mb-8">{title}</h1>
+      <h1 className="text-4xl mb-12">{title}</h1>
       <ul
         role="list"
-        className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-4 gap-y-8"
+        className="grid grid-cols-3 sm:grid-cols-2 lg:gap-x-72 md:gap-x-32 gap-y-12"
       >
         {members.map((person, i) => (
           <li key={person.name}>
@@ -36,7 +36,7 @@ export function Template({
                 alt={person.name}
               />
               <div>
-                <h3 className="text-base sm:text-xs font-semibold leading-7 tracking-tight text-gray-900 hover:underline">
+                <h3 className="sm:text-xs font-semibold text-gray-900 hover:underline">
                   <a href={person.twitter} target="_blank">{person.name}</a>
                 </h3>
               </div>

@@ -20,10 +20,10 @@ export function Template({
   const randoms = generateUniqueRandoms(25);
   return (
     <div className="my-16">
-      <h2 className="text-xl mb-8">{title}</h2>
+      <h2 className="text-xl mb-12">{title}</h2>
       <ul
         role="list"
-        className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-4 gap-y-8"
+        className="grid grid-cols-3 sm:grid-cols-2 lg:gap-x-72 md:gap-x-32 gap-y-12"
       >
         {fellows.map((person, i) => (
           <li key={person.name}>

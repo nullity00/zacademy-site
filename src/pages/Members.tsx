@@ -13,7 +13,7 @@ import {
 export default function MembersPage() {
   return (
     <>
-      <div className="mx-40 sm:mx-10 h-full relative">
+      <div className="lg:mx-40 mx-6 h-full relative">
         <Core />
         <Resident />
         <ResidentAlumni />
