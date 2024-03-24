@@ -17,7 +17,7 @@ export default function Stats() {
           <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6 mt-12">
             {data.map((item) => {
               return (
-                <div className="col-span-1">
+                <div className="col-span-1" key={item.number}>
                   <h3 className="text-5xl sm:text-3xl font-semibold leading-6">
                     {item.number}
                   </h3>
