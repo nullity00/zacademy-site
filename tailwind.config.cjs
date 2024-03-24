@@ -3,9 +3,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      sm: { min: "360px", max: "460px" },
-      md: { min: "460px", max: "1150px" },
-      lg: { min: "1150px", max: "2000px" },
+      sm: { min: "300px", max: "768px" },
+      md: { min: "768px", max: "1024px" },
+      lg: { min: "1024px", max: "2000px" },
     },
     extend: {
       colors: {
