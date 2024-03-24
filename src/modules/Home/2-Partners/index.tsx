@@ -15,7 +15,7 @@ const ClientSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white my-32 sm:my-16">
+    <section className="bg-white py-8 sm:my-16">
       <div className="container mx-auto">
         <h2 className="text-5xl sm:text-3xl font-bold mb-10 text-left">Our Clients</h2>
         <div className="grid grid-cols-3 gap-4">
