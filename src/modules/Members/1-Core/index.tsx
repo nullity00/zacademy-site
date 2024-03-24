@@ -37,7 +37,7 @@ export function Template({
               />
               <div>
                 <h3 className="text-base sm:text-xs font-semibold leading-7 tracking-tight text-gray-900 hover:underline">
-                  <a href={person.twitter}>{person.name}</a>
+                  <a href={person.twitter} target="_blank">{person.name}</a>
                 </h3>
               </div>
             </div>
