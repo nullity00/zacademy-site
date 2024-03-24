@@ -1,7 +1,7 @@
 
 function Stats() {
   return (
-    <div className="pt-16 grid grid-cols-2 gap-4">
+    <div className="pt-16 grid grid-cols-2 sm:flex sm:flex-col gap-4">
       <div className="col-span-1 flex flex-col justify-center">
         <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold">
           Fellowship Programs
