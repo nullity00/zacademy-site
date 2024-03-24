@@ -13,12 +13,12 @@ export const GradientWord = styled.span`
 function HeroSection() {
   return (
     <div className="h-full relative sm:my-16">
-      <div className="grid grid-cols-5 sm:grid-cols-2 ml-40 sm:mx-auto text-left sm:text-center items-left">
-        <div className="sm:col-span-3 sm:my-0 md:hidden lg:hidden">
+      <div className="grid grid-cols-5 sm:flex sm:flex-col ml-40 sm:mx-6 text-left sm:text-center items-left">
+        <div className="sm:my-0 md:hidden lg:hidden">
           <Lottie animationData={logo}/>
         </div>
         <div className="col-span-2  flex flex-col py-4 my-40 sm:mb-0 sm:mt-10">
-          <h1 className="lg:leading-normal lg:text-7xl font-bold">
+          <h1 className="lg:leading-normal lg:text-7xl sm:text-4xl font-bold">
             Your Shield in the <GradientWord>ZK</GradientWord> realm
           </h1>
           <h2 className="text-left sm:text-center my-4 text-zinc-500">
