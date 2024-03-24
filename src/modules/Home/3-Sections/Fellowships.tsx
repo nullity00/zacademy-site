@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 export default function Fellowships() {
   return (
     <>
-      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 sm:my-16 sm:mx-6 text-justify">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 sm:my-16 sm:mx-6 text-justify sm:text-center">
         <div className="col-span-1 sm:hidden">
           <img src="/hands on shield.svg" className="h-[24rem] mt-8" />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 sm:flex sm:flex-col sm:align-center">
           <h1 className="lg:text-5xl sm:text-3xl font-bold lg:leading-normal">
-            {" "}
             Our Fellowships: <br /> The Trial by Fire Saga{" "}
           </h1>
-          <div className="col-span-1 lg:hidden md:hidden">
-          <img src="/hands on shield.svg" className="h-[24rem] sm:h-[16rem] mt-8" />
-        </div>
+          <img
+            src="/hands on shield.svg"
+            className="h-[24rem] sm:h-[16rem] mt-8 lg:hidden md:hidden"
+          />
           <p className="text-zinc-500 mb-8">
             <br />
             Applicants flood in, seeking to join our ranks, and those selected

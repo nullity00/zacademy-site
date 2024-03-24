@@ -17,7 +17,7 @@ const ClientSection: React.FC = () => {
   return (
     <section className="bg-white py-8">
       <div className="lg:mx-32 sm:mx-8">
-        <h2 className="text-5xl sm:text-3xl font-bold mb-10 text-left">Our Clients</h2>
+        <h2 className="text-5xl sm:text-3xl font-bold mb-10 sm:text-center">Our Clients</h2>
         <div className="grid grid-cols-3 gap-4">
           {clients.map((client, index) => (
             <div

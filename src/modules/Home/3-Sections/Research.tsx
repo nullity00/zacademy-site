@@ -1,20 +1,13 @@
-import { Link } from "react-router-dom";
-
 export default function Research() {
   return (
     <>
-      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 sm:my-16 sm:mx-6">
-        <div className="col-span-1 sm:hidden">
-          <img src="/code.svg" className="h-[15rem] mt-8" />
-        </div>
-        <div className="col-span-1 mr-10 sm:mr-0">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col sm:align-center gap-4 my-32 sm:my-16 sm:mx-6  text-justify sm:text-center">
+        <img src="/code.svg" className="h-[15rem] col-span-1 mt-8 sm:hidden" />
+        <div className="col-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col">
           <h1 className="lg:text-5xl sm:text-3xl font-bold lg:leading-normal">
-            {" "}
             Shh.. it's a Secret: <br /> ZK Research
           </h1>
-          <div className="sm:col-span-1 md:hidden lg:hidden">
-          <img src="/code.svg" className="h-[10rem] mt-8" />
-        </div>
+          <img src="/code.svg" className="h-[10rem] mt-8 md:hidden lg:hidden" />
           <p className="text-zinc-500 mb-8 sm:text-justify">
             <br />
             In the realm of Innovation, we take pride in our forward-thinking
@@ -23,11 +16,11 @@ export default function Research() {
             contract fellowship.
             <br />
           </p>
-          <Link to={"/"}>
+          <a target="_blank" href="https://blog.zacademy.dev/">
             <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               Read Our Blogs
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </>

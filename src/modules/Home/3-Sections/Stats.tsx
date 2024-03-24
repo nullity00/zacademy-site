@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const data = [
   { number: "100+", text: "Fellows" },
   { number: "15+", text: "Projects secured" },
@@ -9,8 +7,8 @@ const data = [
 export default function Stats() {
   return (
     <>
-      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 sm:my-16 sm:mx-6">
-        <div className="col-span-1">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 sm:my-16 sm:mx-6 text-justify sm:text-center sm:flex sm:flex-col sm:align-center">
+        <div className="col-span-1 sm:flex sm:flex-col sm:align-center">
           <h1 className="lg:text-5xl sm:text-3xl font-bold lg:leading-normal">
             Ama<span className="text-emeraldlight">zzz</span>ing Stats
           </h1>
@@ -28,9 +26,11 @@ export default function Stats() {
               );
             })}
           </div>
-          <div className="col-span-1 ml-20 sm:ml-0 lg:hidden md:hidden">
-          <img src="/track record.svg" className="h-[12rem] mt-8" />
-        </div>
+
+          <img
+            src="/track record.svg"
+            className="h-[12rem] mt-8 sm:ml-0 lg:hidden md:hidden"
+          />
           <p className="text-zinc-500 text-justify mb-8">
             <br />A significant number of our fellows elevate themselves to
             prominent positions within other firms or embark on independent
