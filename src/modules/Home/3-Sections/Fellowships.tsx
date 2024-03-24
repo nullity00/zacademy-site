@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 export default function Fellowships() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 my-32 sm:my-16 sm:mx-6 text-justify">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 sm:my-16 sm:mx-6 text-justify">
         <div className="col-span-1 sm:hidden">
           <img src="/hands on shield.svg" className="h-[24rem] mt-8" />
         </div>
-        <div className="col-span-1 sm:col-span-3">
+        <div className="col-span-1">
           <h1 className="lg:text-5xl sm:text-lg font-bold lg:leading-normal">
             {" "}
             Our Fellowships: <br /> The Trial by Fire Saga{" "}
@@ -36,7 +36,7 @@ export default function Fellowships() {
             </Link>
           </div>
         </div>
-        <div className="col-span-3 md:hidden lg:hidden">
+        <div className="col-span-1 md:hidden lg:hidden">
           <img src="/hands on shield.svg" className="h-[15rem] sm:mx-auto mt-8" />
         </div>
       </div>
