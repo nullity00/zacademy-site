@@ -3,16 +3,19 @@ import { Link } from "react-router-dom";
 export default function Research() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 my-32">
-        <div className="col-span-1">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 sm:my-16 sm:mx-6">
+        <div className="col-span-1 sm:hidden">
           <img src="/code.svg" className="h-[15rem] mt-8" />
         </div>
-        <div className="col-span-1 mr-10">
-          <h1 className="lg:text-5xl font-bold lg:leading-normal">
+        <div className="col-span-1 mr-10 sm:mr-0">
+          <h1 className="lg:text-5xl sm:text-3xl font-bold lg:leading-normal">
             {" "}
             Shh.. it's a Secret: <br /> ZK Research
           </h1>
-          <p className="text-zinc-500 mb-8">
+          <div className="sm:col-span-1 md:hidden lg:hidden">
+          <img src="/code.svg" className="h-[10rem] mt-8" />
+        </div>
+          <p className="text-zinc-500 mb-8 sm:text-justify">
             <br />
             In the realm of Innovation, we take pride in our forward-thinking
             approach, evident in our incubation of novel programs such as the ZK
@@ -21,7 +24,7 @@ export default function Research() {
             <br />
           </p>
           <Link to={"/"}>
-            <button className="px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+            <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               Read Our Blogs
             </button>
           </Link>

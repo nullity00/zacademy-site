@@ -7,7 +7,7 @@ function GuestAuditor() {
         Guest Auditor Program
       </h1>
 
-      <div className="grid grid-cols-2 gap-16 my-4">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-16 my-4">
         <div className="col-span-1 flex flex-col gap-8 justify-center">
           <div>
             <p className="text-zinc-500">

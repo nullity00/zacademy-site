@@ -1,19 +1,22 @@
-const core_members = [
-  { name: "Ali Atiia", twitter: "https://twitter.com/0xAlizk" },
-  { name: "engn33r", twitter: "https://twitter.com/bl4ckb1rd71" },
-  { name: "invader", twitter: "https://twitter.com/nullity00" },
-  { name: "nullity", twitter: "https://twitter.com/nullity00" },
+const alumni_members = [
+  { name: "devtooligan", twitter: "https://twitter.com/devtooligan" },
+  { name: "stermi", twitter: "https://twitter.com/StErMi" },
+  { name: "peep", twitter: "https://twitter.com/XianganH" },
+  { name: "B Samuels", twitter: "https://twitter.com/thebensams" },
+  { name: "Usmann", twitter: "https://twitter.com/usmannk" },
+  { name: "blockdev", twitter: "https://twitter.com/blockdeveth" },
+
 ];
 
-export default function Core() {
+export default function Alumni() {
   return (
     <div className="my-16">
-      <h1 className="text-4xl mb-8">Core</h1>
+      <h1 className="text-4xl mb-8">Alumni Residents</h1>
       <ul
         role="list"
         className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-4 gap-y-8"
       >
-        {core_members.map((person) => (
+        {alumni_members.map((person) => (
           <li key={person.name}>
             <div className="flex flex-row sm:flex-col items-center gap-x-6">
               <img

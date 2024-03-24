@@ -1,19 +1,29 @@
-const core_members = [
-  { name: "Ali Atiia", twitter: "https://twitter.com/0xAlizk" },
-  { name: "engn33r", twitter: "https://twitter.com/bl4ckb1rd71" },
-  { name: "invader", twitter: "https://twitter.com/nullity00" },
-  { name: "nullity", twitter: "https://twitter.com/nullity00" },
+const fellows_april2022 = [
+  { name: "alex lau", twitter: "" },
+  { name: "bastien guyonnet", twitter: "" },
+  { name: "eagle eyewatch", twitter: "" },
+  { name: "j montenegro*", twitter: "" },
+  { name: "oliver chalk", twitter: "" },
+  { name: "peep*", twitter: "" },
+  { name: "saran g parikh", twitter: "" },
+  { name: "sjkelleyjr*", twitter: "" },
+  { name: "smoothbot", twitter: "" },
+  { name: "stermi", twitter: "" },
+  { name: "zokunei", twitter: "" },
+
+
 ];
 
-export default function Core() {
+export default function April2022() {
   return (
     <div className="my-16">
-      <h1 className="text-4xl mb-8">Core</h1>
+      <h2 className="text-xl mb-8">Block 2 - April 2022</h2>
+
       <ul
         role="list"
         className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-4 gap-y-8"
       >
-        {core_members.map((person) => (
+        {fellows_april2022.map((person) => (
           <li key={person.name}>
             <div className="flex flex-row sm:flex-col items-center gap-x-6">
               <img
@@ -33,6 +43,7 @@ export default function Core() {
           </li>
         ))}
       </ul>
+      <p className="mt-10">*promoted to resident</p>
     </div>
   );
 }

@@ -7,7 +7,7 @@ function SmartContracts() {
         Smart Contract Fellowship
       </h1>
 
-      <div className="grid grid-cols-2 gap-16 my-4">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-16 my-4">
         <div className="col-span-1 flex flex-col gap-8 justify-center">
           <div>
             <h2 className="text-semibold text-xl mb-4">
