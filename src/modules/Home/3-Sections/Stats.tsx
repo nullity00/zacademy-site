@@ -9,8 +9,8 @@ const data = [
 export default function Stats() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 my-32 sm:my-16 sm:mx-6 sm:text-center">
-        <div className="col-span-1 sm:col-span-3">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 sm:my-16 sm:mx-6 sm:text-center">
+        <div className="col-span-1">
           <h1 className="lg:text-5xl sm:text-lg font-bold lg:leading-normal">
             Ama<span className="text-emeraldlight">zzz</span>ing Stats
           </h1>
@@ -39,7 +39,7 @@ export default function Stats() {
             </button>
           </a>
         </div>
-        <div className="col-span-1 sm:col-span-3 ml-20 sm:ml-0">
+        <div className="col-span-1 ml-20 sm:ml-0">
           <img src="/track record.svg" className="h-[20rem] mt-8" />
         </div>
       </div>
