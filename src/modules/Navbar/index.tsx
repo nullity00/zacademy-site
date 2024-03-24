@@ -70,7 +70,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
   }, [inputRef, setMenuOpen]);
   return (
     <div
-      className="w-full h-full bg-gradientThree z-40 duration-700"
+      className="w-full h-full z-40 duration-700"
       ref={inputRef}
     >
       <div className="mt-8 mx-auto flex flex-col p-8 gap-8">
@@ -93,7 +93,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
           </button>
         </Link>
         <a href="https://docs.spect.network/spect-docs/introduction/faq">
-          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
+          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Audits
           </button>
         </a>
@@ -102,13 +102,13 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             onClick={() => {
               setMenuOpen(false);
             }}
-            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700"
+            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700"
           >
             Fellowships
           </button>
         </Link>
         <a href="#contactform">
-          <button className="p-6 rounded-xl w-full text-xl text-purple text-bold hover:bg-purple hover:bg-opacity-5 duration-700">
+          <button className="p-6 rounded-xl w-full text-xl text-emeraldlight text-bold hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Countact Us
           </button>
         </a>

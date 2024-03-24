@@ -26,7 +26,7 @@ function HeroSection() {
           </h2>
           <Link to={"/fellowships"}>
             <button
-              className="px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700"
+              className="px-8 py-3 rounded-xl sm:w-full text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700"
             >
               Explore Fellowships
             </button>
