@@ -8,10 +8,13 @@ export default function Research() {
           <img src="/code.svg" className="h-[15rem] mt-8" />
         </div>
         <div className="col-span-1 mr-10 sm:mr-0">
-          <h1 className="lg:text-5xl font-bold lg:leading-normal">
+          <h1 className="lg:text-5xl sm:text-3xl font-bold lg:leading-normal">
             {" "}
             Shh.. it's a Secret: <br /> ZK Research
           </h1>
+          <div className="sm:col-span-1 md:hidden lg:hidden">
+          <img src="/code.svg" className="h-[10rem] mt-8" />
+        </div>
           <p className="text-zinc-500 mb-8 sm:text-justify">
             <br />
             In the realm of Innovation, we take pride in our forward-thinking
@@ -21,13 +24,10 @@ export default function Research() {
             <br />
           </p>
           <Link to={"/"}>
-            <button className="px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+            <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               Read Our Blogs
             </button>
           </Link>
-        </div>
-        <div className="sm:col-span-1 md:hidden lg:hidden">
-          <img src="/code.svg" className="h-[15rem] mt-8" />
         </div>
       </div>
     </>

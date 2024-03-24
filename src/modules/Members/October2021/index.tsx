@@ -15,7 +15,7 @@ const fellows_october2021 = [
 export default function October2021() {
   return (
     <div className="my-16">
-      <h2 className="text-xl mb-8">Block 2 - October 2021</h2>
+      <h2 className="text-xl mb-8">Block 1 - October 2021</h2>
 
       <ul
         role="list"

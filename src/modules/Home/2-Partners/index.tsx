@@ -15,14 +15,14 @@ const ClientSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white py-8 sm:my-16">
-      <div className="container mx-auto">
+    <section className="bg-white py-8">
+      <div className="lg:mx-auto sm:mx-8">
         <h2 className="text-5xl sm:text-3xl font-bold mb-10 text-left">Our Clients</h2>
         <div className="grid grid-cols-3 gap-4">
           {clients.map((client, index) => (
             <div
               key={index}
-              className="bg-gray-100 p-4 rounded relative hover:bg-opacity-5 duration-700"
+              className="bg-gray-100 p-4 col-span-1 rounded relative hover:bg-opacity-5 duration-700"
             >
               {/* Logo */}
               <img
