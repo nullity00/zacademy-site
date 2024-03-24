@@ -107,9 +107,9 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             Fellowships
           </button>
         </Link>
-        <a href="https://circles.spect.network/">
+        <a href="#contactform">
           <button className="p-6 rounded-xl w-full text-xl text-purple text-bold hover:bg-purple hover:bg-opacity-5 duration-700">
-            Launch App
+            Countact Us
           </button>
         </a>
       </div>
