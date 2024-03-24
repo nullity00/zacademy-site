@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 export default function Research() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 my-32 sm:my-16 sm:mx-6">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 sm:my-16 sm:mx-6">
         <div className="col-span-1 sm:hidden">
           <img src="/code.svg" className="h-[15rem] mt-8" />
         </div>
-        <div className="col-span-1 sm:col-span-3 mr-10 sm:mr-0">
+        <div className="col-span-1 mr-10 sm:mr-0">
           <h1 className="lg:text-5xl font-bold lg:leading-normal">
             {" "}
             Shh.. it's a Secret: <br /> ZK Research
@@ -26,7 +26,7 @@ export default function Research() {
             </button>
           </Link>
         </div>
-        <div className="sm:col-span-3 md:hidden lg:hidden">
+        <div className="sm:col-span-1 md:hidden lg:hidden">
           <img src="/code.svg" className="h-[15rem] mt-8" />
         </div>
       </div>
