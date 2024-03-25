@@ -1,13 +1,16 @@
 import { core } from "../Data/core";
 
 export const generateUniqueRandoms = (n: number) => {
-  const arr = [];
-  while(arr.length < n){
-    const r = Math.floor(Math.random() * n) + 1;
-    if(arr.indexOf(r) === -1) arr.push(r);
+  let arr = Array.from({ length: n }, (_, i) => i + 1);
+
+  for (let i = arr.length - 1; i > 0; i--) {
+    // Instead of Math.random(), we'll use the current milliseconds to create randomness
+    let j = new Date().getMilliseconds() % (i + 1);
+    [arr[i], arr[j]] = [arr[j], arr[i]];
   }
+
   return arr;
-}
+};
 
 export function Template({
   title,
@@ -18,7 +21,7 @@ export function Template({
     name: string;
     twitter: string;
   }[];
-  }) {
+}) {
   const randoms = generateUniqueRandoms(25);
   return (
     <div className="my-16">
@@ -37,7 +40,9 @@ export function Template({
               />
               <div>
                 <h3 className="sm:text-xs font-semibold text-gray-900 hover:underline">
-                  <a href={person.twitter} target="_blank">{person.name}</a>
+                  <a href={person.twitter} target="_blank">
+                    {person.name}
+                  </a>
                 </h3>
               </div>
             </div>
@@ -49,7 +54,6 @@ export function Template({
 }
 
 export default function Core() {
-
   return (
     <>
       <Template title={"Core"} members={core} />
