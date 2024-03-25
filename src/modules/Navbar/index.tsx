@@ -7,10 +7,18 @@ interface Props {
   setMenuOpen: (menuOpen: boolean) => void;
 }
 
+function Button({ text }: { text: string }) {
+  return (
+    <button className="px-6 py-3 rounded-xl text-sm text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
+      {text}
+    </button>
+  );
+}
+
 export function Navbar({ menuOpen, setMenuOpen }: Props) {
   return (
-    <div className="w-full flex h-18 items-center justify-between top-0 p-6 z-10">
-      <div className="flex flex-row gap-4 text-emeraldlight items-center text-xl lg:ml-36 z-20">
+    <div className="w-full flex h-18 items-center justify-between top-0 p-6">
+      <div className="flex flex-row gap-4 text-emeraldlight items-center text-xl lg:ml-36">
         <Link to={"/"}>
           <img src="/logo.svg" className="h-10" />
         </Link>
@@ -21,27 +29,27 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
       >
         <MenuOutlined />
       </button>
-      <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-36">
+      <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-[8vw]">
         <Link to={"/members"}>
-          <button className="px-6 py-3 rounded-xl text-md text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
-            Members
-          </button>
+          <Button text={"Members"} />
         </Link>
         <a href="https://reports.zAcademy.dev/">
-          <button className="px-6 py-3 rounded-xl text-md text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
-            Audits
-          </button>
+          <Button text={"Reports"} />
+        </a>
+        <a href="https://research.zAcademy.dev/">
+          <Button text={"Research"} />
+        </a>
+        <a href="https://blog.zAcademy.dev/">
+          <Button text={"Blog"} />
         </a>
         <Link to={"/fellowships"}>
-          <button className="px-6 py-3 rounded-xl text-md text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
-            Fellowships
-          </button>
+          <Button text={"Fellowships"} />
         </Link>
-        <a href="#contactform">
+        <Link to={"/contact-us"}>
           <button className="px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
             Contact Us
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -69,11 +77,8 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
     };
   }, [inputRef, setMenuOpen]);
   return (
-    <div
-      className="w-full h-full z-40 duration-700"
-      ref={inputRef}
-    >
-      <div className="mt-8 mx-auto flex flex-col p-8 gap-8">
+    <div className="w-full h-full z-40 duration-700" ref={inputRef}>
+      <div className="mt-8 mx-auto flex flex-col p-8 gap-2">
         <button
           onClick={() => {
             setMenuOpen(false);
@@ -92,11 +97,22 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             Members
           </button>
         </Link>
-        <a href="https://docs.spect.network/spect-docs/introduction/faq">
+        <a href="https://reports.zAcademy.dev/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
-            Audits
+            Reports
           </button>
         </a>
+        <a href="https://research.zAcademy.dev/">
+          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
+            Research
+          </button>
+        </a>
+        <a href="https://blog.zAcademy.dev/">
+          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
+            Blog
+          </button>
+        </a>
+
         <Link to={"/fellowships"}>
           <button
             onClick={() => {
@@ -107,11 +123,16 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             Fellowships
           </button>
         </Link>
-        <a href="#contactform">
-          <button className="p-6 rounded-xl w-full text-xl text-emeraldlight text-bold hover:bg-darkgreen hover:bg-opacity-5 duration-700">
-            Countact Us
+        <Link to={"/contact-us"}>
+          <button
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+            className="p-6 rounded-xl w-full text-xl text-emeraldlight text-bold hover:bg-darkgreen hover:bg-opacity-5 duration-700"
+          >
+            Contact Us
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );

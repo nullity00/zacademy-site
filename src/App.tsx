@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { Navbar, MobileNavbar } from "./modules/Navbar";
 import MembersPage from "./pages/Members";
+import ContactPage from "./pages/Contact";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/fellowships" element={<FellowshipsPage />} />
           <Route path="/members" element={<MembersPage />} />
+          <Route path="/contact-us" element={<ContactPage />} />
         </Routes>
       </div>
     </Router>
