@@ -7,10 +7,18 @@ interface Props {
   setMenuOpen: (menuOpen: boolean) => void;
 }
 
+function Button({ text }: { text: string }) {
+  return (
+    <button className="px-6 py-3 rounded-xl text-sm text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
+      {text}
+    </button>
+  );
+}
+
 export function Navbar({ menuOpen, setMenuOpen }: Props) {
   return (
-    <div className="w-full flex h-18 items-center justify-between top-0 p-6 z-10">
-      <div className="flex flex-row gap-4 text-emeraldlight items-center text-xl lg:ml-36 z-20">
+    <div className="w-full flex h-18 items-center justify-between top-0 p-6">
+      <div className="flex flex-row gap-4 text-emeraldlight items-center text-xl lg:ml-36">
         <Link to={"/"}>
           <img src="/logo.svg" className="h-10" />
         </Link>
@@ -21,31 +29,21 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
       >
         <MenuOutlined />
       </button>
-      <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-36">
+      <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-[8vw]">
         <Link to={"/members"}>
-          <button className="px-6 py-3 rounded-xl text-md text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
-            Members
-          </button>
+          <Button text={"Members"} />
         </Link>
         <a href="https://reports.zAcademy.dev/">
-          <button className="px-6 py-3 rounded-xl text-md text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
-            Reports
-          </button>
+          <Button text={"Reports"} />
         </a>
         <a href="https://research.zAcademy.dev/">
-          <button className="px-6 py-3 rounded-xl text-md text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
-            Research
-          </button>
+          <Button text={"Research"} />
         </a>
         <a href="https://blog.zAcademy.dev/">
-          <button className="px-6 py-3 rounded-xl text-md text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
-            Blog
-          </button>
+          <Button text={"Blog"} />
         </a>
         <Link to={"/fellowships"}>
-          <button className="px-6 py-3 rounded-xl text-md text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
-            Fellowships
-          </button>
+          <Button text={"Fellowships"} />
         </Link>
         <Link to={"/contact-us"}>
           <button className="px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">

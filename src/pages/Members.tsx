@@ -17,7 +17,7 @@ export default function MembersPage() {
         <Core />
         <Resident />
         <ResidentAlumni />
-        <h1 className="text-4xl mb-8">Fellows</h1>
+        <h1 className="text-4xl mb-8 sm:text-center">Fellows</h1>
         <ZBlock1 />
         <Block5 />
         <Block4 />
