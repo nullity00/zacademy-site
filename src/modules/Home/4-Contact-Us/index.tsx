@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 export default function PartnerUp() {
   return (
     <>
-      <div className="flex flex-col items-center gap-4 m-12 p-12 rounded-2xl bg-[#E8FFF8]">
-        <img src="/hands out of laptop.svg" className="h-[18rem] m-4 sm:m-0" />
-        <h1 className="py-8 leading-normal lg:leading-tight lg:text-6xl text-center text-4xl font-bold">
+      <div className="flex flex-col items-center gap-2 m-12 p-12 rounded-2xl bg-[#E8FFF8]">
+        <img src="/hands out of laptop.svg" className="h-[18rem] sm:m-0" />
+        <h1 className="p-2 leading-normal lg:leading-tight lg:text-6xl text-center text-4xl font-bold">
           Partner up with <br /> a Protocol Audit
         </h1>
         <Link to={"/contact-us"}>

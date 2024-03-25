@@ -13,7 +13,7 @@ export function Resident() {
 export function ResidentAlumni() {
   return (
     <>
-      <Template title={"Alumni"} members={alumni_residents} />
+      <Template title={"Alumni Resident"} members={alumni_residents} />
     </>
   );
 }

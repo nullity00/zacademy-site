@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Fellowships() {
   return (
     <>
-      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 md:my-16 sm:my-16 sm:mx-6 md:mx-6 text-justify sm:text-center">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 md:my-16 sm:my-16 sm:mx-6 md:mx-6 text-justify">
         <div className="col-span-1 sm:hidden">
           <img
             src="/hands on shield.svg"

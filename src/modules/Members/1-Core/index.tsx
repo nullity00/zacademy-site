@@ -8,7 +8,8 @@ export const generateUniqueRandoms = (n: number) => {
     let j = new Date().getMilliseconds() % (i + 1);
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
-
+  console.log("I'm being called");
+  
   return arr;
 };
 

@@ -1,6 +1,6 @@
 import Footer from "../modules/Footer";
 import Core from "../modules/Members/1-Core";
-import { Resident, ResidentAlumni } from "../modules/Members/2-Alumni";
+import { Resident, ResidentAlumni } from "../modules/Members/2-Residents";
 import {
   Block1,
   Block2,
