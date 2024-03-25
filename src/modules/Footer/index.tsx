@@ -10,7 +10,7 @@ function Icon({
   width: string;
 }) {
   return (
-    <a href={href}>
+    <a href={href} target="_blank">
       <img src={src} width={width} alt={alt} className="opacity-50 hover:opacity-90 duration-700"/>
     </a>
   );
