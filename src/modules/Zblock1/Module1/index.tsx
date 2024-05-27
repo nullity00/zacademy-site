@@ -40,7 +40,7 @@ function Module1 () {
   return (
     <>
       {/* Start Of Summary */}
-      <div className="grid grid-cols-2 gap-20 lg:my-16 lg:mx-16">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-20 my-16 lg:mx-16">
         <div className="bg-green-100 p-10 rounded-lg shadow-md">
           <h2 className="text-2xl font-semibold mb-2">Module 1</h2>
           <a href="#session1" className="text-gray-600 hover:underline">- Sessions</a><br />
@@ -77,9 +77,9 @@ function Module1 () {
       {/* End Of Summary */}
 
       {/* Start of Youtube Slider */}
-      <h1 className="text-5xl font-extrabold lg:mx-16 text-center lg:my-16">Module 1</h1>
+      <h1 className="text-5xl font-extrabold lg:mx-16 text-center my-16">Module 1</h1>
       <h1 id="session1" className="text-2xl font-bold lg:mx-16">Session</h1>
-      <div className="flex overflow-x-auto space-x-10 lg:my-6 lg:mx-16">
+      <div className="flex sm:flex-col overflow-x-auto lg:space-x-10 sm:space-y-10 my-6 lg:mx-16">
         {videoData.map((video) => (
           <div key={video.id} className="w-64">
             <iframe
@@ -104,7 +104,7 @@ function Module1 () {
       {/* end of Youtube Slider */}
 
       {/* Start of Discussion */}
-      <div className="lg:my-16 lg:mx-16">
+      <div className="my-16 lg:mx-16">
         <h1 id="discussion1" className="text-2xl font-bold mb-4">Discussion</h1>
         <a
           href="https://discord.com/invite/rGDvVpqCcK"
@@ -118,7 +118,7 @@ function Module1 () {
       {/* End of Discussion */}
 
       {/* Start of Exercises */}
-      <div className="lg:my-16 lg:mx-16">
+      <div className="my-16 lg:mx-16">
         <h1 id="exercise1" className="text-2xl font-bold mb-4">Exercises</h1>
         <a
           href="https://docs.google.com/presentation/d/1AOCI3mWXCoP3-xtaYhqmiezcxfl9g8psuOjopk2jxkI/edit?usp=sharing"
@@ -150,7 +150,7 @@ function Module1 () {
       {/* End of Exercises */}
 
       {/* Start of Supplimentary Materials */}
-      <div className="lg:my-16 lg:mx-16">
+      <div className="my-16 lg:mx-16">
         <h1 id="materials1" className="text-2xl font-bold mb-4">Supplimentary Materials</h1>
         <a
           href="https://docs.google.com/presentation/d/1ebxaq9fsBJxOEpEnqaj9vYloNQT82DkAgp2d5JJRI_k/edit?usp=sharing"
