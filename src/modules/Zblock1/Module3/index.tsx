@@ -40,9 +40,9 @@ function Module3 () {
   return (
     <>
       {/* Start of Youtube Slider */}
-      <h1 className="text-5xl font-extrabold lg:mx-16 text-center lg:my-16">Module 3</h1>
+      <h1 className="text-5xl font-extrabold lg:mx-16 text-center my-16">Module 3</h1>
       <h1 id="session1" className="text-2xl font-bold lg:mx-16">Session</h1>
-      <div className="flex overflow-x-auto space-x-10 lg:my-6 lg:mx-16">
+      <div className="flex sm:flex-col overflow-x-auto lg:space-x-10 sm:space-y-10 my-6 lg:mx-16">
         {videoData.map((video) => (
           <div key={video.id} className="w-64">
             <iframe
@@ -67,7 +67,7 @@ function Module3 () {
       {/* end of Youtube Slider */}
 
       {/* Start of Discussion */}
-      <div className="lg:my-16 lg:mx-16">
+      <div className="my-16 lg:mx-16">
         <h1 id="discussion1" className="text-2xl font-bold mb-4">Discussion</h1>
         <a
           href="https://discord.gg/qJuc7TD6VQ"
@@ -81,7 +81,7 @@ function Module3 () {
       {/* End of Discussion */}
 
       {/* Start of Quizzes */}
-      <div className="lg:my-16 lg:mx-16">
+      <div className="my-16 lg:mx-16">
         <h1 id="discussion1" className="text-2xl font-bold mb-4">Quizzes</h1>
         <a
           href="https://hackmd.io/68TlQZFvQOeMZ2mvFl0Abg?view#Session-11"
@@ -115,7 +115,7 @@ function Module3 () {
       {/* End of Discussion */}
 
       {/* Start of Guest Lectures */}
-      <div className="lg:my-16 lg:mx-16">
+      <div className="my-16 lg:mx-16">
         <h1 id="exercise1" className="text-2xl font-bold mb-4">Guest Lectures</h1>
         <a
           href="https://youtu.be/-SXMd6S0r0I"
@@ -153,7 +153,7 @@ function Module3 () {
       {/* End of Guest Lectures */}
 
       {/* Start of Audit Reports */}
-      <div className="lg:my-16 lg:mx-16">
+      <div className="my-16 lg:mx-16">
         <h1 id="materials1" className="text-2xl font-bold mb-4">Audit Reports</h1>
         <a
           href="https://github.com/zBlock-1/spartan-ecdsa-audit-report"
