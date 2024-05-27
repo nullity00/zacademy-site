@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Navbar, MobileNavbar } from "./modules/Navbar";
 import MembersPage from "./pages/Members";
 import ContactPage from "./pages/Contact";
+import ZblockPage from "./pages/Zblock";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,6 +23,7 @@ function App() {
           <Route path="/fellowships" element={<FellowshipsPage />} />
           <Route path="/members" element={<MembersPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="/zBlock1" element={<ZblockPage />} />
         </Routes>
       </div>
     </Router>
