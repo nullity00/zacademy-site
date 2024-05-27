@@ -28,9 +28,9 @@ function Module2 () {
   return (
     <>
       {/* Start of Youtube Slider */}
-      <h1 className="text-5xl font-extrabold lg:mx-16 text-center lg:my-16">Module 2</h1>
+      <h1 className="text-5xl font-extrabold lg:mx-16 text-center my-16">Module 2</h1>
       <h1 id="session1" className="text-2xl font-bold lg:mx-16">Session</h1>
-      <div className="flex overflow-x-auto space-x-10 lg:my-6 lg:mx-16">
+      <div className="flex sm:flex-col overflow-x-auto lg:space-x-10 sm:space-y-10 my-6 lg:mx-16">
         {videoData.map((video) => (
           <div key={video.id} className="w-64">
             <iframe
@@ -55,7 +55,7 @@ function Module2 () {
       {/* end of Youtube Slider */}
 
       {/* Start of Discussion */}
-      <div className="lg:my-16 lg:mx-16">
+      <div className="my-16 lg:mx-16">
         <h1 id="discussion1" className="text-2xl font-bold mb-4">Discussion</h1>
         <a
           href="https://discord.gg/Y8ccpfcYmq"
@@ -69,7 +69,7 @@ function Module2 () {
       {/* End of Discussion */}
 
       {/* Start of Guest Lectures */}
-      <div className="lg:my-16 lg:mx-16">
+      <div className="my-16 lg:mx-16">
         <h1 id="exercise1" className="text-2xl font-bold mb-4">Guest Lectures</h1>
         <a
           href="https://youtu.be/h_ie8eaPNcM?si=YejDJgOkvgY_CGf3"
@@ -141,7 +141,7 @@ function Module2 () {
       {/* End of Guest Lectures */}
 
       {/* Start of Audit Reports */}
-      <div className="lg:my-16 lg:mx-16">
+      <div className="my-16 lg:mx-16">
         <h1 id="materials1" className="text-2xl font-bold mb-4">Audit Reports</h1>
         <a
           href="https://github.com/zBlock-1/RLN-audit-report"
