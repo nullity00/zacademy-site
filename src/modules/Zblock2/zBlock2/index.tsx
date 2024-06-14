@@ -73,17 +73,16 @@ function ZBlock2Modules() {
             Sessions
           </h1>
           <VideoSection videoData={m1video} />
+        </div>
+        <div className="col-span-1">
+          <h1 className="text-2xl font-bold">Guest Lectures</h1>
+          <VideoSection videoData={m1guestLectures} />
           <h1 id="discussion1" className="text-2xl font-bold mb-4">
             Discussion
           </h1>
           <div className="flex flex-row gap-4 p-4 items-center rounded-2xl bg-[#E8FFF8]">
             <Discussion chat={m1discussion} />
           </div>
-        </div>
-        <div className="col-span-1">
-          <h1 className="text-2xl font-bold">Guest Lectures</h1>
-          <VideoSection videoData={m1guestLectures} />
-
           <h1 className="text-2xl font-bold my-4">Audit Reports</h1>
           <div className="flex flex-row gap-4 p-4 items-center rounded-2xl bg-[#E8FFF8]">
             <Report report={m1report} />
