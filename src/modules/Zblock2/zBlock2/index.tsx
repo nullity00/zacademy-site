@@ -1,4 +1,9 @@
-import { m1video,m1guestLectures, m1discussion, m1report } from "../Data/zblock2";
+import {
+  m1video,
+  m1guestLectures,
+  m1discussion,
+  m1report,
+} from "../Data/zblock2";
 import {
   m2discussion,
   m2guestLectures,
@@ -38,25 +43,26 @@ function ZBlock2Modules() {
             <img src="./zblock1.svg" className="h-[15rem]"></img>
           </div>
           <p className="text-gray-600 text-justify">
-            In June 2023, we conducted a Zero Knowledge Auditing cohort that
-            kicked off with foundational concepts in complexity theory and Zero
-            Knowledge Proofs (ZKPs). Participants engaged in hands-on exercises
-            with Circom, a tool for creating ZKP circuits, to deepen their
-            understanding.
-            <br /> <br /> The cohort's first audit project was the Rate Limiting
-            Nullifier (RLN) by the Privacy & Scaling Explorations team. RLN is a
-            zk-library/protocol designed to prevent spam in permissionless
-            environments while preserving user anonymity. This audit took 15
-            days to complete. <br /> <br /> Following a retreat session, we
-            proceeded to audit Spartan ECDSA's codebase, a library for proving
-            and verifying ECDSA (secp256k1) signatures in zero-knowledge. This
-            audit spanned 16 days. Both RLN and Spartan ECDSA utilized Circom
-            circuits. <br /> <br /> During the cohort, fellows also developed
-            new Circom tooling and enhanced the usability of existing tools by
-            improving the documentation and code for projects like Picus and
-            Ecne. At the end of the audit, outstanding fellows were awarded for
-            their exceptional contributions and performance throughout the
-            cohort.
+            From Jan 2024 to May 2024, we conducted our second Zero Knowledge
+            Auditing cohort that kicked off with foundational concepts in
+            complexity theory and Zero Knowledge Proofs (ZKPs) pivoting to Halo2
+            framework. Participants engaged in hands-on exercises with Halo2, a
+            tool for creating ZKP circuits, to deepen their understanding.
+            <br /> <br /> The cohort's audit project was the Summa Protocol by
+            the Privacy & Scaling Explorations team. Summa Protocol is a
+            blockchain-based solution designed to provide Proof of Solvency for
+            financial entities, ensuring they have sufficient assets to cover
+            their liabilities. It leverages cryptographic techniques to verify
+            solvency transparently and securely without revealing sensitive
+            financial data. This audit took 120 days to complete, spanning over
+            two Versions.
+            <br />
+            <br /> During the cohort, fellows also developed new Halo2 tooling
+            and enhanced the usability of existing tools by improving the
+            documentation and code for projects like Polyexen-demo and
+            Halo2-analyzer. At the end of the audit, outstanding fellows were
+            awarded for their exceptional contributions and performance
+            throughout the cohort.
           </p>
         </div>
         <div className="col-span-1 sm:hidden">
