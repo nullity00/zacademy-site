@@ -1,11 +1,11 @@
-import { m1video, m1exercises, m1notes, m1discussion } from "../Data/zblock2";
+import { m1video,m1guestLectures, m1discussion, m1report } from "../Data/zblock2";
 import {
   m2discussion,
   m2guestLectures,
   m2video,
   m2report,
 } from "../Data/zblock2";
-import { Discussion, VideoSection, Report, Notes } from "../utils";
+import { Discussion, VideoSection, Report } from "../utils";
 
 function ZBlock2Modules() {
   return (
@@ -81,31 +81,12 @@ function ZBlock2Modules() {
           </div>
         </div>
         <div className="col-span-1">
-          <h1 id="materials1" className="text-2xl font-bold mt-8 mb-4">
-            Supplimentary Materials
-          </h1>
+          <h1 className="text-2xl font-bold">Guest Lectures</h1>
+          <VideoSection videoData={m1guestLectures} />
+
+          <h1 className="text-2xl font-bold my-4">Audit Reports</h1>
           <div className="flex flex-row gap-4 p-4 items-center rounded-2xl bg-[#E8FFF8]">
-            <Notes notes={m1notes} />
-          </div>
-          <h1 id="exercise1" className="text-2xl font-bold my-4">
-            Exercises
-          </h1>
-          <div className="flex flex-col  gap-6 p-6 rounded-2xl bg-[#E8FFF8]">
-            {m1exercises.map((exercise) => {
-              return (
-                <div className="flex flex-row gap-4 items-center">
-                  <img src="/exercise.svg" className="h-[2rem]" />
-                  <a
-                    href={exercise.link}
-                    className="hover:underline font-bold"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {exercise.title}
-                  </a>
-                </div>
-              );
-            })}
+            <Report report={m1report} />
           </div>
         </div>
       </div>
