@@ -19,19 +19,19 @@ export const m1video = [
     },
     {
       id: "KpGlTC7fNVk",
-      title: "Protocol Intro to Summa",
+      title: "Intro to Summa Protocol",
       description: "",
       link: "https://drive.google.com/drive/folders/13HYik8qTA4uYvYBed8iFPjhojS_eCVRJ?usp=drive_link",
     },
     {
       id: "0ZfUKTc_qoE",
-      title: "Halo2 by Resident Nullity",
+      title: "Digging into Halo2 by Resident Nullity",
       description: "",
       link: "https://drive.google.com/drive/folders/1XnXCzF9X9_zz8RidKy24-QuVvLqYi-4p?usp=drive_link",
     },
     {
       id: "8S3SRg0DPlk",
-      title: "Protocol Codebase Overview 1",
+      title: "Codebase Overview 1",
       description: "",
       link: "https://drive.google.com/drive/folders/1RehDHoexuhUrzjDqGfDFAZTiyBDN2gfR?usp=drive_link",
     },
@@ -55,7 +55,7 @@ export const m1video = [
     },
     {
       id: "9RTjdn8NElk",
-      title: "Proof of Solvency Resident by Nagu",
+      title: "Proof of Solvency by Resident Nagu",
       description: "",
       link: "https://drive.google.com/drive/folders/1T438y7TJa4e7BJSdCWdM5QvkbZ9Z8zxa?usp=drive_link",
     },
@@ -76,12 +76,12 @@ export const m1video = [
   ];
   
   export const m1discussion = {
-    title: "Summa-General",
+    title: "summa-general",
     link: "https://discord.com/channels/877252171983360072/1195123409739337779",
   };
 
   export const m1report = {
-    title: "Summa V-A Audit Report",
+    title: "Summa Va Audit Report",
     link: "https://github.com/zBlock-2/audit-report/blob/main/versionA.md",
   };
   
@@ -140,11 +140,11 @@ export const m1video = [
   ];
   
   export const m2discussion = {
-    title: "summa-General",
+    title: "summa-general",
     link: "https://discord.com/channels/877252171983360072/1195123409739337779",
   };
   
   export const m2report = {
-    title: "Summa V-B Audit Report",
+    title: "Summa Vb Audit Report",
     link: "https://github.com/zBlock-2/audit-report/blob/main/versionB.md",
   };
