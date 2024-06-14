@@ -35,10 +35,14 @@ function ZBlock1Modules() {
           <br />
         </div> */}
         {/* Right Column */}
+
         <div className="col-span-2">
-          <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold mb-10">
+          <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold lg:mb-10">
             zBlock1
           </h1>
+          <div className="lg:hidden">
+            <img src="./zblock1.svg" className="h-[15rem]"></img>
+          </div>
           <p className="text-gray-600 text-justify">
             In June 2023, we conducted a Zero Knowledge Auditing cohort that
             kicked off with foundational concepts in complexity theory and Zero
@@ -61,12 +65,15 @@ function ZBlock1Modules() {
             cohort.
           </p>
         </div>
+        <div className="col-span-1 sm:hidden">
+          <img src="./zblock1.svg" className="h-[30rem]"></img>
+        </div>
       </div>
 
       <h1 className="text-4xl font-bold text-center mt-40" id="module-1">
         Module 1
       </h1>
-      <div className="grid grid-cols-2 gap-12 mt-12">
+      <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
         <div className="col-span-1">
           <h1 id="session1" className="text-2xl font-bold">
             Sessions
@@ -112,7 +119,7 @@ function ZBlock1Modules() {
       <h1 className="text-4xl font-bold text-center mt-40" id="module-2">
         Module 2
       </h1>
-      <div className="grid grid-cols-2 gap-12 mt-12">
+      <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
         <div className="col-span-1">
           <h1 className="text-2xl font-bold">Sessions</h1>
           <VideoSection videoData={m2video} />
@@ -137,7 +144,7 @@ function ZBlock1Modules() {
       <h1 className="text-4xl font-bold text-center mt-40" id="module-3">
         Module 3
       </h1>
-      <div className="grid grid-cols-2 gap-12 mt-12">
+      <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
         <div className="col-span-1">
           <h1 className="text-2xl font-bold">Sessions</h1>
           <VideoSection videoData={m3video} />
