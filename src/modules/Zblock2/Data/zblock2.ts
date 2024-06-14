@@ -7,112 +7,85 @@ export const m1video = [
     },
     {
       id: "TAVTzLSI-gU",
-      title: "Summa | Proof of Solvency",
+      title: "Proof of Solvency",
       description: "",
       link: "https://drive.google.com/drive/folders/1SSzHwvOgab5FnlgmEjoyKuNiNYlh3Lgw?usp=drive_link",
     },
     {
       id: "9iCJ6GqHpo4",
-      title: "Summa | Protocol overview",
+      title: "Protocol overview",
       description: "",
       link: "https://drive.google.com/drive/folders/1N3vDwrGifY_tbKbhKvTB22oRaAUTd7vo?usp=drive_link",
     },
     {
       id: "KpGlTC7fNVk",
-      title: "Summa | Protocol Intro to Summa",
+      title: "Protocol Intro to Summa",
       description: "",
       link: "https://drive.google.com/drive/folders/13HYik8qTA4uYvYBed8iFPjhojS_eCVRJ?usp=drive_link",
     },
     {
       id: "0ZfUKTc_qoE",
-      title: "Summa | Protocol Codebase Overview 1",
+      title: "Halo2 by Resident Nullity",
       description: "",
       link: "https://drive.google.com/drive/folders/1XnXCzF9X9_zz8RidKy24-QuVvLqYi-4p?usp=drive_link",
     },
     {
       id: "8S3SRg0DPlk",
-      title: "Summa | Protocol Codebase Overview 1",
+      title: "Protocol Codebase Overview 1",
       description: "",
       link: "https://drive.google.com/drive/folders/1RehDHoexuhUrzjDqGfDFAZTiyBDN2gfR?usp=drive_link",
     },
     {
       id: "p6wGvJ4VPck",
-      title: "Summa Protocol | Codebase Overview 2",
+      title: "Codebase Overview 2",
       description: "",
       link: "https://drive.google.com/drive/folders/13IVDe0YMt72imiLJSv1l4wavzKR1beBs?usp=drive_link",
     },
     {
       id: "cjed5gnrj_I",
-      title: "Summa Protocol | Smart Contract Overview",
+      title: "Smart Contract Overview",
       description: "",
       link: "https://drive.google.com/drive/folders/15MbHe6C_WhZenre933Rl2Z38Ce9idh7_?usp=drive_link",
     },
     {
-      id: "QvJyQeCdmaU",
-      title: "Taxonomy of ZK Vulnerabilities by rkm0959",
-      description: "",
-      link: "https://drive.google.com/drive/folders/1B1h-Y3wRYZhfGKJJdxDthBxE7uQQtbgn?usp=drive_link",
-    },
-    {
       id: "jSEvIHmAke0",
-      title: "yAcademy | Office Hours",
+      title: "Office Hours",
       description: "",
       link: "https://drive.google.com/drive/folders/1R2uQ6M7AeUH8VvLOJRTUVZUpkY1Y6x9a?usp=drive_link",
     },
     {
       id: "9RTjdn8NElk",
-      title: "yAcademy Resident talk | Proof of Solvency by Nagu",
+      title: "Proof of Solvency Resident by Nagu",
       description: "",
       link: "https://drive.google.com/drive/folders/1T438y7TJa4e7BJSdCWdM5QvkbZ9Z8zxa?usp=drive_link",
     },
     {
       id: "6uDpGraAeEQ",
-      title: "yAcademy | Office Hours II",
+      title: "Office Hours II",
       description: "",
       link: "https://drive.google.com/drive/folders/19U-xYiJ4NZL95DPQmzX2Ysjql86w1RUs?usp=drive_link",
     },
   ];
-  
-  export const m1exercises = [
+  export const m1guestLectures = [
     {
-      title: "Karp Reduction",
-      link: "https://sweltering-bill-f01.notion.site/Module-1-Karp-reduction-exercise-d4176a28430240a59f60ca7c00ac021c",
-    },
-    {
-      title: "Circom Quiz and Puzzle",
-      link: "https://sweltering-bill-f01.notion.site/Module-1-Circom-Quiz-Puzzle-a526f578861644798108ba0ee7573f77",
+      id: "QvJyQeCdmaU",
+      title: "Taxonomy of ZK Vulnerabilities by rkm0959",
+      description: "GUEST",
+      link: "https://drive.google.com/drive/folders/1B1h-Y3wRYZhfGKJJdxDthBxE7uQQtbgn?usp=drive_link",
     },
   ];
   
-  export const m1notes = {
-    title: "Circom startup kit",
-    link: "https://docs.google.com/presentation/d/1ebxaq9fsBJxOEpEnqaj9vYloNQT82DkAgp2d5JJRI_k/edit?usp=sharing",
-  };
-  
   export const m1discussion = {
-    title: "module-1-zk-context",
-    link: "https://discord.gg/5vVJ7hY",
+    title: "Summa-General",
+    link: "https://discord.com/channels/877252171983360072/1195123409739337779",
+  };
+
+  export const m1report = {
+    title: "Summa V-A Audit Report",
+    link: "https://github.com/zBlock-2/audit-report/blob/main/versionA.md",
   };
   
   export const m2video = [
-    {
-      id: "2bEiNcfkxBQ",
-      title: "Guest Speaker | KZG",
-      description: "",
-      link: "https://drive.google.com/drive/folders/1aD0u0fPyRkmZFya3sq80n0WCWi66RByX?usp=drive_link",
-    },
-    {
-      id: "yZ9NJ9x75iY",
-      title: "Guest Speaker | Axiom V2",
-      description: "",
-      link: "https://drive.google.com/drive/folders/1iQVFMVLLD5VqQjHUZiRurwzvBrV7E2sY?usp=drive_link",
-    },
-    {
-      id: "KLq3dwlu2xw",
-      title: "Guest Speaker | PowdrVM",
-      description: "",
-      link: "https://drive.google.com/drive/folders/15BMnPT3rf5mmUdD8qCCtQ4fP98AaOuU2?usp=drive_link",
-    },
     {
       id: "c3yQigJO3kc",
       title: "Mathematical Foundations of the Polynomial Interpolation Approach",
@@ -127,15 +100,36 @@ export const m1video = [
     },
     {
       id: "o5H81gi6n-o",
-      title: "Summa | V2 Smart Contract Overview",
+      title: "V2 Smart Contract Overview",
       description: "",
       link: "https://drive.google.com/drive/folders/187RrwO4cVWJyS-lqjWVWC0Iso9gdtxq5?usp=drive_link",
     },
     {
       id: "nWM6oHo1-Ek",
-      title: "Summa | Vb Prover-side Code Walkthrough",
+      title: "Vb Prover-side Code Walkthrough",
       description: "",
       link: "https://drive.google.com/drive/folders/1EXA-JiOYQWIioK8UpkmyG_9e-I6zXiOj?usp=drive_link",
+    }, 
+  ];
+  
+  export const m2guestLectures = [
+    {
+      id: "2bEiNcfkxBQ",
+      title: "KZG",
+      description: "",
+      link: "https://drive.google.com/drive/folders/1aD0u0fPyRkmZFya3sq80n0WCWi66RByX?usp=drive_link",
+    },
+    {
+      id: "yZ9NJ9x75iY",
+      title: "Axiom V2",
+      description: "",
+      link: "https://drive.google.com/drive/folders/1iQVFMVLLD5VqQjHUZiRurwzvBrV7E2sY?usp=drive_link",
+    },
+    {
+      id: "KLq3dwlu2xw",
+      title: "PowdrVM",
+      description: "",
+      link: "https://drive.google.com/drive/folders/15BMnPT3rf5mmUdD8qCCtQ4fP98AaOuU2?usp=drive_link",
     },
     {
       id: "3ie2yZ7CT5A",
@@ -143,30 +137,14 @@ export const m1video = [
       description: "",
       link: "https://drive.google.com/drive/folders/18DvFxBapDtksfDGePirIJmQcicmMTwva?usp=drive_link",
     },
-    
-  ];
-  
-  export const m2guestLectures = [
-    {
-      id: "h_ie8eaPNcM",
-      title: "Pairing with Lev Soukhanov (Ethereum Foundation)",
-      link: "https://docs.google.com/presentation/d/1BsA9RhgxBY8H4E8uOvesLptBIL11MaILOEyipfjSXso/edit#slide=id.p",
-      description: "",
-    },
-    {
-      id: "Hz_XHfxunck",
-      title: "Groth16 with Yin Tong (Geometry)",
-      link: "https://docs.google.com/presentation/d/1vYUiNYv8PRI2SVEKC3uz54I475d79E9XxvCWwkC7kPQ/edit#slide=id.p",
-      description: "",
-    },
   ];
   
   export const m2discussion = {
-    title: "module-2-rln-audit",
-    link: "https://discord.gg/Y8ccpfcYmq",
+    title: "summa-General",
+    link: "https://discord.com/channels/877252171983360072/1195123409739337779",
   };
   
   export const m2report = {
-    title: "RLN Audit Reports",
-    link: "https://github.com/zBlock-1/RLN-audit-report",
+    title: "Summa V-B Audit Report",
+    link: "https://github.com/zBlock-2/audit-report/blob/main/versionB.md",
   };
