@@ -1,19 +1,13 @@
-import { m1video, m1exercises, m1notes, m1discussion } from "../Data/zblock1";
+import { m1video,m1guestLectures, m1discussion, m1report } from "../Data/zblock2";
 import {
   m2discussion,
   m2guestLectures,
   m2video,
   m2report,
-} from "../Data/zblock1";
-import {
-  m3exercises,
-  m3video,
-  m3report,
-  m3guestLectures,
-} from "../Data/zblock1";
-import { Discussion, VideoSection, Report, Notes } from "../utils";
+} from "../Data/zblock2";
+import { Discussion, VideoSection, Report } from "../utils";
 
-function ZBlock1Modules() {
+function ZBlock2Modules() {
   return (
     <>
       <div className="grid grid-cols-3 sm:flex sm:flex-col gap-20">
@@ -38,7 +32,7 @@ function ZBlock1Modules() {
 
         <div className="col-span-2">
           <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold lg:mb-10">
-            zBlock1
+            zBlock2
           </h1>
           <div className="lg:hidden">
             <img src="./zblock1.svg" className="h-[15rem]"></img>
@@ -79,39 +73,19 @@ function ZBlock1Modules() {
             Sessions
           </h1>
           <VideoSection videoData={m1video} />
+        </div>
+        <div className="col-span-1">
+          <h1 className="text-2xl font-bold">Guest Lectures</h1>
+          <VideoSection videoData={m1guestLectures} />
           <h1 id="discussion1" className="text-2xl font-bold mb-4">
             Discussion
           </h1>
           <div className="flex flex-row gap-4 p-4 items-center rounded-2xl bg-[#E8FFF8]">
             <Discussion chat={m1discussion} />
           </div>
-        </div>
-        <div className="col-span-1">
-          <h1 id="materials1" className="text-2xl font-bold mt-8 mb-4">
-            Supplimentary Materials
-          </h1>
+          <h1 className="text-2xl font-bold my-4">Audit Reports</h1>
           <div className="flex flex-row gap-4 p-4 items-center rounded-2xl bg-[#E8FFF8]">
-            <Notes notes={m1notes} />
-          </div>
-          <h1 id="exercise1" className="text-2xl font-bold my-4">
-            Exercises
-          </h1>
-          <div className="flex flex-col  gap-6 p-6 rounded-2xl bg-[#E8FFF8]">
-            {m1exercises.map((exercise) => {
-              return (
-                <div className="flex flex-row gap-4 items-center">
-                  <img src="/exercise.svg" className="h-[2rem]" />
-                  <a
-                    href={exercise.link}
-                    className="hover:underline font-bold"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {exercise.title}
-                  </a>
-                </div>
-              );
-            })}
+            <Report report={m1report} />
           </div>
         </div>
       </div>
@@ -140,53 +114,8 @@ function ZBlock1Modules() {
           </div>
         </div>
       </div>
-
-      <h1 className="text-4xl font-bold text-center mt-40" id="module-3">
-        Module 3
-      </h1>
-      <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
-        <div className="col-span-1">
-          <h1 className="text-2xl font-bold">Sessions</h1>
-          <VideoSection videoData={m3video} />
-          <h1 className="text-2xl font-bold">Guest Lectures</h1>
-          <VideoSection videoData={m3guestLectures} />
-        </div>
-        <div className="col-span-1">
-          <h1 id="discussion1" className="text-2xl font-bold mb-4">
-            Discussion
-          </h1>
-          <div className="flex flex-row gap-4 p-4 items-center rounded-2xl  bg-[#E8FFF8]">
-            <Discussion chat={m2discussion} />
-          </div>
-          <h1 id="exercise1" className="text-2xl font-bold my-4">
-            Exercises
-          </h1>
-          <div className="flex flex-col  gap-6 p-6 rounded-2xl  bg-[#E8FFF8]">
-            {m3exercises.map((exercise) => {
-              return (
-                <div className="flex flex-row gap-4 items-center">
-                  <img src="/exercise.svg" className="h-[2rem]" />
-                  <a
-                    href={exercise.link}
-                    className="hover:underline font-bold"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {exercise.title}
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-
-          <h1 className="text-2xl font-bold my-4">Audit Reports</h1>
-          <div className="flex flex-row gap-4 p-4 items-center rounded-2xl  bg-[#E8FFF8]">
-            <Report report={m3report} />
-          </div>
-        </div>
-      </div>
     </>
   );
 }
 
-export default ZBlock1Modules;
+export default ZBlock2Modules;
