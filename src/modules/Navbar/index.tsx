@@ -36,8 +36,8 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         <a href="https://reports.yacademy.dev/" target="_blank">
           <Button text={"Reports"} />
         </a>
-        <a href="https://research.yacademy.dev/" target="_blank">
-          <Button text={"Research"} />
+        <a href="https://proxies.yacademy.dev/" target="_blank">
+          <Button text={"Proxies Research"} />
         </a>
         <a href="https://blog.yacademy.dev/" target="_blank">
           <Button text={"Blog"} />
@@ -108,9 +108,9 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             Reports
           </button>
         </a>
-        <a href="https://research.yacademy.dev/">
+        <a href="https://proxies.yacademy.dev/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
-            Research
+            Proxies Research
           </button>
         </a>
         <a href="https://blog.yacademy.dev/">

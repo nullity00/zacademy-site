@@ -5,6 +5,9 @@ function Stats() {
         <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold">
           Fellowship Programs
         </h1>
+        <h2 className="text-semibold text-xl mt-8">
+          General structure and Guidelines
+        </h2>
         <p className="text-zinc-500">
           <br />
           yAcademy fellowships are not introductory programs to software

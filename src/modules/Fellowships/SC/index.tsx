@@ -8,9 +8,9 @@ function SmartContracts() {
       </h1>
 
       <div className="grid grid-cols-2 sm:flex sm:flex-col gap-16 my-4">
-        <div className="col-span-1 flex flex-col gap-8 justify-center">
+        <div className="col-span-1 flex flex-col gap-8">
           <div>
-            <h2 className="text-semibold text-xl mb-4">
+            <h2 className="text-semibold text-xl my-4">
               A typical week in the fellowship program
             </h2>
             <p className="text-zinc-500">
@@ -46,14 +46,22 @@ function SmartContracts() {
             </p>
           </div>
           <p>
-            Before applying, please make sure you have read and understood the
-            general structure and guidelines of our programs.
+            Before applying, please make sure you have read and understood the{" "}
+            <button
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="text-green-600 font-bold hover:underline duration-700"
+            >
+              general structure and guidelines of our programs
+            </button>
+            .
           </p>
-          <Link to={"/fellowships"}>
+          <a href="https://tally.so/r/nG9o6e" target="_blank">
             <button className="w-1/2 px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               Apply
             </button>
-          </Link>
+          </a>
         </div>
         <div className="col-span-1 m-4">
           <div className="grid grid-cols-2 gap-2">
@@ -74,6 +82,11 @@ function SmartContracts() {
               </p>
             </div>
           </div>
+          <p className="my-4">
+            There is a requirement to{" "}
+            <span className="text-green-600 font-bold">stake some ETH</span> to
+            ensure engagement and participation from all fellows.
+          </p>
           <img src="/contract-window.svg" className="py-4 h-[32rem]" />
         </div>
       </div>

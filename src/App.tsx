@@ -8,11 +8,26 @@ import ContactPage from "./pages/Contact";
 import ZblockPage from "./pages/Zblock";
 import Zbloc2kPage from "./pages/Zblock2";
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const pathName = useLocation();
+
+  // This effect runs whenever the path name changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathName]);
+
+  return null;
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col bg-white text-black w-full font-default">
         {menuOpen ? (
           <MobileNavbar setMenuOpen={setMenuOpen} />
