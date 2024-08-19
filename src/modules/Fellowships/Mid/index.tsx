@@ -26,7 +26,7 @@ export default function Summary() {
       setCurrentTab("Zero Knowledge Fellowship");
     } else if (window.location.href.split('#')[1] === "guest-auditor") {
       setCurrentTab("Guest Auditor Program");
-    } else {
+    } else if (window.location.href.split('#')[1] === "smart-contract") {
       setCurrentTab("Smart Contract Fellowship");
     }
   }, [window.location.href]);

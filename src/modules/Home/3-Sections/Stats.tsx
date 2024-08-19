@@ -1,7 +1,7 @@
 const data = [
   { number: "100+", text: "Fellows" },
   { number: "15+", text: "Projects secured" },
-  { number: "6", text: "Cohorts" },
+  { number: "8", text: "Cohorts" },
 ];
 
 export default function Stats() {

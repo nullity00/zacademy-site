@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { m1video, m1exercises, m1notes, m1discussion } from "../Data/zblock1";
 import {
   m2discussion,
@@ -16,57 +17,66 @@ import { Discussion, VideoSection, Report, Notes } from "../utils";
 function ZBlock1Modules() {
   return (
     <>
-      <div className="grid grid-cols-3 sm:flex sm:flex-col gap-20">
-        {/* <div className="bg-green-100 p-10 rounded-lg shadow-md col-span-1">
-          <h1 id="session1" className="text-2xl font-semibold mb-8">
-            In a nutshell
-          </h1>
-          <a href="#module-1" className="text-gray-600 hover:underline">
-            Module 1 : ZK in Context
-          </a>
-          <br />
-          <a href="#module-2" className="text-gray-600 hover:underline">
-            Module 2 : Rate Limiting Nullifier
-          </a>
-          <br />
-          <a href="#module-3" className="text-gray-600 hover:underline">
-            Module 3 : Spartan ECDSA
-          </a>
-          <br />
-        </div> */}
-        {/* Right Column */}
-
-        <div className="col-span-2">
+      <div className="grid lg:grid-cols-5 gap-8">
+        <div className="lg:col-span-2 mt-28">
+          <img src="./pse-personae-yac.svg" className="h-[24rem] " />
+        </div>
+        <div className="lg:col-span-3">
           <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold lg:mb-10">
             zBlock1
           </h1>
-          <div className="lg:hidden">
-            <img src="./zblock1.svg" className="h-[15rem]"></img>
-          </div>
           <p className="text-gray-600 text-justify">
             In June 2023, we conducted a Zero Knowledge Auditing cohort that
             kicked off with foundational concepts in complexity theory and Zero
             Knowledge Proofs (ZKPs). Participants engaged in hands-on exercises
             with Circom, a tool for creating ZKP circuits, to deepen their
             understanding.
-            <br /> <br /> The cohort's first audit project was the Rate Limiting
-            Nullifier (RLN) by the Privacy & Scaling Explorations team. RLN is a
-            zk-library/protocol designed to prevent spam in permissionless
-            environments while preserving user anonymity. This audit took 15
-            days to complete. <br /> <br /> Following a retreat session, we
-            proceeded to audit Spartan ECDSA's codebase, a library for proving
-            and verifying ECDSA (secp256k1) signatures in zero-knowledge. This
-            audit spanned 16 days. Both RLN and Spartan ECDSA utilized Circom
-            circuits. <br /> <br /> During the cohort, fellows also developed
-            new Circom tooling and enhanced the usability of existing tools by
-            improving the documentation and code for projects like Picus and
-            Ecne. At the end of the audit, outstanding fellows were awarded for
-            their exceptional contributions and performance throughout the
-            cohort.
+            <br />
+            <br />
+            The cohort's first audit project was the Rate Limiting Nullifier
+            (RLN) by the{" "}
+            <a
+              href="https://pse.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 font-bold hover:underline duration-700"
+            >
+              Privacy & Scaling Explorations
+            </a>{" "}
+            group of the EF. The{" "}
+            <a
+              href="https://github.com/Rate-Limiting-Nullifier"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 font-bold hover:underline duration-700"
+            >
+              Rate Limiting Nullifier
+            </a>{" "}
+            project is a zk-library/protocol designed to prevent spam in
+            permissionless environments while preserving user anonymity. This
+            audit took 15 days to complete.
+            <br />
+            <br />
+            Following a retreat session, we proceeded to audit Spartan ECDSA's
+            codebase, a library for proving and verifying ECDSA (secp256k1)
+            signatures in zero-knowledge. This audit spanned 16 days. Both RLN
+            and Spartan ECDSA utilized Circom circuits.
+            <br />
+            <br />
+            During the cohort, fellows also developed new Circom tooling and
+            enhanced the usability of existing tools by improving the
+            documentation and code for projects like Picus and Ecne. At the end
+            of the audit, outstanding fellows were awarded for their exceptional
+            contributions and performance throughout the cohort.
           </p>
-        </div>
-        <div className="col-span-1 sm:hidden">
-          <img src="./zblock1.svg" className="h-[30rem]"></img>
+          <p className="mt-4 font-semibold">
+            See also :{" "}
+            <Link to={"/zBlock2"}>
+              <button className="text-green-600 hover:underline duration-700">
+                zBlock2
+              </button>
+            </Link>
+          </p>
         </div>
       </div>
 
