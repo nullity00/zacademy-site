@@ -16,24 +16,6 @@ function ZBlock2Modules() {
   return (
     <>
       <div className="grid grid-cols-3 sm:flex sm:flex-col gap-20">
-        {/* <div className="bg-green-100 p-10 rounded-lg shadow-md col-span-1">
-          <h1 id="session1" className="text-2xl font-semibold mb-8">
-            In a nutshell
-          </h1>
-          <a href="#module-1" className="text-gray-600 hover:underline">
-            Module 1 : ZK in Context
-          </a>
-          <br />
-          <a href="#module-2" className="text-gray-600 hover:underline">
-            Module 2 : Rate Limiting Nullifier
-          </a>
-          <br />
-          <a href="#module-3" className="text-gray-600 hover:underline">
-            Module 3 : Spartan ECDSA
-          </a>
-          <br />
-        </div> */}
-        {/* Right Column */}
 
         <div className="col-span-2">
           <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold lg:mb-10">

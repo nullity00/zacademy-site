@@ -1,11 +1,20 @@
 import { alumni_residents } from "../Data/alumni-residents";
-import { residents } from "../Data/residents";
+import { sc_residents } from "../Data/smart-contract-residents";
+import { zk_residents } from "../Data/zk-residents";
 import { Template } from "../1-Core";
 
-export function Resident() {
+export function SmartContractResident() {
   return (
     <>
-      <Template title={"Resident"} members={residents} />
+      <Template title={"Smart Contract Residents"} members={sc_residents} />
+    </>
+  );
+}
+
+export function ZKResident() {
+  return (
+    <>
+      <Template title={"ZK Residents"} members={zk_residents} />
     </>
   );
 }
@@ -13,7 +22,7 @@ export function Resident() {
 export function ResidentAlumni() {
   return (
     <>
-      <Template title={"Alumni Resident"} members={alumni_residents} />
+      <Template title={"Alumni Residents"} members={alumni_residents} />
     </>
   );
 }

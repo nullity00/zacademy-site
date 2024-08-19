@@ -25,7 +25,7 @@ export function Template({
 }) {
   const randoms = generateUniqueRandoms(25);
   return (
-    <div className="my-16">
+    <div className="my-24">
       <h1 className="text-4xl mb-12 sm:text-center">{title}</h1>
       <ul
         role="list"
