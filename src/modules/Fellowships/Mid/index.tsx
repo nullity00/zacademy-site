@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import SmartContracts from "../SC";
 import ZK from "../ZK";
 import GuestAuditor from "../GA";
@@ -20,25 +21,19 @@ const tabs = [
 export default function Summary() {
   const [currentTab, setCurrentTab] = useState("Smart Contract Fellowship");
 
+  useEffect(() => {
+    if (window.location.href.split('#')[1] === "zero-knowledge") {
+      setCurrentTab("Zero Knowledge Fellowship");
+    } else if (window.location.href.split('#')[1] === "guest-auditor") {
+      setCurrentTab("Guest Auditor Program");
+    } else {
+      setCurrentTab("Smart Contract Fellowship");
+    }
+  }, [window.location.href]);
+
   return (
     <div className="my-16">
       <h2 className="text-3xl font-bold text-center mb-8">Choose your hard</h2>
-
-      {/* <div className="lg:hidden">
-        <label htmlFor="tabs" className="sr-only">
-          Select a tab
-        </label>
-        <select
-          id="tabs"
-          name="tabs"
-          className="block w-full rounded-md border-gray-300 p-3 focus:border-indigo-500 focus:ring-indigo-500"
-          defaultValue={"Team Members"}
-        >
-          {tabs.map((tab) => (
-            <option key={tab.name}>{tab.name}</option>
-          ))}
-        </select>
-      </div> */}
       <div className="sm:block">
         <div className="bg-emeraldlight bg-opacity-5 rounded-xl">
           <nav className="-mb-px grid grid-cols-3" aria-label="Tabs">
