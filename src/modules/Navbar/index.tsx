@@ -33,13 +33,13 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         <Link to={"/members"}>
           <Button text={"Members"} />
         </Link>
-        <a href="https://reports.zAcademy.dev/">
+        <a href="https://reports.yacademy.dev/" target="_blank">
           <Button text={"Reports"} />
         </a>
-        <a href="https://research.zAcademy.dev/">
+        <a href="https://research.yacademy.dev/" target="_blank">
           <Button text={"Research"} />
         </a>
-        <a href="https://blog.zAcademy.dev/">
+        <a href="https://blog.yacademy.dev/" target="_blank">
           <Button text={"Blog"} />
         </a>
         <Link to={"/fellowships"}>
@@ -103,17 +103,17 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             Members
           </button>
         </Link>
-        <a href="https://reports.zAcademy.dev/">
+        <a href="https://reports.yacademy.dev/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Reports
           </button>
         </a>
-        <a href="https://research.zAcademy.dev/">
+        <a href="https://research.yacademy.dev/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Research
           </button>
         </a>
-        <a href="https://blog.zAcademy.dev/">
+        <a href="https://blog.yacademy.dev/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Blog
           </button>
@@ -150,7 +150,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             zBlock2
           </button>
         </Link>
-        
+
         <Link to={"/contact-us"}>
           <button
             onClick={() => {

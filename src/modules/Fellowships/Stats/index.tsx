@@ -1,4 +1,3 @@
-
 function Stats() {
   return (
     <div className="pt-16 grid grid-cols-2 sm:flex sm:flex-col gap-4">
@@ -8,7 +7,7 @@ function Stats() {
         </h1>
         <p className="text-zinc-500">
           <br />
-          zAcademy fellowships are not introductory programs to software
+          yAcademy fellowships are not introductory programs to software
           auditing. They are trial-by-fire programs where you will audit
           pre-production or in-production codebases, and the stakes are very
           high.
@@ -33,7 +32,7 @@ function Stats() {
               You are not required to have experience in auditing in the Web3
               space, but you must be proficient in software engineering
               generally and have published proof of technical work. Please note
-              that as the zAcademy fellowship continues getting more popular,
+              that as the yAcademy fellowship continues getting more popular,
               the competition to join our programs is increasing with each
               iteration.
             </li>
@@ -47,7 +46,6 @@ function Stats() {
           Our stats for the first 5 Smart Contract fellowships
         </p>
       </div>
-      
     </div>
   );
 }

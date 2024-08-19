@@ -17,7 +17,8 @@ function HeroSection() {
       <div className="grid grid-cols-5 md:mx-6 sm:flex sm:flex-col sm:mx-6 sm:text-center">
         <div className="col-span-2 flex flex-col lg:py-4 lg:my-40 md:my-32">
           <h1 className="lg:leading-normal lg:text-7xl md:text-4xl sm:text-4xl font-bold">
-            Your Shield in the <GradientWord>ZK</GradientWord> realm
+            We do <GradientWord>Solidity</GradientWord> <br /> &{" "}
+            <GradientWord>ZK</GradientWord> Audits
           </h1>
           <h2 className="text-left sm:text-center my-4 text-zinc-500">
             Don’t let a soundness bug rekt your protocol

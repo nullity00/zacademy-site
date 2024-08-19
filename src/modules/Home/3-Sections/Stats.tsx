@@ -10,7 +10,7 @@ export default function Stats() {
       <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 md:my-16 sm:my-16 mx-6 text-justify sm:text-center sm:flex sm:flex-col sm:align-center">
         <div className="col-span-1 sm:flex sm:flex-col sm:align-center">
           <h1 className="lg:text-5xl text-3xl font-bold lg:leading-normal">
-            Ama<span className="text-emeraldlight">zzz</span>ing Stats
+            Amazing Stats
           </h1>
           <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6 mt-12">
             {data.map((item) => {
@@ -36,7 +36,7 @@ export default function Stats() {
             prominent positions within other firms or embark on independent
             ventures, generating a cascading wave of excellence.
           </p>
-          <a href="https://reports.zAcademy.dev/">
+          <a href="https://reports.yacademy.dev/" target="_blank">
             <button className="px-8 py-3 rounded-xl sm:w-full text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               View Reports
             </button>

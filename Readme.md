@@ -1,6 +1,6 @@
-# Landing Page for zAcademy
+# Landing Page for yAcademy
 
-https://zacademy.dev 
+https://yacademy.dev
 
 ## Setup
 
