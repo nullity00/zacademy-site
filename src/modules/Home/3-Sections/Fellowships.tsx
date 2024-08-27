@@ -12,7 +12,7 @@ export default function Fellowships() {
         </div>
         <div className="col-span-1 sm:flex sm:flex-col sm:align-center">
           <h1 className="lg:text-5xl text-3xl font-bold lg:leading-normal">
-            Our Fellowships: <br /> The Trial by Fire Saga{" "}
+            Fellowships: <br /> Trial by Fire
           </h1>
           <img
             src="/hands on shield.svg"

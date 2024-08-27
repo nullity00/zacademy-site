@@ -39,7 +39,7 @@ export default function ClientSection() {
     <section className="bg-white m-6">
       <div className="lg:mx-40">
         <h2 className="lg:text-5xl text-3xl font-bold mb-10 sm:text-center">
-          Our Clients
+          Clients
         </h2>
         <div className="grid grid-cols-3 gap-4">
           {clients.map((client, index) => (

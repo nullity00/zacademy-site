@@ -23,11 +23,18 @@ function HeroSection() {
           <h2 className="text-left sm:text-center my-4 text-zinc-500">
             Don’t let a soundness bug rekt your protocol
           </h2>
-          <Link to={"/fellowships"}>
-            <button className="px-8 py-3 rounded-xl sm:w-full text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-              Explore Fellowships
-            </button>
-          </Link>
+          <div className="flex flex-row gap-2">
+            <Link to={"/fellowships"}>
+              <button className="px-8 py-3 rounded-xl sm:w-full text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+                Explore Fellowships
+              </button>
+            </Link>
+            <Link to={"/services"}>
+              <button className="px-8 py-3 rounded-xl sm:w-full text-md text-darkgreen text-bold border-emeraldlight border-2 border-opacity-25 hover:border-opacity-50 hover:text-emeraldlight duration-700">
+                Get an Audit
+              </button>
+            </Link>
+          </div>
         </div>
         <div className="col-span-3 my-20 sm:hidden">
           <Lottie animationData={logo} />

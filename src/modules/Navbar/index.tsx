@@ -37,20 +37,17 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
           <Button text={"Reports"} />
         </a>
         <a href="https://proxies.yacademy.dev/" target="_blank">
-          <Button text={"Proxies Research"} />
-        </a>
-        <a href="https://blog.yacademy.dev/" target="_blank">
-          <Button text={"Blog"} />
+          <Button text={"Research"} />
         </a>
         <Link to={"/fellowships"}>
           <Button text={"Fellowships"} />
         </Link>
-        <Link to={"/zBlock1"}>
-          <Button text={"zBlock1"} />
+        <Link to={"/services"}>
+          <Button text={"Services"} />
         </Link>
-        <Link to={"/zBlock2"}>
+        {/* <Link to={"/zBlock2"}>
           <Button text={"zBlock2"} />
-        </Link>
+        </Link> */}
         <Link to={"/contact-us"}>
           <button className="px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
             Contact Us
