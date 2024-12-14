@@ -36,7 +36,7 @@ export function Template({
             <div className="flex flex-row sm:flex-col items-center gap-x-6">
               <img
                 className="h-11 w-11 sm:h-9 sm:w-9 sm:mb-2 rounded-full items-center"
-                src={randoms[i].toString() + ".png"}
+                src={"members/" + randoms[i].toString() + ".png"}
                 alt={person.name}
               />
               <div>

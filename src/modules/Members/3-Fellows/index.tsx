@@ -102,8 +102,8 @@ export function Template({
                 }
                 src={
                   person.promotedToResident
-                    ? "resident.png"
-                    : randoms[i].toString() + ".png"
+                    ? "members/resident.png"
+                    : "members/" + randoms[i].toString() + ".png"
                 }
                 alt="Core"
               />

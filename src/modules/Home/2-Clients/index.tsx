@@ -1,3 +1,5 @@
+import OrbitingCircles from "../../../components/ui/orbiting-circles";
+
 export default function ClientSection() {
   const clients = [
     { name: "Yearn", logo: "yearn.png", website: "https://yearn.fi/" },
@@ -41,7 +43,7 @@ export default function ClientSection() {
         <h2 className="lg:text-5xl text-3xl font-bold mb-10 sm:text-center">
           Clients
         </h2>
-        <div className="grid grid-cols-3 gap-4">
+        {/* <div className="grid grid-cols-3 gap-4">
           {clients.map((client, index) => (
             <div
               key={index}
@@ -71,8 +73,58 @@ export default function ClientSection() {
               </a>
             </div>
           ))}
-        </div>
+        </div> */}
+        <OrbitingCirclesDemo />
       </div>
     </section>
   );
 }
+
+function OrbitingCirclesDemo() {
+  return (
+    <div className="relative flex h-[90vh] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
+      {/* Inner Circles */}
+      <OrbitingCircles
+        className="size-[30px] border-none bg-transparent"
+        duration={20}
+        delay={20}
+        radius={80}
+      >
+        <Icons.gitHub />
+      </OrbitingCircles>
+      <OrbitingCircles
+        className="size-[30px] border-none bg-transparent"
+        duration={20}
+        delay={10}
+        radius={80}
+      >
+        <Icons.gitHub />
+      </OrbitingCircles>
+
+      {/* Outer Circles (reverse) */}
+      <OrbitingCircles
+        className="size-[50px] border-none bg-transparent"
+        radius={250}
+        duration={20}
+        reverse
+      >
+        <Icons.gitHub />
+      </OrbitingCircles>
+      <OrbitingCircles
+        className="size-[50px] border-none bg-transparent"
+        radius={190}
+        duration={20}
+        delay={20}
+        reverse
+      >
+        <Icons.gitHub />
+      </OrbitingCircles>
+    </div>
+  );
+}
+
+const Icons = {
+  gitHub: () => (
+    <img src="./bulb.svg"/>
+  ),
+};
