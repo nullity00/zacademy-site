@@ -34,7 +34,7 @@ export default function Fellows() {
           </p>
           <Link to={"/contact-us"}>
             <button className="px-8 py-3 rounded-xl sm:w-full text-md sm:text-sm text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-              Get a Quote
+              Start your Audit
             </button>
           </Link>
         </div>
