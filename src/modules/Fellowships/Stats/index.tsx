@@ -44,7 +44,7 @@ function Stats() {
         </p>
       </div>
       <div className="col-span-1 flex flex-col">
-        <img src="/stats-pie.svg" className="h-[30rem]" />
+        <img src="./illustrations/stats-pie.svg" className="h-[30rem]" />
         <p className="text-zinc-300 italic text-center">
           Our stats for the first 5 Smart Contract fellowships
         </p>
