@@ -10,6 +10,7 @@ import Zbloc2kPage from "./pages/Zblock2";
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import ServicesPage from "./pages/Services";
 
 function ScrollToTop() {
   const pathName = useLocation();
@@ -38,6 +39,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/fellowships" element={<FellowshipsPage />} />
           <Route path="/members" element={<MembersPage />} />
+          <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
           <Route path="/zBlock1" element={<ZblockPage />} />
           <Route path="/zBlock2" element={<Zbloc2kPage />} />

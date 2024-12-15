@@ -277,7 +277,7 @@ export const fellows = [
   },
   {
     name: "teddav",
-    github: "https://github.com/teddav/",
+    github: "https://github.com/teddav",
     isResident: true,
   },
   {

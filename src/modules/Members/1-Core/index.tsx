@@ -8,8 +8,8 @@ export const generateUniqueRandoms = (n: number) => {
     let j = new Date().getMilliseconds() % (i + 1);
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
-  console.log("I'm being called");
-  
+  // console.log("I'm being called");
+
   return arr;
 };
 
@@ -21,6 +21,7 @@ export function Template({
   members: {
     name: string;
     twitter: string;
+    avatar?: string;
   }[];
 }) {
   const randoms = generateUniqueRandoms(25);
@@ -36,14 +37,22 @@ export function Template({
             <div className="flex flex-row sm:flex-col items-center gap-x-6">
               <img
                 className="h-11 w-11 sm:h-9 sm:w-9 sm:mb-2 rounded-full items-center"
-                src={"members/" + randoms[i].toString() + ".png"}
+                src={
+                  person.avatar
+                    ? person.avatar
+                    : "members/" + randoms[i].toString() + ".png"
+                }
                 alt={person.name}
               />
               <div>
-                <h3 className="sm:text-xs font-semibold text-gray-900 hover:underline">
-                  <a href={person.twitter} target="_blank">
-                    {person.name}
-                  </a>
+                <h3 className={`sm:text-xs font-semibold text-gray-900 ` + (person.twitter.length > 0 && "hover:underline")}>
+                  {person.twitter.length > 0 ? (
+                    <a href={person.twitter} target="_blank">
+                      {person.name}
+                    </a>
+                  ) : (
+                    person.name
+                  )}
                 </h3>
               </div>
             </div>

@@ -25,54 +25,42 @@ export default function Footer() {
   return (
     <div className="h-full flex flex-col bg-gray-100 justify-center p-16 items-center relative">
       <img src="/logo.svg" className="h-[5rem]" />
-      <div className="text-md text-zinc-600 flex flex-row flex-wrap justify-center gap-6 my-10 z-20">
+      {/* <div className="text-md text-zinc-600 flex flex-row flex-wrap justify-center gap-6 my-10 z-20">
         <Icon
           src="twitter.png"
           alt="Twitter"
-          href="https://twitter.com/yAcademyDAO"
+          href="https://twitter.com/electisec"
           width="20"
         />
         <Icon
           src="github.png"
           alt="Github"
-          href="https://github.com/yAcademy-Residents"
+          href="https://github.com/electisec"
           width="25"
         />
-        {/* <Icon
-          src="discord.png"
-          alt="Discord"
-          href="https://discord.gg/xd4j4pePPm"
-          width="25"
-        />
-        <Icon
-          src="gitcoin.png"
-          alt="Gitcoin"
-          href="https://explorer.gitcoin.co/#/round/10/0x2871742b184633f8dc8546c6301cbc209945033e/0x2871742b184633f8dc8546c6301cbc209945033e-229"
-          width="25"
-        />
-        <Icon
-          src="snapshot.png"
-          alt="Snapshot"
-          href="https://snapshot.org/"
-          width="25"
-        /> */}
         <Icon
           src="youtube.png"
           alt="Youtube"
-          href="https://www.youtube.com/@yAcademyDAO"
+          href="https://www.youtube.com/@electisec"
           width="25"
         />
-      </div>
+      </div> */}
       <DockDemo />
-      <p className="text-sm text-zinc-500 text-center">
-        Copyright © 2024 yAcademy. All rights reserved.
+      <p className="text-sm text-zinc-500 mt-10 text-center">
+        Copyright © 2024 Electisec. All rights reserved.
       </p>
     </div>
   );
 }
 
 import React from "react";
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
+import {
+  CalendarIcon,
+  HomeIcon,
+  MailIcon,
+  PencilIcon,
+  BookCopyIcon,
+} from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -110,8 +98,8 @@ const Icons = {
   ),
   youtube: (props: IconProps) => (
     <svg
-      width="32px"
-      height="32px"
+      width="40px"
+      height="40px"
       viewBox="0 0 32 32"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
@@ -131,31 +119,61 @@ const Icons = {
   ),
 };
 
+{
+  /* <Icon
+          src="discord.png"
+          alt="Discord"
+          href="https://discord.gg/xd4j4pePPm"
+          width="25"
+        />
+        <Icon
+          src="gitcoin.png"
+          alt="Gitcoin"
+          href="https://explorer.gitcoin.co/#/round/10/0x2871742b184633f8dc8546c6301cbc209945033e/0x2871742b184633f8dc8546c6301cbc209945033e-229"
+          width="25"
+        />
+        <Icon
+          src="snapshot.png"
+          alt="Snapshot"
+          href="https://snapshot.org/"
+          width="25"
+        /> */
+}
+
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
+    {
+      href: "https://reports.electisec.tech",
+      icon: BookCopyIcon,
+      label: "Reports",
+    },
+    { href: "https://blog.electisec.tech", icon: PencilIcon, label: "Blog" },
   ],
   contact: {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://www.github.com/electisec",
         icon: Icons.github,
       },
-      LinkedIn: {
-        name: "LinkedIn",
-        url: "#",
-        icon: Icons.linkedin,
-      },
+      // LinkedIn: {
+      //   name: "LinkedIn",
+      //   url: "#",
+      //   icon: Icons.linkedin,
+      // },
       X: {
         name: "X",
-        url: "#",
+        url: "https://www.x.com/electisec",
         icon: Icons.x,
+      },
+      youtube: {
+        name: "YouTube",
+        url: "https://www.youtube.com/@electisec",
+        icon: Icons.youtube,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:hello@electisec.tech",
         icon: Icons.email,
       },
     },
@@ -173,10 +191,11 @@ export function DockDemo() {
                 <TooltipTrigger asChild>
                   <a
                     href={item.href}
+                    target="_blank"
                     aria-label={item.label}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
+                      "size-12 rounded-full"
                     )}
                   >
                     <item.icon className="size-4" />
@@ -195,10 +214,11 @@ export function DockDemo() {
                 <TooltipTrigger asChild>
                   <a
                     href={social.url}
+                    target="_blank"
                     aria-label={social.name}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
+                      "size-12 rounded-full"
                     )}
                   >
                     <social.icon className="size-4" />
@@ -215,4 +235,3 @@ export function DockDemo() {
     </div>
   );
 }
-

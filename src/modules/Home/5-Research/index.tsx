@@ -8,37 +8,33 @@ import AvatarCircles from "@/components/ui/avatar-circles";
 
 const avatars = [
   {
-    imageUrl: "https://pbs.twimg.com/profile_images/1516347654502072325/sSUEYvD7_400x400.jpg",
+    imageUrl:
+      "https://pbs.twimg.com/profile_images/1516347654502072325/sSUEYvD7_400x400.jpg",
     profileUrl: "https://github.com/dillionverma",
-  }
+  },
 ];
 
 interface Item {
   name: string;
   description: string;
-
 }
 
 let notifications = [
   {
     name: "Binius : Hardware Accelerated SNARKs",
     description: "Blog Post",
-
   },
   {
     name: "Proxies Research",
     description: "Magic UI",
-
   },
   {
     name: "year 2024",
     description: "Magic UI",
-
   },
   {
     name: "zblock1 & zblock2",
     description: "Magic UI",
-
   },
 ];
 
@@ -109,7 +105,7 @@ export default function Research() {
             contract fellowship.
             <br />
           </p>
-          <a target="_blank" href="https://blog.yacademy.dev/">
+          <a target="_blank" href="https://blog.electisec.dev/">
             <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               Read Blogs
             </button>

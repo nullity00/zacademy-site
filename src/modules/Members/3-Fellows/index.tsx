@@ -77,6 +77,7 @@ export function Template({
   fellows: {
     name: string;
     url: string;
+    avatar?: string;
     promotedToResident: boolean;
   }[];
 }) {
@@ -101,7 +102,11 @@ export function Template({
                   }`
                 }
                 src={
-                  person.promotedToResident
+                  person.avatar || person.url.includes("github")
+                    ? person.avatar ||
+                      "https://avatars.githubusercontent.com/" +
+                        person.url.split("github.com")[1]
+                    : person.promotedToResident
                     ? "members/resident.png"
                     : "members/" + randoms[i].toString() + ".png"
                 }

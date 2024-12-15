@@ -1,6 +1,6 @@
-# Landing Page for yAcademy
+# Landing Page for Electisec
 
-https://yacademy.dev
+https://electisec.dev
 
 ## Setup
 

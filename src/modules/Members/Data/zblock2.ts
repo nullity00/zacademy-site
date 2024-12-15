@@ -42,7 +42,7 @@ export const zblock2 = [
   },
   {
     name: "teddav",
-    url: "https://github.com/teddav/",
+    url: "https://github.com/teddav",
     promotedToResident: true,
   },
   {

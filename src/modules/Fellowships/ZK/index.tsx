@@ -160,7 +160,7 @@ function ZK() {
             <br />
             <br />
             If you have questions you want to ask before applying, you may
-            contact at: zk AT yacademy DOT dev
+            contact at: zk AT electisec DOT dev
           </p>
 
           {/* <img src="/rust-window.svg" className="py-4 h-[32rem]" /> */}

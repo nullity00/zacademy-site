@@ -6,7 +6,7 @@ const reviews = [
   {
     name: "Manifold Finance",
     logo: "manifold.svg",
-    body: "We would like to especially thank the team at @yAcademyDAO for their audit which you can find here. We give them a 9/10. Logarithmic scale.",
+    body: "We would like to especially thank the team at @electisec for their audit which you can find here. We give them a 9/10. Logarithmic scale.",
   },
   {
     name: "Temple DAO",
@@ -16,7 +16,7 @@ const reviews = [
   {
     name: "Get Protocol",
     logo: "get-protocol.svg",
-    body: "Amazing stuff, really pleased with it. Very solid work from yourself and the yAcademy troop.",
+    body: "Amazing stuff, really pleased with it. Very solid work from yourself and the electisec troop.",
   },
   {
     name: "Curve Finance",

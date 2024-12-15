@@ -10,7 +10,7 @@ function Stats() {
         </h2>
         <p className="text-zinc-500">
           <br />
-          yAcademy fellowships are not introductory programs to software
+          Electisec fellowships are not introductory programs to software
           auditing. They are trial-by-fire programs where you will audit
           pre-production or in-production codebases, and the stakes are very
           high.
@@ -35,7 +35,7 @@ function Stats() {
               You are not required to have experience in auditing in the Web3
               space, but you must be proficient in software engineering
               generally and have published proof of technical work. Please note
-              that as the yAcademy fellowship continues getting more popular,
+              that as the Electisec fellowship continues getting more popular,
               the competition to join our programs is increasing with each
               iteration.
             </li>

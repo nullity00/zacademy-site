@@ -30,7 +30,7 @@ export default function MembersPage() {
             className={
               "rounded-full items-center h-19 w-11 sm:h-8 sm:w-9 sm:mb-2"
             }
-            src={"resident.png"}
+            src={"./members/resident.png"}
             alt="resident"
           />
           <h3
