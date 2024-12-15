@@ -107,8 +107,8 @@ export function Template({
                       "https://avatars.githubusercontent.com/" +
                         person.url.split("github.com")[1]
                     : person.promotedToResident
-                    ? "members/resident.png"
-                    : "members/" + randoms[i].toString() + ".png"
+                    ? "./members/resident.png"
+                    : "./members/" + randoms[i].toString() + ".png"
                 }
                 alt="Core"
               />

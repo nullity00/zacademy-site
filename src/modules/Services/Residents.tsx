@@ -1,3 +1,4 @@
+import HyperText from "@/components/ui/hyper-text";
 import { Link } from "react-router-dom";
 
 export default function Residents() {
@@ -5,9 +6,10 @@ export default function Residents() {
     <>
       <div className="grid grid-cols-2 sm:flex sm:flex-col sm:align-center gap-4 lg:my-32 my-16 mx-6 text-justify sm:text-center">
         <div className="col-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col">
-          <h1 className="lg:text-5xl text-3xl font-bold lg:leading-normal">
-            Audit By Residents
-          </h1>
+          <HyperText
+            className="lg:text-5xl text-3xl font-bold sm:text-center"
+            text="Audit By Residents"
+          />
           <img
             src="./illustrations/code.svg"
             className="h-[10rem] mt-8 md:hidden lg:hidden"

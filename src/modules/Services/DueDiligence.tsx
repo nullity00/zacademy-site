@@ -1,3 +1,5 @@
+import HyperText from "@/components/ui/hyper-text";
+
 const data = [
   { number: "100+", text: "Fellows" },
   { number: "15+", text: "Projects secured" },
@@ -9,9 +11,10 @@ export default function DueDiligence() {
     <>
       <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 md:my-16 sm:my-16 mx-6 text-justify sm:text-center sm:flex sm:flex-col sm:align-center">
         <div className="col-span-1 sm:flex sm:flex-col sm:align-center">
-          <h1 className="lg:text-5xl text-3xl font-bold lg:leading-normal">
-            Due Diligence Report
-          </h1>
+          <HyperText
+            className="lg:text-5xl text-3xl font-bold sm:text-center"
+            text="Due Diligence Report"
+          />
           {/* <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6 mt-12">
             {data.map((item) => {
               return (
