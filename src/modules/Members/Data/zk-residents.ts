@@ -1,5 +1,5 @@
 export const zk_residents = [
-  { name: "nullity", twitter: "https://github.com/nullity00" },
+  { name: "nullity", twitter: "https://github.com/nullity00", avatar: "https://avatars.githubusercontent.com/u/70228821" },
   { name: "Nagu", twitter: "https://github.com/thogiti" },
   { name: "Oba", twitter: "https://github.com/obatirou" },
   { name: "parsley", twitter: "https://github.com/bbresearcher" },

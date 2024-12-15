@@ -54,7 +54,7 @@ function GuestAuditor() {
           </Link> */}
         </div>
         <div className="col-span-1 justify-self-center">
-          <img src="/fist-bump.svg" className="py-4 h-[20rem]" />
+          <img src="./illustrations/fist-bump.svg" className="py-4 h-[20rem]" />
         </div>
       </div>
     </div>

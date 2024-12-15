@@ -87,7 +87,7 @@ function SmartContracts() {
             <span className="text-green-600 font-bold">stake some ETH</span> to
             ensure engagement and participation from all fellows.
           </p>
-          <img src="/contract-window.svg" className="py-4 h-[32rem]" />
+          <img src="./illustrations/contract-window.svg" className="py-4 h-[32rem]" />
         </div>
       </div>
     </div>

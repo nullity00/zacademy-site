@@ -8,7 +8,7 @@ import AvatarCircles from "@/components/ui/avatar-circles";
 
 const avatars = [
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/16860528",
+    imageUrl: "https://pbs.twimg.com/profile_images/1516347654502072325/sSUEYvD7_400x400.jpg",
     profileUrl: "https://github.com/dillionverma",
   }
 ];
