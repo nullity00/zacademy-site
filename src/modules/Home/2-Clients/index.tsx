@@ -1,4 +1,10 @@
 import OrbitingCircles from "../../../components/ui/orbiting-circles";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const clients = [
   { name: "Exit10", logo: "exit10.png", website: "https://exit10.com/" },
@@ -61,7 +67,6 @@ const clients = [
 
 export default function ClientSection() {
 
-
   return (
     <section className="bg-white m-6">
       <div className="lg:mx-40">
@@ -76,7 +81,8 @@ export default function ClientSection() {
 
 function OrbitingCirclesDemo() {
   return (
-    <div className="relative flex h-[100vh] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
+    <div className="relative flex h-[100vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
+      <TooltipProvider>
       {clients.slice(0, 4).map((client, i) => (
       <OrbitingCircles
         className={"size-[30px] border-none bg-transparent hover:cursor-pointer"}
@@ -84,10 +90,21 @@ function OrbitingCirclesDemo() {
         delay={10 * i}
         radius={50}
       >
-        <a href={client.website} target="_blank">
-            <img src={"./clients/" + client.logo} />
-          </a>
-      </OrbitingCircles>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href={client.website}
+              aria-label={client.name}
+              target="_blank"
+            >
+              <img src={"./clients/" + client.logo} />
+            </a>
+          </TooltipTrigger>
+        <TooltipContent>
+      <p>{client.name}</p>
+    </TooltipContent>
+    </Tooltip>
+    </OrbitingCircles>
       ))}
       {clients.slice(4, 10).map((client, i) => (
       <OrbitingCircles
@@ -96,9 +113,20 @@ function OrbitingCirclesDemo() {
         delay={10 * i}
         radius={140}
         >
-          <a href={client.website} target="_blank">
-            <img src={"./clients/" + client.logo} />
-          </a>
+          <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href={client.website}
+              aria-label={client.name}
+              target="_blank"
+            >
+              <img src={"./clients/" + client.logo} />
+            </a>
+          </TooltipTrigger>
+        <TooltipContent>
+      <p>{client.name}</p>
+    </TooltipContent>
+    </Tooltip>
       </OrbitingCircles>
       ))}
       {clients.slice(10, 17).map((client, i) => (
@@ -106,25 +134,48 @@ function OrbitingCirclesDemo() {
         className={"size-[55px] border-none bg-transparent hover:cursor-pointer"}
         duration={70}
         delay={10 * i}
-        radius={230}
+        radius={200}
       >
-        <a href={client.website} target="_blank">
-            <img src={"./clients/" + client.logo} />
-          </a>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href={client.website}
+              aria-label={client.name}
+              target="_blank"
+            >
+              <img src={"./clients/" + client.logo} />
+            </a>
+          </TooltipTrigger>
+        <TooltipContent>
+      <p>{client.name}</p>
+    </TooltipContent>
+    </Tooltip>
       </OrbitingCircles>
       ))}
       {clients.slice(17, 27).map((client, i) => (
       <OrbitingCircles
-        className={"size-[70px] border-none bg-transparent hover:cursor-pointer"}
+        className={"size-[65px] border-none bg-transparent hover:cursor-pointer"}
         duration={90}
         delay={10 * i}
-        radius={320}
+        radius={300}
       >
-        <a href={client.website} target="_blank">
-            <img src={"./clients/" + client.logo} />
-          </a>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href={client.website}
+              aria-label={client.name}
+              target="_blank"
+            >
+              <img src={"./clients/" + client.logo} />
+            </a>
+          </TooltipTrigger>
+        <TooltipContent>
+      <p>{client.name}</p>
+    </TooltipContent>
+    </Tooltip>
       </OrbitingCircles>
       ))}
+        </TooltipProvider>
     </div>
   );
 }

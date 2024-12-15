@@ -28,7 +28,7 @@ export default function Stats() {
           </div>
 
           <img
-            src="/track record.svg"
+            src="./illustrations/track record.svg"
             className="h-[12rem] mt-8 sm:ml-0 lg:hidden md:hidden"
           />
           <p className="text-zinc-500 text-justify mb-8">
@@ -43,7 +43,7 @@ export default function Stats() {
           </a>
         </div>
         <div className="col-span-1 ml-20 sm:hidden">
-          <img src="/track record.svg" className="h-[20rem] mt-8" />
+          <img src="./illustrations/track record.svg" className="h-[20rem] mt-8" />
         </div>
       </div>
     </>
