@@ -26,15 +26,15 @@ let notifications = [
   },
   {
     name: "Proxies Research",
-    description: "Magic UI",
+    description: "",
   },
   {
     name: "year 2024",
-    description: "Magic UI",
+    description: "I",
   },
   {
     name: "zblock1 & zblock2",
-    description: "Magic UI",
+    description: "I",
   },
 ];
 
@@ -74,7 +74,7 @@ export function AnimatedListDemo({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative flex h-[42vh] w-full flex-col p-6 overflow-hidden",
+        "relative flex h-[275px] w-full flex-col p-6 overflow-hidden",
         className
       )}
     >
