@@ -47,7 +47,7 @@ export default function Footer() {
       </div> */}
       <DockDemo />
       <p className="text-sm text-zinc-500 mt-10 text-center">
-        Copyright © 2024 Electisec. All rights reserved.
+        Copyright © 2025 Electisec. All rights reserved.
       </p>
     </div>
   );
