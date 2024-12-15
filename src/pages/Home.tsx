@@ -6,6 +6,7 @@ import Partners from "../modules/Home/2-Clients";
 import Feedback from "../modules/Home/4-Feedback";
 import Services from "@/modules/Home/3-Services";
 import Fellowships from "@/modules/Home/4-Fellowships";
+import Research from "@/modules/Home/5-Research";
 
 export default function HomePage() {
   return (
@@ -14,7 +15,7 @@ export default function HomePage() {
       <Partners />
       <Services />
       <Fellowships />
-      {/* <Sections /> */}
+      <Research />
       <Feedback />
       <PartnerUp />
       <Footer />

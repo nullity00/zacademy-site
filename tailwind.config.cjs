@@ -66,7 +66,7 @@ module.exports = {
   		},
   		fontFamily: {
   			default: [
-  				'Inter',
+  				'Space Grotesk',
   				'sans-serif'
   			]
   		},

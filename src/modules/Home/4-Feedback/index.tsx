@@ -1,13 +1,12 @@
 import { cn } from "@/lib/utils";
 import Marquee from "../../../components/ui/marquee";
-
+import HyperText from "@/components/ui/hyper-text";
 
 const reviews = [
   {
     name: "Manifold Finance",
     logo: "manifold.svg",
     body: "We would like to especially thank the team at @yAcademyDAO for their audit which you can find here. We give them a 9/10. Logarithmic scale.",
-
   },
   {
     name: "Temple DAO",
@@ -22,32 +21,30 @@ const reviews = [
   {
     name: "Curve Finance",
     logo: "curve.svg",
-    body: "yAudit looked at our core infra in a very timely manner, made availabilities based on the urgency of our needs and helped deliver a very good audit of a codebase even though they were not the first external reviewers."
+    body: "yAudit looked at our core infra in a very timely manner, made availabilities based on the urgency of our needs and helped deliver a very good audit of a codebase even though they were not the first external reviewers.",
   },
   {
     name: "Strike",
     logo: "strike.svg",
-    body: "Great audit partners and overall experience from scoping to audits. yAudits is currently securing Stryke's mainnet contracts as well as partners building on Stryke's underlying tech."
+    body: "Great audit partners and overall experience from scoping to audits. yAudits is currently securing Stryke's mainnet contracts as well as partners building on Stryke's underlying tech.",
   },
   {
     name: "vfat",
     logo: "vfat.svg",
-    body: "yAudit have been a pleasure to work with, digging deep into the codebase and discovering edge cases. Will be staying with them!"
-  }
-
-]
+    body: "yAudit have been a pleasure to work with, digging deep into the codebase and discovering edge cases. Will be staying with them!",
+  },
+];
 
 export default function Feedback() {
-
   return (
     <section className="bg-white m-6">
       <div className="lg:mx-40">
-        <h2 className="lg:text-5xl text-3xl font-bold mb-10 sm:text-center">
-          Feedback
-        </h2>
+        <HyperText
+          className="lg:text-5xl text-3xl font-bold mb-16 sm:text-center"
+          text="Feedback"
+        />
         <MarqueeDemo />
       </div>
-      
     </section>
   );
 }
@@ -70,11 +67,17 @@ const ReviewCard = ({
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={"./clients/" + logo} />
+        <img
+          className="rounded-full"
+          width="32"
+          height="32"
+          alt=""
+          src={"./clients/" + logo}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}

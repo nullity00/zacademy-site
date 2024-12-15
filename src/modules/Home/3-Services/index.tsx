@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import Marquee from "@/components/ui/marquee";
+import HyperText from "@/components/ui/hyper-text";
 
 const features = [
   {
@@ -15,7 +16,7 @@ const features = [
       <>
         <img
           src="./illustrations/hands out of laptop.svg"
-          className="h-[10rem] absolute top-0 left-12 origin-top transition-all blur-[2px] ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
+          className="h-[10rem] absolute top-0 left-12 origin-top transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />{" "}
       </>
     ),
@@ -31,7 +32,7 @@ const features = [
       <>
         <img
           src="./illustrations/hands on shield.svg"
-          className="h-[12rem] absolute left-24 top-0 origin-top transition-all blur-[2px] ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
+          className="h-[12rem] absolute left-24 top-0 origin-top transition-all  ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
       </>
     ),
@@ -47,7 +48,7 @@ const features = [
       <>
         <img
           src="./illustrations/code.svg"
-          className="h-[8rem] absolute left-10 top-10 origin-top transition-all blur-[1px] ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
+          className="h-[8rem] absolute left-10 top-10 origin-top transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
       </>
     ),
@@ -57,9 +58,10 @@ const features = [
 export default function Services() {
   return (
     <div className="h-full flex flex-col my-32 md:my-16 sm:my-16 sm:mx-6 md:mx-6 lg:mx-48 ">
-      <h2 className="lg:text-5xl text-3xl font-bold mb-16 sm:text-center">
-        Auditing Services
-      </h2>
+      <HyperText
+        className="lg:text-5xl text-3xl font-bold mb-16 sm:text-center"
+        text="Auditing Services"
+      />
       <BentoGrid>
         {features.map((feature, idx) => (
           <BentoCard key={idx} {...feature} />
