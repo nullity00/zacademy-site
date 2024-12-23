@@ -90,7 +90,7 @@ export function AnimatedListDemo({ className }: { className?: string }) {
 export default function Research() {
   return (
     <>
-      <div className="grid grid-cols-2 sm:flex sm:flex-col sm:align-center gap-4 lg:my-32 my-16 lg:mx-48 text-justify sm:text-center">
+      <div className="grid grid-cols-2 sm:flex sm:flex-col sm:align-center gap-4 lg:my-16 my-16 lg:mx-48 text-justify sm:text-center">
         <div className="col-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col">
           <HyperText
             className="lg:text-5xl text-3xl font-bold sm:text-center"

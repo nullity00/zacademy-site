@@ -17,7 +17,7 @@ export default function HomePage() {
       <Fellowships />
       <Research />
       <Feedback />
-      <PartnerUp />
+      {/* <PartnerUp /> */}
       <Footer />
     </>
   );
