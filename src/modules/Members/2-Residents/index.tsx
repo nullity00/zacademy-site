@@ -6,7 +6,7 @@ import { Template } from "../1-Core";
 export function SmartContractResident() {
   return (
     <>
-      <Template title={"Smart Contract Residents"} members={sc_residents} />
+      <Template title={"Smart Contract Auditors"} members={sc_residents} />
     </>
   );
 }
@@ -14,7 +14,7 @@ export function SmartContractResident() {
 export function ZKResident() {
   return (
     <>
-      <Template title={"ZK Residents"} members={zk_residents} />
+      <Template title={"ZK Auditors"} members={zk_residents} />
     </>
   );
 }

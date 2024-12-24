@@ -30,7 +30,7 @@ function HeroSection() {
               </button>
             </Link> */}
             <Link to={"/services"}>
-              <button className="px-24 py-3 rounded-xl sm:w-full text-md text-darkgreen text-bold border-emeraldlight border-2 border-opacity-25 hover:border-opacity-50 hover:text-emeraldlight duration-700">
+              <button className="px-16 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
                 Get an Audit
               </button>
             </Link>

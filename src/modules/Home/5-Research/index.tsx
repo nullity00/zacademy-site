@@ -99,15 +99,12 @@ export default function Research() {
           <AnimatedListDemo className="mt-8 md:hidden lg:hidden" />
           <p className="text-zinc-500 mb-8 sm:text-justify">
             <br />
-            In the realm of Innovation, we take pride in our forward-thinking
-            approach, evident in our incubation of novel programs such as the ZK
-            auditing fellowship, following the successful model of our smart
-            contract fellowship.
+            We dig, that's what we do - always.
             <br />
           </p>
           <a target="_blank" href="https://blog.electisec.dev/">
             <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-              Read Blogs
+              Technical Blog Posts
             </button>
           </a>
         </div>

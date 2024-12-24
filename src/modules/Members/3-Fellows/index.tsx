@@ -84,7 +84,10 @@ export function Template({
   const randoms = generateUniqueRandoms(25);
   return (
     <div className="my-24">
-      <h2 className="text-xl font-bold sm:text-center mb-12">{title}</h2>
+      <h2 className="text-xl font-bold mb-4 sm:text-center">{title}</h2>
+      <h3 className={"sm:text-xs italic text-gray-900 hover:underline mb-12"}>
+        * promoted to Resident
+      </h3>
       <ul
         role="list"
         className="grid lg:grid-cols-3 grid-cols-2 lg:gap-x-72 md:gap-x-32 gap-y-12"

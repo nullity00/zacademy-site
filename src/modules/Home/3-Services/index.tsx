@@ -1,14 +1,10 @@
-import { cn } from "@/lib/utils";
-
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
-import Marquee from "@/components/ui/marquee";
 import HyperText from "@/components/ui/hyper-text";
 
 const features = [
   {
-    name: "Audit by Residents",
-    description:
-      "Trio of Top-tier blockchain security specialists who don't just find vulnerabilities—they predict them before they're born",
+    name: "ZK & Smart Contract Expertise",
+    description: "Get your codebase audited by our top-tier resident auditors",
     href: "/services",
     cta: "Learn more",
     className: "col-span-4 lg:col-span-2",
@@ -16,15 +12,15 @@ const features = [
       <>
         <img
           src="./illustrations/hands out of laptop.svg"
-          className="h-[10rem] absolute top-0 left-12 origin-top transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
+          className="h-[10rem] mx-auto transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />{" "}
       </>
     ),
   },
   {
-    name: "Audit by Fellows",
+    name: "Boosted Audits",
     description:
-      "Squad of 25 rising cybersecurity talents brings fresh perspectives and innovative approaches to blockchain security",
+      "Get 50 additional eyes on your codebase by scheduling your audit during our highly competitive fellowships",
     href: "/services",
     cta: "Learn more",
     className: "col-span-4 lg:col-span-2",
@@ -32,23 +28,23 @@ const features = [
       <>
         <img
           src="./illustrations/hands on shield.svg"
-          className="h-[12rem] absolute left-24 top-0 origin-top transition-all  ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
+          className="h-[12rem] mx-auto transition-all  ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
       </>
     ),
   },
   {
-    name: "Due Diligence report",
+    name: "Consulting",
     description:
-      "Seasoned experts deliver exhaustive architectural and code reviews",
+      "We help you do your due diligence on blockchain projects and protocols: architecture, design, code, algorithms, and approach.",
     href: "/services",
     cta: "Learn more",
-    className: "col-span-4 lg:col-span-1",
+    className: "col-span-4 lg:col-span-2",
     background: (
       <>
         <img
           src="./illustrations/code.svg"
-          className="h-[8rem] absolute left-10 top-10 origin-top transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
+          className="h-[8rem] mx-auto mt-8 transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
       </>
     ),

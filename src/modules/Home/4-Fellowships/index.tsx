@@ -15,7 +15,7 @@ const features = [
       <>
         <img
           src="./illustrations/sc.svg"
-          className="h-[10rem] absolute top-0 left-10 origin-top transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
+          className="h-[10rem] mx-auto transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
       </>
     ),
@@ -31,7 +31,7 @@ const features = [
       <>
         <img
           src="./illustrations/rust-window.svg"
-          className="h-[12rem] absolute left-0 top-0 origin-top transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
+          className="h-[12rem] mx-auto transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
       </>
     ),
@@ -42,12 +42,12 @@ const features = [
       "Seasoned experts deliver exhaustive architectural and code reviews",
     href: "/fellowships",
     cta: "Apply",
-    className: "col-span-4 lg:col-span-1",
+    className: "col-span-4 lg:col-span-2",
     background: (
       <>
         <img
           src="./illustrations/fist-bump.svg"
-          className="h-[8rem] absolute left-0 top-0 origin-top transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
+          className="h-[8rem] mx-auto transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
       </>
     ),

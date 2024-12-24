@@ -14,7 +14,7 @@ export default function Fellows() {
         <div className="col-span-1 sm:flex sm:flex-col sm:align-center">
           <HyperText
             className="lg:text-5xl text-3xl font-bold sm:text-center"
-            text="Audit By Fellows"
+            text="Boosted Audits"
           />
           <img
             src="./illustrations/hands on shield.svg"
@@ -22,15 +22,8 @@ export default function Fellows() {
           />
           <p className="text-zinc-500 mb-8">
             <br />
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
-            inventore rerum aspernatur corporis, deserunt, itaque optio quis
-            beatae numquam aperiam enim suscipit laboriosam sit, unde quas!
-            <br />
-            <br />
-            Quas, porro. Ex, deserunt! Lorem ipsum dolor sit, amet consectetur
-            adipisicing elit. Quasi et eius tempore alias quae temporibus modi,
-            ipsam voluptates, ducimus labore, doloremque cum minus maiores ipsa.
-            Corporis accusantium rerum beatae necessitatibus.
+            Get 50 additional eyes on your codebase by scheduling your audit
+            during our highly competitive fellowships
           </p>
           <Link to={"/contact-us"}>
             <button className="px-8 py-3 rounded-xl sm:w-full text-md sm:text-sm text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">

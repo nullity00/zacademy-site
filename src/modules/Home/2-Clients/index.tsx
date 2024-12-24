@@ -161,22 +161,22 @@ function EllipticalOrbitDemo() {
   // Optimized orbit configurations with all logos included
   const orbits = [
     {
-      radiusX: 550,
-      radiusY: 300,
+      radiusX: 450,
+      radiusY: 180,
       items: clients.slice(0, 10),  // More logos in outer orbit
       duration: 45,
       startAngle: 30
     },
     {
-      radiusX: 400,
-      radiusY: 200,
+      radiusX: 350,
+      radiusY: 130,
       items: clients.slice(10, 18),  // Middle orbit
       duration: 60,
       startAngle: 0
     },
     {
-      radiusX: 250,
-      radiusY: 100,
+      radiusX: 200,
+      radiusY: 70,
       items: clients.slice(18),  // Rest of the logos in inner orbit
       duration: 70,
       startAngle: -30
@@ -184,15 +184,15 @@ function EllipticalOrbitDemo() {
   ];
 
   return (
-    <div className="relative flex h-[70vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
+    <div className="relative flex h-[75vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
       {/* Center Logo */}
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+      {/* <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
         <img 
           src="/favicon.ico" 
           alt="Company Logo" 
-          className="h-16 object-contain"  // Larger size for center logo
+          className="h-8 object-contain"  // Larger size for center logo
         />
-      </div>
+      </div> */}
       {/* SVG Orbit Paths */}
       <svg 
         className="absolute top-0 left-0 w-full h-full"
@@ -244,7 +244,7 @@ function EllipticalOrbitDemo() {
                       <img 
                         src={`./clients/${client.logo}`} 
                         alt={client.name}
-                        className="w-12 h-12 object-contain hover:scale-110 transition-transform"
+                        className="w-10 h-10 object-contain hover:scale-110 transition-transform"
                       />
                     </a>
                   </TooltipTrigger>

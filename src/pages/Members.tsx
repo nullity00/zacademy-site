@@ -25,7 +25,7 @@ export default function MembersPage() {
         <ZKResident />
         <ResidentAlumni />
         <h1 className="text-4xl mb-8 sm:text-center">Fellows</h1>
-        <div className="flex flex-row sm:flex-col items-center gap-x-6">
+        {/* <div className="flex flex-row sm:flex-col items-center gap-x-6">
           <img
             className={
               "rounded-full items-center h-19 w-11 sm:h-8 sm:w-9 sm:mb-2"
@@ -38,7 +38,7 @@ export default function MembersPage() {
           >
             Promoted to Resident*
           </h3>
-        </div>
+        </div> */}
         <ZBlock2 />
         <ZBlock1 />
         <Block6 />

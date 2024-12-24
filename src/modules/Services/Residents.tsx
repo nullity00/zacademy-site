@@ -5,26 +5,27 @@ export default function Residents() {
   return (
     <>
       <div className="grid grid-cols-2 sm:flex sm:flex-col sm:align-center gap-4 lg:my-32 my-16 mx-6 text-justify sm:text-center">
-        <div className="col-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col">
+        <div className="mr-10 sm:mr-0 sm:flex sm:flex-col">
           <HyperText
             className="lg:text-5xl text-3xl font-bold sm:text-center"
-            text="Audit By Residents"
+            text="ZK & Smart Contract Expertise"
           />
           <img
             src="./illustrations/code.svg"
-            className="h-[10rem] mt-8 md:hidden lg:hidden"
+            className="h-[8rem] mt-8 md:hidden lg:hidden"
           />
           <p className="text-zinc-500 mb-8 sm:text-justify">
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-            consequuntur impedit fugiat quo vitae? Doloremque dolores delectus
-            aperiam eaque odio placeat ipsa officia, error cum. Ad aspernatur
-            accusamus quae molestias?
+            Get your codebase audited by our top-tier resident auditors
+            <br /><br />
+            → Get your codebase audited by our top-tier resident auditors
             <br />
+            → Get your codebase audited by our top-tier resident auditors.
+            <br /><br />
           </p>
           <Link to={"/contact-us"}>
             <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-              Contact Us
+              Get an Audit
             </button>
           </Link>
         </div>
