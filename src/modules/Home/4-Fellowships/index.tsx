@@ -59,7 +59,7 @@ export default function Fellowships() {
     <div className="h-full flex flex-col my-16 md:my-16 sm:my-16 sm:mx-6 md:mx-6 lg:mx-48 ">
       <HyperText
         className="lg:text-5xl text-3xl font-bold mb-16 sm:text-center"
-        text="Trial By Fire Fellowships"
+        text="Fellowship Programs"
       />
       <BentoGrid>
         {features.map((feature, idx) => (
