@@ -1,5 +1,5 @@
+import { useEffect, useRef } from 'react';
 import HyperText from "@/components/ui/hyper-text";
-import OrbitingCircles from "../../../components/ui/orbiting-circles";
 import {
   Tooltip,
   TooltipContent,
@@ -82,124 +82,180 @@ const clients = [
   { name: "Yearn", logo: "yearn.svg", website: "https://yearn.fi/" },
 ];
 
+interface EllipticalOrbitProps {
+  children: React.ReactNode;
+  radiusX: number;
+  radiusY: number;
+  duration?: number;
+  delay?: number;
+  className?: string;
+}
+
+const EllipticalOrbit: React.FC<EllipticalOrbitProps> = ({ 
+  children, 
+  radiusX,
+  radiusY,
+  duration = 60,
+  delay = 0,
+  className = ""
+}) => {
+  const elementRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number>();
+  
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+    
+    let startTime: number | null = null;
+    
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = ((elapsed / (duration * 1000)) % 1) * 2 * Math.PI;
+      const angle = progress + (delay * Math.PI / 180);
+      
+      const x = Math.cos(angle) * radiusX;
+      const y = Math.sin(angle) * radiusY;
+      
+      element.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+      animationRef.current = requestAnimationFrame(animate);
+    };
+    
+    animationRef.current = requestAnimationFrame(animate);
+    
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [radiusX, radiusY, duration, delay]);
+  
+  return (
+    <div 
+      ref={elementRef}
+      className={`absolute left-1/2 top-1/2 ${className}`}
+      style={{ 
+        willChange: 'transform',
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
 export default function ClientSection() {
   return (
     <section className="bg-white m-6">
       <div className="lg:mx-40">
         <HyperText
-          className="lg:text-5xl text-3xl font-bold mb-16 sm:text-center"
+          className="lg:text-5xl text-3xl font-bold sm:text-center"
           text="Clients"
         />
-        <OrbitingCirclesDemo />
+        <EllipticalOrbitDemo />
       </div>
     </section>
   );
 }
 
-function OrbitingCirclesDemo() {
+function EllipticalOrbitDemo() {
+  // Optimized orbit configurations with all logos included
+  const orbits = [
+    {
+      radiusX: 550,
+      radiusY: 300,
+      items: clients.slice(0, 10),  // More logos in outer orbit
+      duration: 45,
+      startAngle: 30
+    },
+    {
+      radiusX: 400,
+      radiusY: 200,
+      items: clients.slice(10, 18),  // Middle orbit
+      duration: 60,
+      startAngle: 0
+    },
+    {
+      radiusX: 250,
+      radiusY: 100,
+      items: clients.slice(18),  // Rest of the logos in inner orbit
+      duration: 70,
+      startAngle: -30
+    }
+  ];
+
   return (
-    <div className="relative flex h-[100vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
+    <div className="relative flex h-[70vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
+      {/* Center Logo */}
+      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+        <img 
+          src="/favicon.ico" 
+          alt="Company Logo" 
+          className="h-16 object-contain"  // Larger size for center logo
+        />
+      </div>
+      {/* SVG Orbit Paths */}
+      <svg 
+        className="absolute top-0 left-0 w-full h-full"
+        style={{ 
+          pointerEvents: 'none',
+          zIndex: 0 
+        }}
+      >
+        {orbits.map((orbit, i) => (
+          <ellipse
+            key={`path-${i}`}
+            cx="50%"
+            cy="50%"
+            rx={orbit.radiusX}
+            ry={orbit.radiusY}
+            fill="none"
+            stroke="#666666"
+            strokeWidth="1"
+            opacity="0.5"
+            strokeDasharray="4 4"
+          />
+        ))}
+      </svg>
+
       <TooltipProvider>
-        {clients.slice(0, 4).map((client, i) => (
-          <OrbitingCircles
-            className={
-              "size-[30px] border-none bg-transparent hover:cursor-pointer"
-            }
-            duration={40}
-            delay={10 * i}
-            radius={50}
-          >
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <a
-                  href={client.website}
-                  aria-label={client.name}
-                  target="_blank"
+        {orbits.map((orbit, orbitIndex) => 
+          orbit.items.map((client, i) => {
+            const itemCount = orbit.items.length;
+            const angleStep = 360 / itemCount;
+            const delay = (i * angleStep) + orbit.startAngle;
+
+            return (
+              <Tooltip key={`tooltip-${client.name}`}>
+                <EllipticalOrbit
+                  radiusX={orbit.radiusX}
+                  radiusY={orbit.radiusY}
+                  duration={orbit.duration}
+                  delay={delay}
+                  className="transition-transform"
                 >
-                  <img src={"./clients/" + client.logo} />
-                </a>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{client.name}</p>
-              </TooltipContent>
-            </Tooltip>
-          </OrbitingCircles>
-        ))}
-        {clients.slice(4, 10).map((client, i) => (
-          <OrbitingCircles
-            className={
-              "size-[45px] border-none bg-transparent hover:cursor-pointer"
-            }
-            duration={60}
-            delay={10 * i}
-            radius={140}
-          >
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <a
-                  href={client.website}
-                  aria-label={client.name}
-                  target="_blank"
-                >
-                  <img src={"./clients/" + client.logo} />
-                </a>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{client.name}</p>
-              </TooltipContent>
-            </Tooltip>
-          </OrbitingCircles>
-        ))}
-        {clients.slice(10, 17).map((client, i) => (
-          <OrbitingCircles
-            className={
-              "size-[55px] border-none bg-transparent hover:cursor-pointer"
-            }
-            duration={70}
-            delay={10 * i}
-            radius={200}
-          >
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <a
-                  href={client.website}
-                  aria-label={client.name}
-                  target="_blank"
-                >
-                  <img src={"./clients/" + client.logo} />
-                </a>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{client.name}</p>
-              </TooltipContent>
-            </Tooltip>
-          </OrbitingCircles>
-        ))}
-        {clients.slice(17, 27).map((client, i) => (
-          <OrbitingCircles
-            className={
-              "size-[65px] border-none bg-transparent hover:cursor-pointer"
-            }
-            duration={90}
-            delay={10 * i}
-            radius={300}
-          >
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <a
-                  href={client.website}
-                  aria-label={client.name}
-                  target="_blank"
-                >
-                  <img src={"./clients/" + client.logo} />
-                </a>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{client.name}</p>
-              </TooltipContent>
-            </Tooltip>
-          </OrbitingCircles>
-        ))}
+                  <TooltipTrigger asChild>
+                    <a 
+                      href={client.website} 
+                      aria-label={client.name} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block w-12 h-12"
+                    >
+                      <img 
+                        src={`./clients/${client.logo}`} 
+                        alt={client.name}
+                        className="w-12 h-12 object-contain hover:scale-110 transition-transform"
+                      />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{client.name}</p>
+                  </TooltipContent>
+                </EllipticalOrbit>
+              </Tooltip>
+            );
+          })
+        )}
       </TooltipProvider>
     </div>
   );
