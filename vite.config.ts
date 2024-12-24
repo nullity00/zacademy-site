@@ -5,7 +5,6 @@ import { resolve } from "path";
 const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');
 
-// https://vitejs.dev/config/
 export default defineConfig({
   root,
   plugins: [react()],
@@ -13,6 +12,14 @@ export default defineConfig({
     alias: {
       "@": resolve(__dirname, "./src"),
     },
+  },
+  server: {
+    proxy: {
+      '/api/send-message': {
+        target: 'http://localhost:3001',
+        changeOrigin: true
+      }
+    }
   },
   build: {
     outDir,
@@ -23,4 +30,4 @@ export default defineConfig({
       }
     }
   }
-})
+});
