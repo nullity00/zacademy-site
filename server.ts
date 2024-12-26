@@ -19,7 +19,7 @@ interface TelegramMessage {
   message: string;
 }
 
-app.post('/api/send-message', async (req: Request<{}, {}, TelegramMessage>, res: Response) => {
+app.post('/api/send-message', async (req: any, res: any) => {
   if (!TELEGRAM_BOT || !TELEGRAM_CHAT) {
     console.error('Missing environment variables');
     return res.status(500).json({ 
