@@ -1,13 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: "export",
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  // Since you're using styled-components
   compiler: {
     styledComponents: true,
   },
-}
 
-module.exports = nextConfig
+  exportPathMap: async function () {
+    return {
+      "/": { page: "/" },
+      "/contact-us": { page: "/contact-us" },
+      "/fellowships": { page: "/fellowships" },
+      "/members": { page: "/members" },
+      "/services": { page: "/services" },
+      "/zBlock1": { page: "/zBlock1" },
+      "/zBlock2": { page: "/zBlock2" },
+      "/zk": { page: "/zk" },
+    };
+  },
+};
+
+module.exports = nextConfig;
