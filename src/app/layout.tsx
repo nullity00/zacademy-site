@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Space_Grotesk } from 'next/font/google'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Electisec (previously yAcademy & yAudit)",
@@ -35,8 +41,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`bg-red-500`}>{children}</body>
+    <html lang="en" className={spaceGrotesk.className}>
+      <body className={''}>{children}</body>
     </html>
   );
 }
