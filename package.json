@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup-webhook": "ts-node scripts/setup-webhook.ts"
   },
   "engines": {
     "node": "20.9.0"
@@ -41,6 +42,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@netlify/functions": "^3.0.0",
     "@types/dotenv": "^8.2.3",
     "@types/node": "^20",
     "@types/react": "^19",

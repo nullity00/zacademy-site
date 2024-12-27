@@ -1,34 +1,59 @@
-import {Telegram} from 'telegraf';
-
-import type {NextApiRequest, NextApiResponse} from 'next';
+// netlify/functions/telegram.ts
+import { Telegram } from 'telegraf';
+import { Handler } from '@netlify/functions';
 
 const IPToBlock = (process.env.IP_TO_BLOCK || '').split(',');
-export default async function handler(req: NextApiRequest, res: NextApiResponse<boolean>): Promise<void> {
-	if (IPToBlock.includes((req.headers['x-forwarded-for'] || req.socket.remoteAddress) as string)) {
-		return res.status(403).json(false);
-	}
-	if (req.headers['user-agent']?.includes('python-requests')) {
-		console.log(req.headers['x-forwarded-for'] || req.socket.remoteAddress);
-		return res.status(403).json(false);
-	}
 
-	const telegram = new Telegram(process.env.TELEGRAM_BOT as string);
-	try {
-		await telegram.sendMessage(
-			process.env.TELEGRAM_CHAT as string, `
+export const handler: Handler = async (event, context) => {
+  // Parse the request body
+  const body = JSON.parse(event.body || '{}');
+  
+  // Get IP from Netlify headers
+  const clientIP = event.headers['x-forwarded-for'] || '';
+
+  // IP blocking check
+  if (IPToBlock.includes(clientIP)) {
+    return {
+      statusCode: 403,
+      body: JSON.stringify({ success: false })
+    };
+  }
+
+  // User agent check
+  const userAgent = event.headers['user-agent'] || '';
+  if (userAgent.includes('python-requests')) {
+    console.log('Blocked python-requests from IP:', clientIP);
+    return {
+      statusCode: 403,
+      body: JSON.stringify({ success: false })
+    };
+  }
+
+  const telegram = new Telegram(process.env.TELEGRAM_BOT as string);
+  
+  try {
+    await telegram.sendMessage(
+      process.env.TELEGRAM_CHAT as string, `
 -------------------------------------------------------------------
 You got a new message from your website contact form:
-Name: ${req.body.name}
-Telegram username: ${req.body.tguser}
-Protocol: ${req.body.protocol}
-Preferred audit completion date: ${req.body.date}
-Website: ${req.body.website}
-Github repo link: ${req.body.github}
-Additional information: ${req.body.message}
+Name: ${body.name}
+Telegram username: ${body.tguser}
+Protocol: ${body.protocol}
+Preferred audit completion date: ${body.date}
+Website: ${body.website}
+Github repo link: ${body.github}
+Additional information: ${body.message}
 ------------------------------------------------------------------`);
-		return res.status(200).json(true);
-	} catch (error) {
-		console.error(error);
-		return res.status(500).json(false);
-	}
-}
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ success: true })
+    };
+  } catch (error) {
+    console.error('Telegram error:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ success: false })
+    };
+  }
+};
