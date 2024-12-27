@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import HyperText from "@/components/ui/hyper-text";
+import Image from "next/image";
 
 const features = [
   {
@@ -7,10 +9,11 @@ const features = [
     description: "Get your codebase audited by our top-tier resident auditors",
     href: "/services",
     cta: "Learn more",
-    className: "col-span-4 lg:col-span-2",
+    className: "",
     background: (
       <>
         <img
+          alt=""
           src="./illustrations/hands out of laptop.svg"
           className="h-[10rem] mx-auto transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />{" "}
@@ -23,10 +26,11 @@ const features = [
       "Get 50 additional eyes on your codebase by scheduling your audit during our highly competitive fellowships",
     href: "/services",
     cta: "Learn more",
-    className: "col-span-4 lg:col-span-2",
+    className: "",
     background: (
       <>
         <img
+          alt=""
           src="./illustrations/hands on shield.svg"
           className="h-[12rem] mx-auto transition-all  ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
@@ -39,10 +43,11 @@ const features = [
       "We help you do your due diligence on blockchain projects and protocols: architecture, design, code, algorithms, and approach.",
     href: "/services",
     cta: "Learn more",
-    className: "col-span-4 lg:col-span-2",
+    className: "",
     background: (
       <>
         <img
+          alt=""
           src="./illustrations/code.svg"
           className="h-[8rem] mx-auto mt-8 transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
@@ -58,7 +63,7 @@ export default function Services() {
         className="lg:text-5xl text-3xl font-bold mb-16 sm:text-center"
         text="Auditing Services"
       />
-      <BentoGrid>
+      <BentoGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, idx) => (
           <BentoCard key={idx} {...feature} />
         ))}

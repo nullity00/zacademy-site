@@ -6,7 +6,7 @@ import { block3 } from "../Data/block3";
 import { block4 } from "../Data/block4";
 import { block5 } from "../Data/block5";
 import { block6 } from "../Data/block6";
-import { generateUniqueRandoms } from "../1-Core";
+import Image from "next/image";
 
 export function ZBlock1() {
   return (
@@ -81,7 +81,6 @@ export function Template({
     promotedToResident: boolean;
   }[];
 }) {
-  const randoms = generateUniqueRandoms(25);
   return (
     <div className="my-24">
       <h2 className="text-xl font-bold mb-4 sm:text-center">{title}</h2>
@@ -92,7 +91,7 @@ export function Template({
         role="list"
         className="grid lg:grid-cols-3 grid-cols-2 lg:gap-x-72 md:gap-x-32 gap-y-12"
       >
-        {fellows.map((person, i) => (
+        {fellows.map((person) => (
           <li key={person.name}>
             <div className="flex flex-row sm:flex-col items-center gap-x-6">
               <img
@@ -109,9 +108,7 @@ export function Template({
                     ? person.avatar ||
                       "https://avatars.githubusercontent.com/" +
                         person.url.split("github.com")[1]
-                    : person.promotedToResident
-                    ? "./members/resident.png"
-                    : "./members/" + randoms[i].toString() + ".png"
+                    : "./members/resident.png"
                 }
                 alt="Core"
               />

@@ -1,3 +1,7 @@
+
+"use client";
+
+
 import { cn } from "@/lib/utils";
 
 interface MarqueeProps {
@@ -7,6 +11,7 @@ interface MarqueeProps {
   children?: React.ReactNode;
   vertical?: boolean;
   repeat?: number;
+
   [key: string]: any;
 }
 

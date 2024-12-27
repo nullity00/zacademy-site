@@ -1,13 +1,16 @@
 {
-  "name": "electisec",
+  "name": "electisec-website",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "server": "tsx server.ts"
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "engines": {
+    "node": "20.9.0"
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
@@ -20,36 +23,36 @@
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "framer-motion": "^11.14.4",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.468.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "next": "15.1.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.4.3",
     "shadcn": "^2.1.7",
     "styled-components": "^5.3.5",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
+    "telegraf": "^4.16.3",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/node": "^18.11.9",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.0.1",
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "autoprefixer": "^10.4.8",
     "concurrently": "^9.1.0",
-    "postcss": "^8.4.16",
-    "tailwindcss": "^3.1.8",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
-    "vite": "^3.0.7"
+    "typescript": "^5"
   }
 }

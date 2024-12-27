@@ -1,5 +1,6 @@
 import HyperText from "@/components/ui/hyper-text";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Fellows() {
   return (
@@ -7,6 +8,7 @@ export default function Fellows() {
       <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 md:my-16 sm:my-16 sm:mx-6 md:mx-6 text-justify">
         <div className="col-span-1 sm:hidden">
           <img
+            alt=""
             src="./illustrations/hands on shield.svg"
             className="h-[24rem] md:h-[20rem] mt-8"
           />
@@ -17,6 +19,7 @@ export default function Fellows() {
             text="Boosted Audits"
           />
           <img
+            alt=""
             src="./illustrations/hands on shield.svg"
             className="h-[24rem] sm:h-[16rem] mt-8 lg:hidden md:hidden"
           />
@@ -25,7 +28,7 @@ export default function Fellows() {
             Get 50 additional eyes on your codebase by scheduling your audit
             during our highly competitive fellowships
           </p>
-          <Link to={"/contact-us"}>
+          <Link href={"/contact-us"}>
             <button className="px-8 py-3 rounded-xl sm:w-full text-md sm:text-sm text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               Start your Audit
             </button>

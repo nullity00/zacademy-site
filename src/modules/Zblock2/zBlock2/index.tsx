@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import {
   m1video,
   m1guestLectures,
@@ -25,6 +26,7 @@ import {
   Notes,
   Trophy,
 } from "../utils";
+import Image from "next/image";
 
 function ZBlock2Modules() {
   return (
@@ -32,7 +34,7 @@ function ZBlock2Modules() {
       <div className="lg:mr-32">
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2 mt-28">
-            <img src="./cross.svg" className="h-[24rem] " />
+            <img alt="" src="/zblock/cross.svg" className="h-[24rem] " />
           </div>
           <div className="lg:col-span-3">
             <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold lg:mb-10">
@@ -82,7 +84,7 @@ function ZBlock2Modules() {
             </p>
             <p className="mt-4 font-semibold">
               See also :{" "}
-              <Link to={"/zBlock1"}>
+              <Link href={"/zBlock1"}>
                 <button className="text-green-600 hover:underline duration-700">
                   zBlock1
                 </button>
@@ -98,11 +100,11 @@ function ZBlock2Modules() {
         </h1>
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="lg:col-span-1 flex flex-col p-4 px-12 rounded-xl bg-[#E8FFF8]">
-            <img src="./logo.svg" className="h-16 mb-2" />
+            <img alt="" src="/logo.svg" className="h-16 mb-2" />
             <ul className="list-disc text-zinc-700">
               {yacteam.map((member) => {
                 return (
-                  <li>
+                  <li key={member.name}>
                     <a
                       href={member.github}
                       target="_blank"
@@ -124,7 +126,7 @@ function ZBlock2Modules() {
               <ul className="list-disc text-zinc-700">
                 {fellows.slice(0, 6).map((member) => {
                   return (
-                    <li>
+                    <li key={member.name}>
                       <a
                         href={member.github}
                         target="_blank"
@@ -141,7 +143,7 @@ function ZBlock2Modules() {
               <ul className="list-disc text-zinc-700">
                 {fellows.slice(6, 12).map((member) => {
                   return (
-                    <li>
+                    <li key={member.name}>
                       <a
                         href={member.github}
                         target="_blank"
@@ -156,17 +158,14 @@ function ZBlock2Modules() {
                 })}
               </ul>
             </div>
-            <p className="text-center p-4 text-zinc-700">
-              {" "}
-              * Top Fellows
-            </p>
+            <p className="text-center p-4 text-zinc-700"> * Top Fellows</p>
           </div>
           <div className="lg:col-span-1 flex flex-col p-6 px-12 rounded-xl bg-[#E8FFF8]">
-            <img src="./summa.svg" className="h-10 mb-6" />
+            <img alt="" src="/zblock/summa.svg" className="h-10 mb-6" />
             <ul className="list-disc text-zinc-700">
               {summateam.map((member) => {
                 return (
-                  <li>
+                  <li key={member.name}>
                     <a
                       href={member.github}
                       target="_blank"
@@ -187,7 +186,7 @@ function ZBlock2Modules() {
             <ul className="list-disc text-zinc-700">
               {guest.map((member) => {
                 return (
-                  <li>
+                  <li key={member.name}>
                     <a
                       href={member.github}
                       target="_blank"
@@ -204,7 +203,7 @@ function ZBlock2Modules() {
         </div>
         <div className="flex flex-col gap-4 justify-center text-zinc-800 text-center mt-12">
           <h4 className="text-xl font-semibold">Supported by </h4>
-          <img src="./ef.svg" className="h-16 inline-block" />
+          <img alt="" src="/zblock//ef.svg" className="h-16 inline-block" />
         </div>
 
         <h1 className="text-4xl font-bold text-center mt-40" id="module-1">
@@ -229,10 +228,10 @@ function ZBlock2Modules() {
             <h1 className="text-2xl font-bold my-4">Supplementary Materials</h1>
             <div className="flex flex-col gap-6 p-4 items-left rounded-xl bg-[#E8FFF8]">
               {m1notes.map((exercise) => {
-                return <Notes notes={exercise} />;
+                return <Notes notes={exercise} key={exercise.link} />;
               })}
               {m1bounties.map((item) => {
-                return <Trophy trophy={item} />;
+                return <Trophy trophy={item} key={item.link} />;
               })}
             </div>
             {/* <div className="flex flex-col gap-6 p-4 items-left rounded-xl bg-[#E8FFF8]">
@@ -241,7 +240,7 @@ function ZBlock2Modules() {
             <h1 className="text-2xl font-bold my-4">Exercises</h1>
             <div className="flex flex-col gap-6 p-4 items-left rounded-xl bg-[#E8FFF8]">
               {m1exercises.map((exercise) => {
-                return <Quiz quiz={exercise} />;
+                return <Quiz quiz={exercise} key={exercise.link} />;
               })}
             </div>
             <h1 className="text-2xl font-bold my-4">Audit Reports</h1>
@@ -261,7 +260,7 @@ function ZBlock2Modules() {
             <h1 className="text-2xl font-bold my-4">Supplementary Materials</h1>
             <div className="flex flex-col gap-6 p-4 items-left rounded-xl bg-[#E8FFF8]">
               {m2notes.map((exercise) => {
-                return <Notes notes={exercise} />;
+                return <Notes notes={exercise} key={exercise.link} />;
               })}
               <Trophy trophy={m2bounties} />
             </div>

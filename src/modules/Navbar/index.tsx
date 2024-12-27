@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { CloseCircleOutlined, MenuOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 interface Props {
   menuOpen: boolean;
@@ -19,8 +21,8 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
   return (
     <div className="w-full flex h-18 items-center justify-between top-0 p-6">
       <div className="flex flex-row gap-4 text-emeraldlight items-center text-xl lg:ml-36">
-        <Link to={"/"}>
-          <img src="/logo.svg" className="h-10" />
+        <Link href={"/"}>
+          <img alt="" src="/logo.svg" className="h-10" />
         </Link>
       </div>
       <button
@@ -30,7 +32,7 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         <MenuOutlined />
       </button>
       <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-[8vw]">
-        <Link to={"/members"}>
+        <Link href={"/members"}>
           <Button text={"Members"} />
         </Link>
         <a href="https://reports.electisec.dev/" target="_blank">
@@ -39,16 +41,16 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         <a href="https://proxies.electisec.dev/" target="_blank">
           <Button text={"Research"} />
         </a>
-        <Link to={"/fellowships"}>
+        <Link href={"/fellowships"}>
           <Button text={"Fellowships"} />
         </Link>
-        <Link to={"/services"}>
+        <Link href={"/services"}>
           <Button text={"Services"} />
         </Link>
-        {/* <Link to={"/zBlock2"}>
+        {/* <Link href={"/zBlock2"}>
           <Button text={"zBlock2"} />
         </Link> */}
-        <Link to={"/contact-us"}>
+        <Link href={"/contact-us"}>
           <button className="px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
             Contact Us
           </button>
@@ -65,11 +67,11 @@ interface MobileProps {
 export function MobileNavbar({ setMenuOpen }: MobileProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
-    function handleClickOutside(event: any) {
+    function handleClickOutside(event: MouseEvent) {
       if (
         true &&
         inputRef.current &&
-        !inputRef.current.contains(event.target)
+        !inputRef.current.contains(event.target as Node)
       ) {
         setMenuOpen(false);
       }
@@ -90,7 +92,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
         >
           <CloseCircleOutlined style={{ fontSize: "2rem" }} />
         </button>
-        <Link to={"/members"}>
+        <Link href={"/members"}>
           <button
             onClick={() => {
               setMenuOpen(false);
@@ -105,18 +107,13 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             Reports
           </button>
         </a>
-        <a href="https://proxies.electisec.dev/">
-          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
-            Proxies Research
-          </button>
-        </a>
         <a href="https://blog.electisec.dev/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Blog
           </button>
         </a>
 
-        <Link to={"/fellowships"}>
+        <Link href={"/fellowships"}>
           <button
             onClick={() => {
               setMenuOpen(false);
@@ -126,29 +123,18 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             Fellowships
           </button>
         </Link>
-
-        <Link to={"/zBlock1"}>
+        <Link href={"/services"}>
           <button
             onClick={() => {
               setMenuOpen(false);
             }}
-            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700"
+            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700"
           >
-            zBlock1
-          </button>
-        </Link>
-        <Link to={"/zBlock2"}>
-          <button
-            onClick={() => {
-              setMenuOpen(false);
-            }}
-            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700"
-          >
-            zBlock2
+            Services
           </button>
         </Link>
 
-        <Link to={"/contact-us"}>
+        <Link href={"/contact-us"}>
           <button
             onClick={() => {
               setMenuOpen(false);

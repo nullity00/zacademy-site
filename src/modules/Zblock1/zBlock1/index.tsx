@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+/* eslint-disable react/no-unescaped-entities */
+import Link from "next/link";
 import { m1video, m1exercises, m1notes, m1discussion } from "../Data/zblock1";
 import {
   m2discussion,
@@ -13,13 +14,18 @@ import {
   m3guestLectures,
 } from "../Data/zblock1";
 import { Discussion, VideoSection, Report, Notes } from "../utils";
+import Image from "next/image";
 
 function ZBlock1Modules() {
   return (
     <>
       <div className="grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2 mt-28">
-          <img src="./pse-personae-yac.svg" className="h-[24rem] " />
+          <img
+            alt=""
+            src="/zblock/pse-personae-yac.svg"
+            className="h-[24rem] "
+          />
         </div>
         <div className="lg:col-span-3">
           <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold lg:mb-10">
@@ -71,7 +77,7 @@ function ZBlock1Modules() {
           </p>
           <p className="mt-4 font-semibold">
             See also :{" "}
-            <Link to={"/zBlock2"}>
+            <Link href={"/zBlock2"}>
               <button className="text-green-600 hover:underline duration-700">
                 zBlock2
               </button>
@@ -109,8 +115,11 @@ function ZBlock1Modules() {
           <div className="flex flex-col  gap-6 p-6 rounded-2xl bg-[#E8FFF8]">
             {m1exercises.map((exercise) => {
               return (
-                <div className="flex flex-row gap-4 items-center">
-                  <img src="/exercise.svg" className="h-[2rem]" />
+                <div
+                  className="flex flex-row gap-4 items-center"
+                  key={exercise.link}
+                >
+                  <img alt="" src="/icons/exercise.svg" className="h-[2rem]" />
                   <a
                     href={exercise.link}
                     className="hover:underline font-bold"
@@ -174,8 +183,11 @@ function ZBlock1Modules() {
           <div className="flex flex-col  gap-6 p-6 rounded-2xl  bg-[#E8FFF8]">
             {m3exercises.map((exercise) => {
               return (
-                <div className="flex flex-row gap-4 items-center">
-                  <img src="/exercise.svg" className="h-[2rem]" />
+                <div
+                  className="flex flex-row gap-4 items-center"
+                  key={exercise.link}
+                >
+                  <img alt="" src="/icons/exercise.svg" className="h-[2rem]" />
                   <a
                     href={exercise.link}
                     className="hover:underline font-bold"

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import SmartContracts from "../SC";
 import ZK from "../ZK";
@@ -21,15 +22,15 @@ const tabs = [
 export default function Summary() {
   const [currentTab, setCurrentTab] = useState("Smart Contract Fellowship");
 
-  useEffect(() => {
-    if (window.location.href.split("#")[1] === "zero-knowledge") {
-      setCurrentTab("Zero Knowledge Fellowship");
-    } else if (window.location.href.split("#")[1] === "guest-auditor") {
-      setCurrentTab("Guest Auditor Program");
-    } else if (window.location.href.split("#")[1] === "smart-contract") {
-      setCurrentTab("Smart Contract Fellowship");
-    }
-  }, [window.location.href]);
+  // useEffect(() => {
+  //   if (window.location.href.split("#")[1] === "zero-knowledge") {
+  //     setCurrentTab("Zero Knowledge Fellowship");
+  //   } else if (window.location.href.split("#")[1] === "guest-auditor") {
+  //     setCurrentTab("Guest Auditor Program");
+  //   } else if (window.location.href.split("#")[1] === "smart-contract") {
+  //     setCurrentTab("Smart Contract Fellowship");
+  //   }
+  // }, [window.location.href]);
 
   return (
     <div className="my-16">
@@ -60,7 +61,7 @@ export default function Summary() {
         {currentTab === "Guest Auditor Program" && <GuestAuditor />}
       </div>
       <div className="my-16 flex flex-row gap-4 p-8 items-center rounded-2xl bg-[#E8FFF8]">
-        <img src="./icons/bulb.svg" className="h-[4rem]" />
+        <img alt="" src="./icons/bulb.svg" className="h-[4rem]" />
         <p className="text-darkgreen text-sm">
           If you think our program is too advanced for you now, fear not, you
           can still join after going through an introductory program such as{" "}

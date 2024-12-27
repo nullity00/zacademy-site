@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactElement, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export interface AnimatedListProps {
@@ -34,7 +34,7 @@ export const AnimatedList = React.memo(
 
     return (
       <div className={`flex flex-col items-center gap-4 ${className}`}>
-        <AnimatePresence>
+        <AnimatePresence mode="sync">
           {itemsToShow.map((item) => (
             <AnimatedListItem key={(item as React.ReactElement).key}>
               {item}

@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import Image from "next/image";
 
 function SmartContracts() {
   return (
-    <div id="smart-contract">
+    <div>
       <h1 className="lg:text-4xl md:text-3xl sm:text-3xl font-bold mb-4">
         Smart Contract Fellowship
       </h1>
@@ -13,37 +13,35 @@ function SmartContracts() {
             <h2 className="text-semibold text-xl my-4">
               A typical week in the fellowship program
             </h2>
-            <p className="text-zinc-500">
-              <ul className="list-disc list-inside">
-                <li>
-                  The auditing sprint starts on Monday with an overview session
-                  delivered by one of our resident auditors, a guest auditor, or
-                  the codebase author.
-                </li>
-                <br />
-                <li>
-                  During the week, async discussion take place between fellows,
-                  mentors, guest auditors, residents, and codebase devs.
-                </li>
-                <br />
-                <li>
-                  Fellows work in groups during the week. Groups may meet during
-                  the week over calls.
-                </li>
-                <br />
-                <li>
-                  At the end of the week (or second week for larger codebases),
-                  fellows present their findings and receive feedback from our
-                  residents, mentors, and codebase authors.
-                </li>
-                <br />
-                <li>
-                  The auditing sprint ends with a retreat session where we
-                  invite a prominent guest for a lecture or AMA with the
-                  fellows.
-                </li>
-              </ul>
-            </p>
+
+            <ul className="list-disc list-inside text-zinc-500">
+              <li>
+                The auditing sprint starts on Monday with an overview session
+                delivered by one of our resident auditors, a guest auditor, or
+                the codebase author.
+              </li>
+              <br />
+              <li>
+                During the week, async discussion take place between fellows,
+                mentors, guest auditors, residents, and codebase devs.
+              </li>
+              <br />
+              <li>
+                Fellows work in groups during the week. Groups may meet during
+                the week over calls.
+              </li>
+              <br />
+              <li>
+                At the end of the week (or second week for larger codebases),
+                fellows present their findings and receive feedback from our
+                residents, mentors, and codebase authors.
+              </li>
+              <br />
+              <li>
+                The auditing sprint ends with a retreat session where we invite
+                a prominent guest for a lecture or AMA with the fellows.
+              </li>
+            </ul>
           </div>
           <p>
             Before applying, please make sure you have read and understood the{" "}
@@ -87,7 +85,11 @@ function SmartContracts() {
             <span className="text-green-600 font-bold">stake some ETH</span> to
             ensure engagement and participation from all fellows.
           </p>
-          <img src="./illustrations/contract-window.svg" className="py-4 h-[32rem]" />
+          <img
+            alt=""
+            src="./illustrations/contract-window.svg"
+            className="py-4 h-[32rem]"
+          />
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { sendContactForm } from '@/api/telegram';
+import axios from "axios";
 
 export default function ContactUs() {
   const [isDisabled, setIsDisabled] = useState(false);
@@ -10,33 +10,55 @@ export default function ContactUs() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (isBusy || isDisabled) return;
-    
+
     setIsBusy(true);
     setIsDisabled(true);
-    
+
     try {
       const formData = {
-        name: (e.currentTarget.elements.namedItem('name') as HTMLInputElement).value,
-        tguser: (e.currentTarget.elements.namedItem('tguser') as HTMLInputElement).value,
-        protocol: (e.currentTarget.elements.namedItem('protocol') as HTMLInputElement).value,
-        website: (e.currentTarget.elements.namedItem('website') as HTMLInputElement).value,
-        date: (e.currentTarget.elements.namedItem('date') as HTMLInputElement)?.value,
-        github: (e.currentTarget.elements.namedItem('github') as HTMLInputElement)?.value,
-        message: (e.currentTarget.elements.namedItem('message') as HTMLTextAreaElement).value,
+        name: (e.currentTarget.elements.namedItem("name") as HTMLInputElement)
+          .value,
+        tguser: (
+          e.currentTarget.elements.namedItem("tguser") as HTMLInputElement
+        ).value,
+        protocol: (
+          e.currentTarget.elements.namedItem("protocol") as HTMLInputElement
+        ).value,
+        website: (
+          e.currentTarget.elements.namedItem("website") as HTMLInputElement
+        ).value,
+        date: (e.currentTarget.elements.namedItem("date") as HTMLInputElement)
+          ?.value,
+        github: (
+          e.currentTarget.elements.namedItem("github") as HTMLInputElement
+        )?.value,
+        message: (
+          e.currentTarget.elements.namedItem("message") as HTMLTextAreaElement
+        ).value,
       };
 
-      const success = await sendContactForm(formData);
+      axios
+        .post("/api/telegram", formData)
+        .then((): void => {
+          setResponse(
+            "Thank you for your message. We will get back to you as soon as possible!"
+          );
+        })
+        .catch((): void => {
+          setResponse(
+            "We are sorry, but something went wrong. Please try again later."
+          );
+        })
+        .finally((): void => {
+          (document.getElementById("contact-form") as HTMLFormElement)?.reset();
+          setIsBusy(false);
+          setTimeout((): void => {
+            setIsDisabled(false);
+          }, 10000);
+        });
 
-      if (success) {
-        setResponse("Thank you for your message. We will get back to you soon!");
-        if (formRef.current) {
-          formRef.current.reset();
-        }
-      } else {
-        throw new Error('Failed to send message');
-      }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       setResponse("Sorry, something went wrong. Please try again later.");
     } finally {
       setIsBusy(false);
@@ -49,11 +71,10 @@ export default function ContactUs() {
       <div className="max-w-5xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Contact us
-          </h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact us</h2>
           <p className="text-xl text-gray-600">
-            Request an audit or ask a question. We don't just read code, we read your messages too.
+            Request an audit or ask a question. We dont just read code, we read
+            your messages too.
           </p>
         </div>
 
@@ -148,21 +169,24 @@ export default function ContactUs() {
                   type="submit"
                   disabled={isDisabled}
                   className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-darkgreen 
-                    ${isDisabled 
-                      ? 'bg-gray-400 cursor-not-allowed' 
-                      : 'bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700'
+                    ${
+                      isDisabled
+                        ? "bg-gray-400 cursor-not-allowed"
+                        : "bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700"
                     }`}
                 >
-                  {isBusy ? 'Sending...' : 'Send request'}
+                  {isBusy ? "Sending..." : "Send request"}
                 </button>
               </div>
 
               {response && (
-                <div className={`mt-4 p-4 rounded-md ${
-                  response.includes("sorry") 
-                    ? "bg-red-50 text-red-700"
-                    : "bg-green-50 text-green-700"
-                }`}>
+                <div
+                  className={`mt-4 p-4 rounded-md ${
+                    response.includes("sorry")
+                      ? "bg-red-50 text-red-700"
+                      : "bg-green-50 text-green-700"
+                  }`}
+                >
                   {response}
                 </div>
               )}
@@ -171,14 +195,18 @@ export default function ContactUs() {
 
           <div className="hidden md:block">
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Us</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Contact Us
+              </h3>
               <p className="text-gray-600 space-y-2">
                 You can reach us at:{" xyz@electisec "}
-                <br /><br />
+                <br />
+                <br />
                 If you are interested in becoming a contributor to Electisec,
-                email us with your thoughts and we'll send you an invite to our
+                email us with your thoughts and we will send you an invite to our
                 community.
-                <br /><br />
+                <br />
+                <br />
                 See you around! 🚀
               </p>
             </div>

@@ -73,7 +73,7 @@ export default function HyperText({
       className="flex flex-wrap scale-100 cursor-default py-2"
       onMouseEnter={triggerAnimation}
     >
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="sync">
         {displayText.map((letter, i) => (
           <motion.span
             key={i}

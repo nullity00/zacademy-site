@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 function ZK() {
   return (
-    <div id="zero-knowledge">
+    <div>
       <h1 className="lg:text-4xl md:text-3xl sm:text-3xl font-bold mb-8">
         Zero Knowledge Fellowship
       </h1>
@@ -13,12 +13,12 @@ function ZK() {
             <p className="text-xl font-bold leading-10 text-gray-600">
               Previous ZK Cohorts
             </p>
-            <Link to="/zBlock1">
+            <Link href="/zBlock1">
               <p className="text-md font-semibold leading-8 text-darkgreen">
                 zBlock1 (May 2023)
               </p>
             </Link>
-            <Link to="/zBlock2">
+            <Link href="/zBlock2">
               <p className="text-md font-semibold leading-8 text-darkgreen">
                 zBlock2 (Jan - May 2024)
               </p>
@@ -28,49 +28,48 @@ function ZK() {
           </div>
           <div>
             <h2 className="text-semibold text-xl mb-4">Highlights</h2>
-            <p className="text-zinc-500">
-              <ul className="list-disc list-inside">
-                <li>
-                  The fellowship will include theory sessions, code overview
-                  sessions, retreat sessions with leading experts in the field,
-                  office hours with devs and/or our residents, and ad-hoc
-                  sessions self-organized by groups of fellows. There are
-                  usually also be some quizzes and puzzles throughout.
-                </li>
-                <br />
-                <li>
-                  The fellowship leads up to an{" "}
-                  <span className="line-through">audit</span> security review
-                  report (eg{" "}
-                  <a
-                    href="https://github.com/zBlock-1/RLN-audit-report"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-green-600 font-bold hover:underline duration-700"
-                  >
-                    [1]
-                  </a>
-                  <a
-                    href="https://github.com/zBlock-1/spartan-ecdsa-audit-report"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-green-600 font-bold hover:underline duration-700"
-                  >
-                    [2]
-                  </a>
-                  <a
-                    href="https://github.com/zBlock-2/audit-report/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-green-600 font-bold hover:underline duration-700"
-                  >
-                    [3]
-                  </a>
-                  ) contributed to collaboratively by everyone involved:
-                  fellows, residents, and mentors.
-                </li>
-              </ul>
-            </p>
+
+            <ul className="list-disc list-inside">
+              <li>
+                The fellowship will include theory sessions, code overview
+                sessions, retreat sessions with leading experts in the field,
+                office hours with devs and/or our residents, and ad-hoc sessions
+                self-organized by groups of fellows. There are usually also be
+                some quizzes and puzzles throughout.
+              </li>
+              <br />
+              <li>
+                The fellowship leads up to an{" "}
+                <span className="line-through">audit</span> security review
+                report (eg{" "}
+                <a
+                  href="https://github.com/zBlock-1/RLN-audit-report"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 font-bold hover:underline duration-700"
+                >
+                  [1]
+                </a>
+                <a
+                  href="https://github.com/zBlock-1/spartan-ecdsa-audit-report"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 font-bold hover:underline duration-700"
+                >
+                  [2]
+                </a>
+                <a
+                  href="https://github.com/zBlock-2/audit-report/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 font-bold hover:underline duration-700"
+                >
+                  [3]
+                </a>
+                ) contributed to collaboratively by everyone involved: fellows,
+                residents, and mentors.
+              </li>
+            </ul>
           </div>
           <p>
             You will be contacted once the next fellowship is starting up, no
@@ -111,40 +110,38 @@ function ZK() {
           </p>
           <div>
             <h2 className="text-semibold text-xl mb-4">Pre-requisites</h2>
-            <p className="text-zinc-500">
-              <ul className="list-disc list-inside">
-                <li>
-                  No prior ZK knowledge is required, but proof of work else
-                  where is.
-                </li>
-                <br />
-                <li>
-                  You can review our previous fellowships:{" "}
-                  <Link
-                    to={"/zBlock1"}
-                    className="text-green-600 font-bold hover:underline duration-700"
-                  >
-                    zBlock1
-                  </Link>{" "}
-                  and{" "}
-                  <Link
-                    to={"/zBlock2"}
-                    className="text-green-600 font-bold hover:underline duration-700"
-                  >
-                    zBlock2
-                  </Link>{" "}
-                  to :
-                  <ul className="list-disc list-inside ml-8 mt-2">
-                    <li>Get a sense of what the fellowship is like.</li>
-                    <li>
-                      Level up your understanding of ZK tailored to give
-                      aspiring auditors the minimum viable theory to get to the
-                      code.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </p>
+
+            <ul className="list-disc list-inside text-zinc-500">
+              <li>
+                No prior ZK knowledge is required, but proof of work else where
+                is.
+              </li>
+              <br />
+              <li>
+                You can review our previous fellowships:{" "}
+                <Link
+                  href={"/zBlock1"}
+                  className="text-green-600 font-bold hover:underline duration-700"
+                >
+                  zBlock1
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href={"/zBlock2"}
+                  className="text-green-600 font-bold hover:underline duration-700"
+                >
+                  zBlock2
+                </Link>{" "}
+                to :
+                <ul className="list-disc list-inside ml-8 mt-2">
+                  <li>Get a sense of what the fellowship is like.</li>
+                  <li>
+                    Level up your understanding of ZK tailored to give aspiring
+                    auditors the minimum viable theory to get to the code.
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
           <p className="my-4">
             Before applying, please make sure you have read and understood the{" "}
@@ -163,7 +160,7 @@ function ZK() {
             contact at: zk AT electisec DOT dev
           </p>
 
-          {/* <img src="/rust-window.svg" className="py-4 h-[32rem]" /> */}
+          {/* <img alt=""  src="/rust-window.svg" className="py-4 h-[32rem]" /> */}
         </div>
       </div>
     </div>
