@@ -59,7 +59,7 @@ function ZK() {
                   [2]
                 </a>
                 <a
-                  href="https://github.com/zBlock-2/audit-report/"
+                  href="https://github.com/electisec/summa-audit-report/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-600 font-bold hover:underline duration-700"
