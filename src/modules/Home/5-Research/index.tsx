@@ -90,10 +90,10 @@ export function AnimatedListDemo({ className }: { className?: string }) {
 export default function Research() {
   return (
     <>
-      <div className="h-full grid lg:grid-cols-2 grid-cols-1 my-16 md:my-16 sm:my-16 sm:mx-6 md:mx-6 lg:mx-48 ">
+      <div className="h-full grid lg:grid-cols-2 grid-cols-1 my-12 sm:mx-6 md:mx-6 lg:mx-64 ">
         <div className="cols-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col">
           <HyperText
-            className="lg:text-5xl text-3xl font-bold sm:text-center"
+            className="lg:text-4xl text-3xl font-bold sm:text-center"
             text="Research"
           />
           <AnimatedListDemo className="mt-8 md:hidden lg:hidden" />

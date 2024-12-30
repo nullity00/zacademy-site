@@ -5,23 +5,23 @@ import Image from "next/image";
 export default function Fellows() {
   return (
     <>
-      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 md:my-16 sm:my-16 sm:mx-6 md:mx-6 text-justify">
-        <div className="col-span-1 sm:hidden">
+      <div className="flex flex-row sm:flex-col items-center my-8 justify-between sm:text-center">
+        <div className="sm:hidden">
           <img
             alt=""
             src="./illustrations/hands on shield.svg"
-            className="h-[24rem] md:h-[20rem] mt-8"
+            className="h-[20rem]"
           />
         </div>
-        <div className="col-span-1 sm:flex sm:flex-col sm:align-center">
+        <div className="flex flex-col sm:items-center">
           <HyperText
-            className="lg:text-5xl text-3xl font-bold sm:text-center"
+            className="lg:text-4xl text-3xl font-bold sm:text-center"
             text="Boosted Audits"
           />
           <img
             alt=""
             src="./illustrations/hands on shield.svg"
-            className="h-[24rem] sm:h-[16rem] mt-8 lg:hidden md:hidden"
+            className="h-[16rem] mt-8 lg:hidden md:hidden"
           />
           <p className="text-zinc-500 mb-8">
             <br />

@@ -19,8 +19,8 @@ function Button({ text }: { text: string }) {
 
 export function Navbar({ menuOpen, setMenuOpen }: Props) {
   return (
-    <div className="w-full flex h-18 items-center justify-between top-0 p-6">
-      <div className="flex flex-row gap-4 text-emeraldlight items-center text-xl lg:ml-36">
+    <div className="w-full flex h-18 items-center justify-between top-0 py-6">
+      <div className="flex flex-row gap-4 text-emeraldlight items-center text-xl lg:ml-64">
         <Link href={"/"}>
           <img alt="" src="/logo.svg" className="h-10" />
         </Link>
@@ -31,7 +31,7 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
       >
         <MenuOutlined />
       </button>
-      <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-[8vw]">
+      <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-[15vw]">
         <Link href={"/members"}>
           <Button text={"Members"} />
         </Link>

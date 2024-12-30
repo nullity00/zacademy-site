@@ -31,7 +31,7 @@ import Image from "next/image";
 function ZBlock2Modules() {
   return (
     <>
-      <div className="lg:mr-32">
+      <div className="mt-24">
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2 mt-28">
             <img alt="" src="/zblock/cross.svg" className="h-[24rem] " />
@@ -93,7 +93,7 @@ function ZBlock2Modules() {
           </div>
         </div>
         <h1
-          className="text-4xl  font-bold text-center mt-40 mb-20"
+          className="text-4xl  font-bold text-center mt-20 mb-20"
           id="module-1"
         >
           Participants
@@ -206,7 +206,7 @@ function ZBlock2Modules() {
           <img alt="" src="/zblock//ef.svg" className="h-16 inline-block" />
         </div>
 
-        <h1 className="text-4xl font-bold text-center mt-40" id="module-1">
+        <h1 className="text-4xl font-bold text-center mt-20" id="module-1">
           Module 1
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
@@ -250,10 +250,10 @@ function ZBlock2Modules() {
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold text-center mt-40" id="module-2">
+        <h1 className="text-4xl font-bold text-center mt-20" id="module-2">
           Module 2
         </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
+        <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12 mb-8">
           <div className="col-span-1">
             <h1 className="text-2xl font-bold">Sessions</h1>
             <VideoSection videoData={m2video} />

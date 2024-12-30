@@ -148,9 +148,9 @@ const EllipticalOrbit: React.FC<EllipticalOrbitProps> = ({
 
 export default function ClientSection() {
   return (
-    <section className="bg-white m-6">
-      <div className="lg:mx-40">
-        <HyperText className="lg:text-5xl text-3xl font-bold" text="Clients" />
+    <section className="bg-white m-2">
+      <div className="lg:mx-64">
+        <HyperText className="lg:text-4xl text-3xl font-bold" text="Clients" />
         <EllipticalOrbitDemo />
       </div>
     </section>
@@ -184,7 +184,7 @@ function EllipticalOrbitDemo() {
   ];
 
   return (
-    <div className="relative flex h-[75vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
+    <div className="relative flex h-[50vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
       {/* Center Logo */}
       {/* <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
         <img alt=""  

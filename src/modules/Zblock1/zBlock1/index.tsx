@@ -19,7 +19,7 @@ import Image from "next/image";
 function ZBlock1Modules() {
   return (
     <>
-      <div className="grid lg:grid-cols-5 gap-8">
+      <div className="grid lg:grid-cols-5 gap-8 mt-24">
         <div className="lg:col-span-2 mt-28">
           <img
             alt=""
@@ -86,7 +86,7 @@ function ZBlock1Modules() {
         </div>
       </div>
 
-      <h1 className="text-4xl font-bold text-center mt-40" id="module-1">
+      <h1 className="text-4xl font-bold text-center mt-20" id="module-1">
         Module 1
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
@@ -135,7 +135,7 @@ function ZBlock1Modules() {
         </div>
       </div>
 
-      <h1 className="text-4xl font-bold text-center mt-40" id="module-2">
+      <h1 className="text-4xl font-bold text-center mt-20" id="module-2">
         Module 2
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
@@ -160,7 +160,7 @@ function ZBlock1Modules() {
         </div>
       </div>
 
-      <h1 className="text-4xl font-bold text-center mt-40" id="module-3">
+      <h1 className="text-4xl font-bold text-center mt-20" id="module-3">
         Module 3
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">

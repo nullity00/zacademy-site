@@ -4,10 +4,10 @@ import Image from "next/image";
 export default function DueDiligence() {
   return (
     <>
-      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 md:my-16 sm:my-16 mx-6 text-justify sm:text-center sm:flex sm:flex-col sm:align-center">
-        <div className="col-span-1 sm:flex sm:flex-col sm:align-center">
+      <div className="flex flex-row sm:flex-col items-center my-8 justify-between sm:text-center">
+        <div className="flex flex-col">
           <HyperText
-            className="lg:text-5xl text-3xl font-bold sm:text-center"
+            className="lg:text-4xl text-3xl font-bold sm:text-center"
             text="Consulting"
           />
           {/* <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6 mt-12">
@@ -28,7 +28,7 @@ export default function DueDiligence() {
           <img
             alt=""
             src="./illustrations/code.svg"
-            className="h-[12rem] mt-8 sm:ml-0 lg:hidden md:hidden"
+            className="h-[12rem] lg:hidden md:hidden"
           />
           <p className="text-zinc-500 text-justify mb-8">
             <br />
@@ -41,11 +41,11 @@ export default function DueDiligence() {
             </button>
           </a>
         </div>
-        <div className="col-span-1 ml-20 sm:hidden">
+        <div className="sm:hidden">
           <img
             alt=""
             src="./illustrations/code.svg"
-            className="h-[20rem] mt-8"
+            className="h-[16rem]"
           />
         </div>
       </div>
