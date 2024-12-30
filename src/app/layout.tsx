@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={spaceGrotesk.className}>
+      <GoogleTagManager gtmId="G-NZNG2YQNTY" />
       <body className={""}>{children}</body>
     </html>
   );
