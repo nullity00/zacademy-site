@@ -38,8 +38,8 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         <a href="https://reports.electisec.tech/" target="_blank">
           <Button text={"Reports"} />
         </a>
-        <a href="https://proxies.electisec.tech/" target="_blank">
-          <Button text={"Research"} />
+        <a href="https://blog.electisec.tech/" target="_blank">
+          <Button text={"Blog"} />
         </a>
         <Link href={"/fellowships"}>
           <Button text={"Fellowships"} />
