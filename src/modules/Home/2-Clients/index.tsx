@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import HyperText from "@/components/ui/hyper-text";
 import {
   Tooltip,
@@ -158,42 +158,99 @@ export default function ClientSection() {
 }
 
 function EllipticalOrbitDemo() {
-  // Optimized orbit configurations with all logos included
-  const orbits = [
-    {
-      radiusX: 450,
-      radiusY: 180,
-      items: clients.slice(0, 10), // More logos in outer orbit
-      duration: 45,
-      startAngle: 30,
-    },
-    {
-      radiusX: 350,
-      radiusY: 130,
-      items: clients.slice(10, 18), // Middle orbit
-      duration: 60,
-      startAngle: 0,
-    },
-    {
-      radiusX: 200,
-      radiusY: 70,
-      items: clients.slice(18), // Rest of the logos in inner orbit
-      duration: 70,
-      startAngle: -30,
-    },
-  ];
+  // Responsive orbit configurations
+  const getOrbits = () => {
+    // For smaller screens
+    if (window.innerWidth < 640) {
+      return [
+        {
+          radiusX: 150,
+          radiusY: 60,
+          items: clients.slice(0, 10),
+          duration: 45,
+          startAngle: 30,
+        },
+        {
+          radiusX: 120,
+          radiusY: 45,
+          items: clients.slice(10, 18),
+          duration: 60,
+          startAngle: 0,
+        },
+        {
+          radiusX: 80,
+          radiusY: 30,
+          items: clients.slice(18),
+          duration: 70,
+          startAngle: -30,
+        },
+      ];
+    }
+    // For medium screens
+    if (window.innerWidth < 1024) {
+      return [
+        {
+          radiusX: 300,
+          radiusY: 120,
+          items: clients.slice(0, 10),
+          duration: 45,
+          startAngle: 30,
+        },
+        {
+          radiusX: 230,
+          radiusY: 90,
+          items: clients.slice(10, 18),
+          duration: 60,
+          startAngle: 0,
+        },
+        {
+          radiusX: 150,
+          radiusY: 50,
+          items: clients.slice(18),
+          duration: 70,
+          startAngle: -30,
+        },
+      ];
+    }
+    // For large screens (default)
+    return [
+      {
+        radiusX: 450,
+        radiusY: 180,
+        items: clients.slice(0, 10),
+        duration: 45,
+        startAngle: 30,
+      },
+      {
+        radiusX: 350,
+        radiusY: 130,
+        items: clients.slice(10, 18),
+        duration: 60,
+        startAngle: 0,
+      },
+      {
+        radiusX: 200,
+        radiusY: 70,
+        items: clients.slice(18),
+        duration: 70,
+        startAngle: -30,
+      },
+    ];
+  };
+
+  const [orbits, setOrbits] = useState(getOrbits());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setOrbits(getOrbits());
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <div className="relative flex h-[50vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
-      {/* Center Logo */}
-      {/* <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <img alt=""  
-          src="/favicon.ico" 
-          alt="Company Logo" 
-          className="h-8 object-contain"  // Larger size for center logo
-        />
-      </div> */}
-      {/* SVG Orbit Paths */}
+    <div className="relative flex lg:h-[50vh] md:h-[40vh] sm:h-[25vh]  flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
       <svg
         className="absolute top-0 left-0 w-full h-full"
         style={{
@@ -239,12 +296,12 @@ function EllipticalOrbitDemo() {
                       aria-label={client.name}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-12 h-12"
+                      className="block w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
                     >
                       <img
                         src={`/clients/${client.logo}`}
                         alt={client.name}
-                        className="w-10 h-10 object-contain hover:scale-110 transition-transform"
+                        className="sm:w-4 sm:h-4 md:w-10 md:h-10 object-contain hover:scale-110 transition-transform"
                       />
                     </a>
                   </TooltipTrigger>
