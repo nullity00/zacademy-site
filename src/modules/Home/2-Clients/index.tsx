@@ -158,10 +158,35 @@ export default function ClientSection() {
 }
 
 function EllipticalOrbitDemo() {
-  // Responsive orbit configurations
-  const getOrbits = () => {
+  // Initialize with default large screen values
+  const defaultOrbits = [
+    {
+      radiusX: 450,
+      radiusY: 180,
+      items: clients.slice(0, 10),
+      duration: 45,
+      startAngle: 30,
+    },
+    {
+      radiusX: 350,
+      radiusY: 130,
+      items: clients.slice(10, 18),
+      duration: 60,
+      startAngle: 0,
+    },
+    {
+      radiusX: 200,
+      radiusY: 70,
+      items: clients.slice(18),
+      duration: 70,
+      startAngle: -30,
+    },
+  ];
+
+  // Move getOrbits inside useEffect to safely access window
+  const getOrbits = (width: number) => {
     // For smaller screens
-    if (window.innerWidth < 640) {
+    if (width < 640) {
       return [
         {
           radiusX: 150,
@@ -187,7 +212,7 @@ function EllipticalOrbitDemo() {
       ];
     }
     // For medium screens
-    if (window.innerWidth < 1024) {
+    if (width < 1024) {
       return [
         {
           radiusX: 300,
@@ -213,44 +238,37 @@ function EllipticalOrbitDemo() {
       ];
     }
     // For large screens (default)
-    return [
-      {
-        radiusX: 450,
-        radiusY: 180,
-        items: clients.slice(0, 10),
-        duration: 45,
-        startAngle: 30,
-      },
-      {
-        radiusX: 350,
-        radiusY: 130,
-        items: clients.slice(10, 18),
-        duration: 60,
-        startAngle: 0,
-      },
-      {
-        radiusX: 200,
-        radiusY: 70,
-        items: clients.slice(18),
-        duration: 70,
-        startAngle: -30,
-      },
-    ];
+    return defaultOrbits;
   };
 
-  const [orbits, setOrbits] = useState(getOrbits());
+  const [orbits, setOrbits] = useState(defaultOrbits);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+    
+    // Initial setup using window.innerWidth
+    setOrbits(getOrbits(window.innerWidth));
+
     const handleResize = () => {
-      setOrbits(getOrbits());
+      setOrbits(getOrbits(window.innerWidth));
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // During SSR or before mount, return a placeholder or default layout
+  if (!isMounted) {
+    return (
+      <div className="relative flex lg:h-[50vh] md:h-[40vh] sm:h-[25vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
+        {/* Optional loading state or static content */}
+      </div>
+    );
+  }
+
   return (
-    <div className="relative flex lg:h-[50vh] md:h-[40vh] sm:h-[25vh]  flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
+    <div className="relative flex lg:h-[50vh] md:h-[40vh] sm:h-[25vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
       <svg
         className="absolute top-0 left-0 w-full h-full"
         style={{

@@ -35,10 +35,10 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         <Link href={"/members"}>
           <Button text={"Members"} />
         </Link>
-        <a href="https://reports.electisec.dev/" target="_blank">
+        <a href="https://reports.electisec.tech/" target="_blank">
           <Button text={"Reports"} />
         </a>
-        <a href="https://proxies.electisec.dev/" target="_blank">
+        <a href="https://proxies.electisec.tech/" target="_blank">
           <Button text={"Research"} />
         </a>
         <Link href={"/fellowships"}>
@@ -83,7 +83,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
   }, [inputRef, setMenuOpen]);
   return (
     <div className="w-full h-full z-40 duration-700" ref={inputRef}>
-      <div className="mt-8 mx-auto flex flex-col p-8 gap-2">
+      <div className="pt-8 mx-auto flex flex-col p-8 gap-2">
         <button
           onClick={() => {
             setMenuOpen(false);
@@ -102,12 +102,12 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             Members
           </button>
         </Link>
-        <a href="https://reports.electisec.dev/">
+        <a href="https://reports.electisec.tech/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Reports
           </button>
         </a>
-        <a href="https://blog.electisec.dev/">
+        <a href="https://blog.electisec.tech/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Blog
           </button>

@@ -102,7 +102,7 @@ export default function Research() {
             We dig, that&apos;s what we do - always.
             <br />
           </p>
-          <a target="_blank" href="https://blog.electisec.dev/">
+          <a target="_blank" href="https://blog.electisec.tech/">
             <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               Technical Blog Posts
             </button>

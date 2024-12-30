@@ -35,7 +35,7 @@ export default function DueDiligence() {
             Get due diligence on blockchain projects and protocols :
             architecture, design, code, algorithms, and approach.
           </p>
-          <a href="https://reports.electisec.dev/" target="_blank">
+          <a href="https://reports.electisec.tech/" target="_blank">
             <button className="px-8 py-3 rounded-xl sm:w-full text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               Enquire Now
             </button>
