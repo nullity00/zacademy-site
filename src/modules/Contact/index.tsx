@@ -56,7 +56,6 @@ export default function ContactUs() {
             setIsDisabled(false);
           }, 10000);
         });
-
     } catch (error) {
       console.error("Error:", error);
       setResponse("Sorry, something went wrong. Please try again later.");
@@ -71,7 +70,7 @@ export default function ContactUs() {
       <div className="max-w-5xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact us</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
           <p className="text-xl text-gray-600">
             Request an audit or ask a question. We dont just read code, we read
             your messages too.
@@ -196,15 +195,15 @@ export default function ContactUs() {
           <div className="hidden md:block">
             <div className="bg-white p-8 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Contact Us
+                Contact
               </h3>
               <p className="text-gray-600 space-y-2">
                 You can reach us at:{" xyz@electisec "}
                 <br />
                 <br />
                 If you are interested in becoming a contributor to Electisec,
-                email us with your thoughts and we will send you an invite to our
-                community.
+                email us with your thoughts and we will send you an invite to
+                our community.
                 <br />
                 <br />
                 See you around! 🚀

@@ -52,7 +52,7 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         </Link> */}
         <Link href={"/contact-us"}>
           <button className="px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-            Contact Us
+            Contact
           </button>
         </Link>
       </div>
@@ -141,7 +141,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             }}
             className="p-6 rounded-xl w-full text-xl text-emeraldlight text-bold hover:bg-darkgreen hover:bg-opacity-5 duration-700"
           >
-            Contact Us
+            Contact
           </button>
         </Link>
       </div>

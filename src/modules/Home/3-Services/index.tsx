@@ -40,7 +40,7 @@ const features = [
   {
     name: "Consulting",
     description:
-      "We help you do your due diligence on blockchain projects and protocols: architecture, design, code, algorithms, and approach.",
+      "Get due diligence on blockchain projects and protocols: architecture, design, code, algorithms, and approach.",
     href: "/services",
     cta: "Learn more",
     className: "",

@@ -17,8 +17,8 @@ function HeroSection() {
       <div className="grid grid-cols-4 md:mx-6 sm:flex sm:flex-col sm:mx-6 sm:text-center">
         <div className="col-span-2 flex flex-col lg:py-4 lg:my-24 md:my-32">
           <h1 className="lg:leading-normal lg:text-6xl md:text-4xl sm:text-4xl font-bold">
-            <GradientWord>ZK</GradientWord> & <br />
-            <GradientWord>Smart Contract</GradientWord> <br /> Security
+            <GradientWord>ZK</GradientWord> & 
+            <GradientWord> Smart Contract</GradientWord> <br /> Security
           </h1>
           <h2 className="text-left sm:text-center my-4 text-zinc-500">
             Audits - Research - Training - Consulting

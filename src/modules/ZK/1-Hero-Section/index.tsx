@@ -37,7 +37,7 @@ function HeroSection() {
           />
         </h1>
         <h2 className="sm:text-center my-4 text-zinc-500">
-          Don’t let a soundness bug rekt your protocol
+          Auditing the ZK Stack
         </h2>
         <Link href={"/contact-us"}>
           <button className="px-16 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">

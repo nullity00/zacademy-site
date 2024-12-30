@@ -17,12 +17,12 @@ export function AuditStats() {
       <div className="lg:m-24 md:my-20 sm:my-8 flex flex-col gap-12">
         <div className="grid grid-cols-3 sm:grid-cols-1 gap-2 sm:gap-4">
           <div className="flex flex-col items-center justify-center cols-span-1 ">
-            <NumberTickerDemo num={100} text="Mn +" />
+            <NumberTickerDemo num={2} text="Bn +" />
             <p>TVL Secured</p>
           </div>
           <div className="flex flex-col items-center justify-center cols-span-1">
-            <NumberTickerDemo num={17} text="" />
-            <p>New Customers in 2024</p>
+            <NumberTickerDemo num={59} text="" />
+            <p>Audits in 2024</p>
           </div>
           <div className="flex flex-col items-center justify-center cols-span-1">
             <NumberTickerDemo num={80} text="%" />
@@ -36,7 +36,7 @@ export function AuditStats() {
           </div>
           <div className="flex flex-col items-center justify-center cols-span-1">
             <NumberTickerDemo num={8} text="" />
-            <p>Fellowships Completed</p>
+            <p>Fellowships Completed since 2022</p>
           </div>
         </div>
       </div>

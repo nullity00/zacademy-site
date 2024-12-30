@@ -32,8 +32,8 @@ export default function DueDiligence() {
           />
           <p className="text-zinc-500 text-justify mb-8">
             <br />
-            We help you do your due diligence on blockchain projects and
-            protocols : architecture, design, code, algorithms, and approach.
+            Get due diligence on blockchain projects and protocols :
+            architecture, design, code, algorithms, and approach.
           </p>
           <a href="https://reports.electisec.dev/" target="_blank">
             <button className="px-8 py-3 rounded-xl sm:w-full text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
@@ -42,11 +42,7 @@ export default function DueDiligence() {
           </a>
         </div>
         <div className="sm:hidden">
-          <img
-            alt=""
-            src="./illustrations/code.svg"
-            className="h-[16rem]"
-          />
+          <img alt="" src="./illustrations/code.svg" className="h-[16rem]" />
         </div>
       </div>
     </>

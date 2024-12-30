@@ -26,7 +26,7 @@ const reviews = [
   {
     name: "Strike",
     logo: "strike.svg",
-    body: "Great audit partners and overall experience from scoping to audits. yAudits is currently securing Stryke's mainnet contracts as well as partners building on Stryke's underlying tech.",
+    body: "Great audit partners and overall experience from scoping to audits. yAudits is currently securing Strike's mainnet contracts as well as partners building on Strike's underlying tech.",
   },
   {
     name: "vfat",

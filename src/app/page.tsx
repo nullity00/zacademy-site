@@ -23,12 +23,11 @@ export default function Home() {
 
       <HeroSection />
       <Partners />
+      <Feedback />
       <AuditStats />
       <Services />
-      <Fellowships />
       <Research />
-      <Feedback />
-
+      <Fellowships />
       <Footer />
     </div>
   );
