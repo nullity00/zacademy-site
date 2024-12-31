@@ -2,18 +2,18 @@
 
 import { usePathname, useSearchParams } from 'next/navigation'
 import Script from 'next/script'
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 
 // Declare the gtag function on the window object
 declare global {
   interface Window {
-    gtag: (command: string, targetId: string, config: object) => void;
+    gtag: (...args: any[]) => void;
   }
 }
 
 const GA_TRACKING_ID = 'G-NZNG2YQNTY'
 
-export default function GoogleAnalytics() {
+function GoogleAnalyticsInner() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -25,6 +25,10 @@ export default function GoogleAnalytics() {
     }
   }, [pathname, searchParams])
 
+  return null
+}
+
+export default function GoogleAnalytics() {
   return (
     <>
       <Script
@@ -43,6 +47,9 @@ export default function GoogleAnalytics() {
           `,
         }}
       />
+      <Suspense fallback={null}>
+        <GoogleAnalyticsInner />
+      </Suspense>
     </>
   )
 }
