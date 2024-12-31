@@ -1,12 +1,28 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
-import { GoogleTagManager } from '@next/third-parties/google'
+import GoogleAnalytics from '@/app/gtag';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
 });
+
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={spaceGrotesk.className}>
+      <head>
+        <GoogleAnalytics />
+      </head>
+      <body className={""}>{children}</body>
+    </html>
+  );
+}
 
 export const metadata: Metadata = {
   title: "Electisec (previously yAcademy & yAudit)",
@@ -36,15 +52,3 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className={spaceGrotesk.className}>
-      <GoogleTagManager gtmId="G-NZNG2YQNTY" />
-      <body className={""}>{children}</body>
-    </html>
-  );
-}

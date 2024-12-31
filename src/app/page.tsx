@@ -10,30 +10,25 @@ import Services from "@/modules/Home/3-Services";
 import Fellowships from "@/modules/Home/4-Fellowships";
 import Research from "@/modules/Home/5-Research";
 import { AuditStats } from "@/modules/Home/7-Stats";
-import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <>
-      <GoogleTagManager gtmId="G-NZNG2YQNTY" />
+    <div className="flex flex-col bg-white text-black w-full font-default">
+      {menuOpen ? (
+        <MobileNavbar setMenuOpen={setMenuOpen} />
+      ) : (
+        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      )}
 
-      <div className="flex flex-col bg-white text-black w-full font-default">
-        {menuOpen ? (
-          <MobileNavbar setMenuOpen={setMenuOpen} />
-        ) : (
-          <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        )}
-
-        <HeroSection />
-        <Partners />
-        <Feedback />
-        <AuditStats />
-        <Services />
-        <Research />
-        <Fellowships />
-        <Footer />
-      </div>
-    </>
+      <HeroSection />
+      <Partners />
+      <Feedback />
+      <AuditStats />
+      <Services />
+      <Research />
+      <Fellowships />
+      <Footer />
+    </div>
   );
 }
