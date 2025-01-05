@@ -6,41 +6,72 @@ import HyperText from "@/components/ui/hyper-text";
 
 import AvatarCircles from "@/components/ui/avatar-circles";
 
-const avatars = [
-  {
-    imageUrl:
-      "https://pbs.twimg.com/profile_images/1516347654502072325/sSUEYvD7_400x400.jpg",
-    profileUrl: "https://github.com/dillionverma",
-  },
-];
-
 interface Item {
   name: string;
   description: string;
+  link?: string;
+  avatars: { imageUrl: string; profileUrl: string }[];
 }
 
 let notifications = [
   {
-    name: "Binius : Hardware Accelerated SNARKs",
-    description: "Blog Post",
+    name: "Security notes on ERC4337 and smart wallets",
+    description: "An analysis of the security aspects of Account Abstraction",
+    link: "https://blog.electisec.tech/blogs/2024-09-09-security-notes-erc4337",
+    avatars: [
+      {
+        imageUrl:
+          "https://pbs.twimg.com/profile_images/1823720862916206592/bbWgqgyj_400x400.jpg",
+        profileUrl: "https://twitter.com/adrianromero",
+      },
+    ],
+  },
+  {
+    name: "When L2s Fall",
+    description: "Newsflash - single points of failure can fail",
+    link: "https://blog.electisec.tech/blogs/2024-08-19-when-L2s-fall",
+    avatars: [
+      {
+        imageUrl:
+          "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+        profileUrl: "https://twitter.com/bl4ckb1rd71",
+      },
+    ],
+  },
+  {
+    name: "Are Inverse TWAP Prices Inaccurate",
+    description: "Price Data is Hard - Part 1",
+    link: "https://blog.electisec.tech/blogs/2024-05-24-are-inverse-TWAP-prices-inaccurate",
+    avatars: [
+      {
+        imageUrl:
+          "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+        profileUrl: "https://twitter.com/bl4ckb1rd71",
+      },
+    ],
   },
   {
     name: "Proxies Research",
-    description: "",
-  },
-  {
-    name: "year 2024",
-    description: "I",
-  },
-  {
-    name: "zblock1 & zblock2",
-    description: "I",
+    description: "Proxies Deep Dive for auditors",
+    link: "https://blog.electisec.tech/proxies/",
+    avatars: [
+      {
+        imageUrl:
+          "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+        profileUrl: "https://twitter.com/bl4ckb1rd71",
+      },
+      {
+        imageUrl:
+          "https://pbs.twimg.com/profile_images/1581745674260869120/aBYE6lat_400x400.jpg",
+        profileUrl: "https://twitter.com/devtooligan",
+      },
+    ],
   },
 ];
 
 notifications = Array.from({ length: 10 }, () => notifications).flat();
 
-const Notification = ({ name, description }: Item) => {
+const Notification = ({ name, description, link, avatars }: Item) => {
   return (
     <figure
       className={cn(
