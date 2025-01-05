@@ -21,8 +21,7 @@ const tabs = [
   },
 ];
 
-const getTabFromHash = () => {
-  const hash = window.location.hash;
+const getTabFromHash = (hash: string) => {
   switch (hash) {
     case '#smart-contract':
       return "Smart Contract Fellowship";
@@ -36,43 +35,53 @@ const getTabFromHash = () => {
 };
 
 export default function Summary() {
-  const [currentTab, setCurrentTab] = useState(getTabFromHash());
+  const [currentTab, setCurrentTab] = useState("Smart Contract Fellowship");
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Handle initial load and hash changes
+    setIsClient(true);
+    // Set initial tab based on hash
+    const hash = window.location.hash;
+    setCurrentTab(getTabFromHash(hash));
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
     const handleHashChange = () => {
-      const newTab = getTabFromHash();
-      setCurrentTab(newTab);
+      const hash = window.location.hash;
+      setCurrentTab(getTabFromHash(hash));
       
       // Scroll to the section with a small delay to ensure content is rendered
       setTimeout(() => {
-        const hash = window.location.hash;
-      const element = hash ? document.querySelector(hash) : null;
+        const element = hash ? document.querySelector(hash) : null;
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }, 100);
     };
 
-    // Set initial tab and scroll position
-    handleHashChange();
-
     // Listen for hash changes
     window.addEventListener('hashchange', handleHashChange);
+
+    // Initial scroll if needed
+    handleHashChange();
 
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
     };
-  }, []);
+  }, [isClient]);
 
   const handleTabClick = (tab: { name: any; href: any; current?: boolean; }) => {
     setCurrentTab(tab.name);
-    // Update URL hash without triggering a page reload
-    window.history.pushState(null, '', tab.href);
-    // Manually trigger the scroll
-    const element = document.querySelector(tab.href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (typeof window !== 'undefined') {
+      // Update URL hash without triggering a page reload
+      window.history.pushState(null, '', tab.href);
+      // Manually trigger the scroll
+      const element = document.querySelector(tab.href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
