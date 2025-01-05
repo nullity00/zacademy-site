@@ -120,7 +120,7 @@ export function AnimatedListDemo({ className }: { className?: string }) {
 
 export default function Research() {
   return (
-    <div className="h-full grid lg:grid-cols-2 my-12 sm:mx-6 md:mx-6 lg:mx-64">
+    <div className="h-full grid lg:grid-cols-2 my-12 sm:mx-6 md:mx-6 lg:mx-80">
       <div className="col-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col w-full">
         <HyperText
           className="lg:text-4xl text-3xl font-bold sm:text-center"

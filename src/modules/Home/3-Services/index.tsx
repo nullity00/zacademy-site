@@ -58,7 +58,7 @@ const features = [
 
 export default function Services() {
   return (
-    <div className="h-full flex flex-col my-16 sm:mx-6 md:mx-6 lg:mx-64 ">
+    <div className="h-full flex flex-col my-16 sm:mx-6 md:mx-6 lg:mx-80 ">
       <HyperText
         className="lg:text-4xl text-3xl font-bold mb-8 sm:text-center"
         text="Auditing Services"

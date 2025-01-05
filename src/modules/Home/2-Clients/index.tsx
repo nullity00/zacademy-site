@@ -149,7 +149,7 @@ const EllipticalOrbit: React.FC<EllipticalOrbitProps> = ({
 export default function ClientSection() {
   return (
     <section className="bg-white m-2">
-      <div className="lg:mx-64">
+      <div className="lg:mx-80">
         <HyperText className="lg:text-4xl text-3xl font-bold" text="Clients" />
         <EllipticalOrbitDemo />
       </div>
@@ -246,7 +246,7 @@ function EllipticalOrbitDemo() {
 
   useEffect(() => {
     setIsMounted(true);
-    
+
     // Initial setup using window.innerWidth
     setOrbits(getOrbits(window.innerWidth));
 
@@ -254,8 +254,8 @@ function EllipticalOrbitDemo() {
       setOrbits(getOrbits(window.innerWidth));
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // During SSR or before mount, return a placeholder or default layout

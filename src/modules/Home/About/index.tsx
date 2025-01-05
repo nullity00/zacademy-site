@@ -2,7 +2,7 @@ import HyperText from "@/components/ui/hyper-text";
 
 export const About = () => {
   return (
-    <div className="lg:mx-64 bg-white text-lg my-16">
+    <div className="lg:mx-80 bg-white text-lg my-16">
       <HyperText className="lg:text-4xl text-3xl font-bold" text="About" />
       <div className="grid grid-cols-2 gap-8 text-zinc-700  mt-8">
         <div className="cols-span-1 ">
@@ -35,8 +35,8 @@ export const About = () => {
         </div>
         <div className="cols-span-1">
           <p>
-            In 2024, we expanded to zero-knowledge security and research with two
-            :<br /> <br />
+            In 2024, we expanded to zero-knowledge security and research with
+            two :<br /> <br />
           </p>
           <ul className="list-disc list-inside text-zinc-500">
             <li>

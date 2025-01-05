@@ -24,9 +24,10 @@ export default function Home() {
 
       <HeroSection />
       <About />
+      <AuditStats />
       <Partners />
       <Feedback />
-      <AuditStats />
+
       <Services />
       <Research />
       <Fellowships />

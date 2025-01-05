@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Team() {
   return (
-    <div className="lg:mx-64 lg:my-20">
+    <div className="lg:mx-80 lg:my-20">
       <h1 className="lg:text-4xl text-3xl font-bold mb-4">Team</h1>
       <p>
         Electisec&apos;s ZK team consists of ZK Circuit breakers, MPC

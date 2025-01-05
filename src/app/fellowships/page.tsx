@@ -7,7 +7,6 @@ import Stats from "@/modules/Fellowships/Stats";
 import Footer from "@/modules/Footer";
 import Summary from "@/modules/Fellowships/Mid";
 
-
 export default function FellowshipsPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -17,7 +16,7 @@ export default function FellowshipsPage() {
       ) : (
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       )}
-      <div className="lg:mx-64 mx-6 h-full relative">
+      <div className="lg:mx-80 mx-6 h-full relative">
         <Stats />
         <Summary />
       </div>

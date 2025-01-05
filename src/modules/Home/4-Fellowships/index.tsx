@@ -57,7 +57,7 @@ const features = [
 
 export default function Fellowships() {
   return (
-    <div className="h-full flex flex-col my-8 sm:mx-6 md:mx-6 lg:mx-64">
+    <div className="h-full flex flex-col my-8 sm:mx-6 md:mx-6 lg:mx-80">
       <HyperText
         className="lg:text-4xl text-3xl font-bold mb-4 sm:text-center"
         text="Fellowship Programs"
