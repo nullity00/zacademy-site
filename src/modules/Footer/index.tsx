@@ -1,17 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 
-export default function Footer() {
-  return (
-    <div className="h-full flex flex-col bg-gray-100 justify-center p-16 items-center relative">
-      <img alt="" src="/logo.svg" className="h-[5rem]" />
-      <DockDemo />
-      <p className="text-sm text-zinc-500 mt-10 text-center">
-        Copyright © 2025 Electisec. All rights reserved.
-      </p>
-    </div>
-  );
-}
-
 import React from "react";
 import { CalendarIcon, MailIcon, PencilIcon, BookCopyIcon } from "lucide-react";
 
@@ -25,6 +13,20 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "../../components/ui/dock";
+
+
+export default function Footer() {
+  return (
+    <div className="h-full flex flex-col bg-gray-100 justify-center p-16 items-center relative">
+      <img alt="" src="/logo.svg" className="h-[5rem]" />
+      <DockDemo />
+      <p className="text-sm text-zinc-500 mt-10 text-center">
+        Copyright © 2025 Electisec. All rights reserved.
+      </p>
+    </div>
+  );
+}
+
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -88,27 +90,6 @@ export const Icons = {
   ),
 };
 
-{
-  /* <Icon
-          src="discord.png"
-          alt="Discord"
-          href="https://discord.gg/xd4j4pePPm"
-          width="25"
-        />
-        <Icon
-          src="gitcoin.png"
-          alt="Gitcoin"
-          href="https://explorer.gitcoin.co/#/round/10/0x2871742b184633f8dc8546c6301cbc209945033e/0x2871742b184633f8dc8546c6301cbc209945033e-229"
-          width="25"
-        />
-        <Icon
-          src="snapshot.png"
-          alt="Snapshot"
-          href="https://snapshot.org/"
-          width="25"
-        /> */
-}
-
 const DATA = {
   navbar: [
     {
@@ -125,11 +106,6 @@ const DATA = {
         url: "https://www.github.com/electisec",
         icon: Icons.github,
       },
-      // LinkedIn: {
-      //   name: "LinkedIn",
-      //   url: "#",
-      //   icon: Icons.linkedin,
-      // },
       Telegram: {
         name: "Telegram",
         url: "https://t.me/electisec",
