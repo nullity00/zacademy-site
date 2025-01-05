@@ -6,7 +6,7 @@ const features = [
   {
     name: "Smart Contract Fellowships",
     description: "4-6 weeks fully auditing 1-2 codebases, it goes deep",
-    href: "/fellowships",
+    href: "/fellowships#smart-contract",
     cta: "Apply",
     className: "",
     background: (
@@ -23,7 +23,7 @@ const features = [
     name: "ZK Fellowships",
     description:
       "2-3 months, you will be challenged. Ethereum and (eventually) the world will be SNARKified, help secure the future",
-    href: "/fellowships",
+    href: "/fellowships#zero-knowledge",
     cta: "Apply",
     className: "",
     background: (
@@ -40,7 +40,7 @@ const features = [
     name: "Guest Auditor Program",
     description:
       "we occasionally host advanced auditors and field experts to lead the audits and mentoring of fellows alongside our residents",
-    href: "/fellowships",
+    href: "/fellowships#guest-auditor",
     cta: "Apply",
     className: "",
     background: (
