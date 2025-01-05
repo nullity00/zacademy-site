@@ -32,10 +32,10 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         <MenuOutlined />
       </button>
       <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-[15vw]">
-        <a href="https://reports.electisec.tech/" target="_blank">
+        <a href="https://reports.electisec.tech/">
           <Button text={"Reports"} />
         </a>
-        <a href="https://blog.electisec.tech/" target="_blank">
+        <a href="https://blog.electisec.tech/">
           <Button text={"Blog"} />
         </a>
         <Link href={"/fellowships"}>

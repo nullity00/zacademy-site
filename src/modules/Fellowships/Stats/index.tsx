@@ -7,17 +7,25 @@ function Stats() {
         <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold">
           Fellowship Programs
         </h1>
-        <h2 className="text-semibold text-xl mt-8">
-          General structure and Guidelines
-        </h2>
+        <p className="text-zinc-500 mt-8">
+          Our fellowships are a public good aiming to onboard top security
+          talent to the Ethereum ecosystem. Many of our alumni fellows from 8
+          previous fellowships now occupying prominent positions in top projects
+          and protocols, topping bounty and contest leaderboards, or leading a
+          successful solo auditing careers.
+        </p>
         <p className="text-zinc-500">
           <br />
-          Electisec fellowships are <strong>not introductory programs</strong> to software
-          auditing. They are trial-by-fire programs where you will audit
-          pre-production or in-production codebases, and the stakes are very
-          high.
-          <br /> <br />
+          Electisec fellowships are <strong>
+            not introductory programs
+          </strong>{" "}
+          to software auditing. They are trial-by-fire programs where you will
+          audit pre-production or in-production codebases, and the stakes are
+          very high.
         </p>
+        <h2 className="text-semibold text-xl my-8">
+          General structure and Guidelines
+        </h2>
         <ul className="list-disc list-inside">
           <li>
             You will be auditing alongside our residents, guest auditors, and
@@ -52,7 +60,7 @@ function Stats() {
         <br /> <br />
       </div>
       <div className="col-span-1 flex flex-col">
-        <img alt="" src="./illustrations/stats-pie.svg" className="h-[32rem]" />
+        <img alt="" src="./illustrations/stats-pie.svg" className="h-[40rem]" />
         <p className="text-zinc-300 italic text-center px-16">
           Audits conducted within our fellowship programs get a boost from extra
           eyes of our amazing fellows, uncovering hundreds of bugs in 8
