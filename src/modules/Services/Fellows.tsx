@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Fellows() {
   return (
     <>
-      <div className="flex flex-row sm:flex-col items-center my-8 justify-between sm:text-center">
+      <div className="flex flex-row gap-16 sm:flex-col items-center my-8 justify-between sm:text-center">
         <div className="sm:hidden">
           <img
             alt=""

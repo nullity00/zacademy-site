@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function DueDiligence() {
   return (
     <>
-      <div className="flex flex-row sm:flex-col items-center my-8 justify-between sm:text-center">
+      <div className="flex flex-row gap-16 sm:flex-col items-center my-8 justify-between sm:text-center">
         <div className="flex flex-col">
           <HyperText
             className="lg:text-4xl text-3xl font-bold sm:text-center"

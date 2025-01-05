@@ -32,9 +32,6 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         <MenuOutlined />
       </button>
       <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-[15vw]">
-        <Link href={"/members"}>
-          <Button text={"Members"} />
-        </Link>
         <a href="https://reports.electisec.tech/" target="_blank">
           <Button text={"Reports"} />
         </a>
@@ -46,6 +43,9 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         </Link>
         <Link href={"/services"}>
           <Button text={"Services"} />
+        </Link>
+        <Link href={"/team"}>
+          <Button text={"Team"} />
         </Link>
         {/* <Link href={"/zBlock2"}>
           <Button text={"zBlock2"} />
@@ -92,16 +92,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
         >
           <CloseCircleOutlined style={{ fontSize: "2rem" }} />
         </button>
-        <Link href={"/members"}>
-          <button
-            onClick={() => {
-              setMenuOpen(false);
-            }}
-            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700"
-          >
-            Members
-          </button>
-        </Link>
+
         <a href="https://reports.electisec.tech/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Reports
@@ -131,6 +122,16 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700"
           >
             Services
+          </button>
+        </Link>
+        <Link href={"/team"}>
+          <button
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700"
+          >
+            Team
           </button>
         </Link>
 
