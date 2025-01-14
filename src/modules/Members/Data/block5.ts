@@ -35,7 +35,7 @@ export const block5 = [
   { name: "Jat", url: "https://github.com/jat9292", promotedToResident: false },
   {
     name: "DrasticWatermelon",
-    twitter: "https://github.com/DrasticWatermelon",
+    url: "https://github.com/DrasticWatermelon",
     promotedToResident: true,
   },
   {
