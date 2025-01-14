@@ -52,7 +52,7 @@ export const sc_residents = [
       "https://pbs.twimg.com/profile_images/1668541537242824704/P0HUE5q8_400x400.jpg",
   },
   {
-    name: "DrasticWatermelon",
+    name: "Drastic Watermelon",
     twitter: "https://github.com/DrasticWatermelon",
     avatar: "https://avatars.githubusercontent.com/DrasticWatermelon",
   },
