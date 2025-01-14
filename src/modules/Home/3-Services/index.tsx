@@ -61,7 +61,7 @@ export default function Services() {
     <div className="h-full flex flex-col my-16 sm:mx-6 md:mx-6 lg:mx-80 ">
       <HyperText
         className="lg:text-4xl text-3xl font-bold mb-8 sm:text-center"
-        text="Auditing Services"
+        text="Services"
       />
       <BentoGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, idx) => (

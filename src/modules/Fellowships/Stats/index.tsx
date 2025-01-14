@@ -2,14 +2,14 @@ import Image from "next/image";
 
 function Stats() {
   return (
-    <div className="pt-16 grid grid-cols-2 sm:flex sm:flex-col gap-4">
-      <div className="col-span-1 flex flex-col justify-center">
+    <div className="pt-16 lg:grid lg:grid-cols-2 sm:flex sm:flex-col gap-4">
+      <div className="lg:col-span-1 flex flex-col justify-center">
         <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold">
           Fellowship Programs
         </h1>
         <p className="text-zinc-500 mt-8">
           Our fellowships are a public good aiming to onboard top security
-          talent to the Ethereum ecosystem. Many of our alumni fellows from 8
+          talent to the Ethereum ecosystem. <br /><br /> Many of our alumni fellows from 8
           previous fellowships now occupying prominent positions in top projects
           and protocols, topping bounty and contest leaderboards, or leading a
           successful solo auditing careers.
@@ -23,10 +23,10 @@ function Stats() {
           audit pre-production or in-production codebases, and the stakes are
           very high.
         </p>
-        <h2 className="text-semibold text-xl my-8">
+        <h2 className="font-semibold text-xl my-8">
           General structure and Guidelines
         </h2>
-        <ul className="list-disc list-inside">
+        <ul className="list-disc list-inside text-zinc-500">
           <li>
             You will be auditing alongside our residents, guest auditors, and
             mentors.
@@ -59,9 +59,9 @@ function Stats() {
         </ul>
         <br /> <br />
       </div>
-      <div className="col-span-1 flex flex-col">
-        <img alt="" src="./illustrations/stats-pie.svg" className="h-[40rem]" />
-        <p className="text-zinc-300 italic text-center px-16">
+      <div className="lg:col-span-1 flex flex-col lg:justify-center">
+        <img alt="" src="./illustrations/stats-pie.svg" className="lg:h-[40rem] md:h-[28rem]" />
+        <p className="text-zinc-400 italic text-center lg:px-16">
           Audits conducted within our fellowship programs get a boost from extra
           eyes of our amazing fellows, uncovering hundreds of bugs in 8
           fellowships since 2021

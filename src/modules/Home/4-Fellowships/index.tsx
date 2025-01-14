@@ -22,7 +22,7 @@ const features = [
   {
     name: "ZK Fellowships",
     description:
-      "2-3 months, you will be challenged. Ethereum and (eventually) the world will be SNARKified, help secure the future",
+      "2-3 months, you will be challenged",
     href: "/fellowships#zero-knowledge",
     cta: "Apply",
     className: "",
@@ -39,7 +39,7 @@ const features = [
   {
     name: "Guest Auditor Program",
     description:
-      "we occasionally host advanced auditors and field experts to lead the audits and mentoring of fellows alongside our residents",
+      "field experts leading audits and mentoring fellows alongside our residents",
     href: "/fellowships#guest-auditor",
     cta: "Apply",
     className: "",

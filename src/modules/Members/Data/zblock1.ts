@@ -43,7 +43,7 @@ export const zblock1 = [
   {
     name: "parsley",
     url: "https://github.com/bbresearcher",
-    promotedToResident: false,
+    promotedToResident: true,
   },
   {
     name: "Rajesh",

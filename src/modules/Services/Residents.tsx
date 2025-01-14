@@ -41,7 +41,7 @@ export default function Residents() {
         <img
           alt=""
           src="./illustrations/hands out of laptop.svg"
-          className="h-[14rem] sm:hidden"
+          className="lg:h-[14rem] md:h-[10rem] sm:hidden"
         />
       </div>
     </>

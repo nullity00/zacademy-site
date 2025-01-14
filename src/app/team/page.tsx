@@ -19,6 +19,7 @@ import {
   ZBlock1,
   ZBlock2,
 } from "../../modules/Members/3-Fellows";
+import { About } from "@/modules/Home/About";
 
 export default function MembersPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,6 +31,7 @@ export default function MembersPage() {
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       )}
       <div className="lg:mx-80 mx-6 h-full relative">
+        <About />
         <SmartContractResident />
         <ZKResident />
         <Core />

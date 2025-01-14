@@ -217,7 +217,7 @@ export const yacteam = [
   },
   {
     name: "Invader",
-    github: "",
+    github: "https://github.com/invader-tak",
   },
   {
     name: "nullity",

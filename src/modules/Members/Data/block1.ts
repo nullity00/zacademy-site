@@ -23,7 +23,7 @@ export const block1 = [
   { name: "Carl Farterson", url: "", promotedToResident: false, avatar: "" },
   { name: "Dhurv", url: "", promotedToResident: false, avatar: "" },
   { name: "Goober", url: "", promotedToResident: false, avatar: "" },
-  { name: "Invader", url: "", promotedToResident: true },
+  { name: "Invader", url: "", promotedToResident: true, avatar: "https://avatars.githubusercontent.com/u/95246053?v=4" },
   { name: "Nibbler", url: "https://github.com/NibblerExpress", promotedToResident: true },
   { name: "Redbeard", url: "", promotedToResident: false },
 ];

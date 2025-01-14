@@ -31,7 +31,7 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
       >
         <MenuOutlined />
       </button>
-      <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-[15vw]">
+      <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-80">
         <a href="https://reports.electisec.tech/">
           <Button text={"Reports"} />
         </a>

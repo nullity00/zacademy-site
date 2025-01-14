@@ -2,10 +2,13 @@ import HyperText from "@/components/ui/hyper-text";
 
 export const About = () => {
   return (
-    <div className="lg:mx-80 bg-white text-lg my-16">
-      <HyperText className="lg:text-4xl text-3xl font-bold" text="About" />
-      <div className="grid grid-cols-2 gap-8 text-zinc-700  mt-8">
-        <div className="cols-span-1 ">
+    <div className="bg-white text-lg my-16">
+      <HyperText
+        className="lg:text-4xl text-3xl font-bold"
+        text="About the Team"
+      />
+      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-8 text-zinc-700  mt-8">
+        <div className="cols-span-1">
           <p className="">
             Electisec is focused on smart contracts and zero-knowledge security:{" "}
             <i className="font-semibold">
@@ -16,12 +19,11 @@ export const About = () => {
           </p>
           <p className="">
             Our core values are: <br />
-            <br />
           </p>
           <ul className="list-disc list-inside font-semibold">
             <li>Rigour</li>
 
-            <li>Meritocrarcy</li>
+            <li>Meritocracy</li>
 
             <li>Labour is Equity</li>
 
@@ -32,13 +34,12 @@ export const About = () => {
             We launched late 2020 to help make DeFi more secure and have since
             then secured contracts holding billions in TVL. <br /> <br />
           </p>
-        </div>
-        <div className="cols-span-1">
           <p>
-            In 2024, we expanded to zero-knowledge security and research with
-            two :<br /> <br />
+            In 2024, we expanded to zero-knowledge security and research with :
+            <br />
           </p>
-          <ul className="list-disc list-inside text-zinc-500">
+          <ul className="list-disc list-inside font-semibold">
+            <li>The SNARKification of the Ethereum protocol.</li>
             <li>
               The proliferation of ZK-powered networks, dApps, and cross-chain
               middleware.
@@ -47,7 +48,6 @@ export const About = () => {
               The increasing role of ZK in hardening Web2 with primitives such
               as zkEmail and MP-TLS ("zkTLS").
             </li>
-            <li>The SNARKification of the Ethereum protocol.</li>
           </ul>
           <br />
           {/* <p>
@@ -55,15 +55,21 @@ export const About = () => {
             <br />
           </p> */}
           <p>
-            Our expansion in ZK Security was accelerated by a grant from the{" "}
+            Our expansion in ZK Security was accelerated by {" "}
             <a
               className="hover:underline font-bold duration-700 text-darkgreen"
               href="https://x.com/electisec/status/1787559678026948811"
             >
-              Ethereum Foundation
+              a grant from the Ethereum Foundation
             </a>{" "}
-            for which we are grateful.
+            for our 2nd incubation fellowship, for which we are grateful.
           </p>
+        </div>
+        <div className="lg:cols-span-1 sm:hidden md:hidden">
+          <img
+            src="./illustrations/hands on shield.svg"
+            className="h-[26rem] mx-auto mt-6"
+          />
         </div>
       </div>
     </div>
