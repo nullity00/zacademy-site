@@ -20,8 +20,7 @@ let notifications = [
     link: "https://blog.electisec.tech/blogs/2024-09-09-security-notes-erc4337",
     avatars: [
       {
-        imageUrl:
-          "https://pbs.twimg.com/profile_images/1823720862916206592/bbWgqgyj_400x400.jpg",
+        imageUrl: "https://pbs.twimg.com/profile_images/1823720862916206592/bbWgqgyj_400x400.jpg",
         profileUrl: "https://twitter.com/adrianromero",
       },
     ],
@@ -32,8 +31,7 @@ let notifications = [
     link: "https://blog.electisec.tech/blogs/2024-08-19-when-L2s-fall",
     avatars: [
       {
-        imageUrl:
-          "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+        imageUrl: "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
         profileUrl: "https://twitter.com/bl4ckb1rd71",
       },
     ],
@@ -44,8 +42,7 @@ let notifications = [
     link: "https://blog.electisec.tech/blogs/2024-05-24-are-inverse-TWAP-prices-inaccurate",
     avatars: [
       {
-        imageUrl:
-          "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+        imageUrl: "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
         profileUrl: "https://twitter.com/bl4ckb1rd71",
       },
     ],
@@ -56,13 +53,11 @@ let notifications = [
     link: "https://blog.electisec.tech/proxies/",
     avatars: [
       {
-        imageUrl:
-          "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+        imageUrl: "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
         profileUrl: "https://twitter.com/bl4ckb1rd71",
       },
       {
-        imageUrl:
-          "https://pbs.twimg.com/profile_images/1581745674260869120/aBYE6lat_400x400.jpg",
+        imageUrl: "https://pbs.twimg.com/profile_images/1581745674260869120/aBYE6lat_400x400.jpg",
         profileUrl: "https://twitter.com/devtooligan",
       },
     ],
@@ -92,9 +87,7 @@ const Notification = ({ name, description, link, avatars }: Item) => {
           <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white">
             <span className="text-sm sm:text-lg truncate">{name}</span>
           </figcaption>
-          <p className="text-sm font-normal dark:text-white/60 truncate">
-            {description}
-          </p>
+          <p className="text-sm font-normal dark:text-white/60 truncate">{description}</p>
         </div>
       </div>
     </figure>
@@ -103,12 +96,7 @@ const Notification = ({ name, description, link, avatars }: Item) => {
 
 export function AnimatedListDemo({ className }: { className?: string }) {
   return (
-    <div
-      className={cn(
-        "flex h-[275px] flex-col p-6 overflow-hidden w-full max-w-full",
-        className
-      )}
-    >
+    <div className={cn("flex h-[275px] flex-col p-6 overflow-hidden w-full max-w-full", className)}>
       <AnimatedList delay={2000} className="w-full">
         {notifications.map((item, idx) => (
           <Notification {...item} key={idx} />
@@ -121,11 +109,8 @@ export function AnimatedListDemo({ className }: { className?: string }) {
 export default function Research() {
   return (
     <div className="h-full grid lg:grid-cols-2 my-12 sm:mx-6 md:mx-6 lg:mx-80">
-      <div className="col-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col w-full">
-        <HyperText
-          className="lg:text-4xl text-3xl font-bold sm:text-center"
-          text="Research"
-        />
+      <div className="col-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col w-full overflow-hidden">
+        <HyperText className="lg:text-4xl text-3xl font-bold sm:text-center" text="Research" />
         <AnimatedListDemo className="mt-8 md:hidden lg:hidden" />
         <p className="text-zinc-500 mb-8 sm:text-justify">
           <br />
