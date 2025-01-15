@@ -21,8 +21,7 @@ const features = [
   },
   {
     name: "ZK Fellowships",
-    description:
-      "2-3 months, you will be challenged",
+    description: "2-3 months, you will be challenged",
     href: "/fellowships#zero-knowledge",
     cta: "Apply",
     className: "",
@@ -57,7 +56,7 @@ const features = [
 
 export default function Fellowships() {
   return (
-    <div className="h-full flex flex-col my-8 sm:mx-6 md:mx-6 lg:mx-80">
+    <div className="h-full flex flex-col my-8 sm:mx-6 md:mx-6 lg:mx-[20vw]">
       <HyperText
         className="lg:text-4xl text-3xl font-bold mb-4 sm:text-center"
         text="Fellowship Programs"

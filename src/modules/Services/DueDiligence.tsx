@@ -5,8 +5,11 @@ import Link from "next/link";
 export default function DueDiligence() {
   return (
     <>
-      <div className="flex flex-row gap-16 sm:flex-col items-center my-8 justify-between sm:text-center">
-        <div className="flex flex-col">
+      <div className="grid grid-cols-2 gap-16 sm:flex-col items-center my-8 justify-between sm:text-center">
+        <div className="sm:hidden cols-span-1">
+          <img alt="" src="./illustrations/code.svg" className="h-[16rem] justify-self-center" />
+        </div>
+        <div className="flex flex-col cols-span-1">
           <HyperText
             className="lg:text-4xl text-3xl font-bold sm:text-center"
             text="Consulting"
@@ -41,9 +44,6 @@ export default function DueDiligence() {
               Enquire
             </button>
           </Link>
-        </div>
-        <div className="sm:hidden">
-          <img alt="" src="./illustrations/code.svg" className="h-[16rem]" />
         </div>
       </div>
     </>

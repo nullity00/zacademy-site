@@ -15,7 +15,7 @@ export default function ZblockPage() {
       ) : (
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       )}
-      <div className="lg:mx-80">
+      <div className="lg:mx-[20vw]">
         <ZBlock2Modules />
       </div>
       <Footer />

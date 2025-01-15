@@ -14,7 +14,7 @@ export function AuditStats() {
         height={1000}
         width={2000}
       />
-      <div className="lg:mx-80 lg:my-24  md:my-20 sm:my-8 flex flex-col gap-12">
+      <div className="lg:mx-[20vw] lg:my-24  md:my-20 sm:my-8 flex flex-col gap-12">
         <div className="grid grid-cols-3 sm:grid-cols-1 gap-2 sm:gap-4">
           <div className="flex flex-col items-center justify-center cols-span-1 ">
             <NumberTickerDemo num={2} text="Bn +" />

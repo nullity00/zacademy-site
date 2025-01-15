@@ -6,8 +6,13 @@ import Image from "next/image";
 export default function Residents() {
   return (
     <>
-      <div className="flex flex-row gap-16 sm:flex-col items-center my-16 justify-between sm:text-center">
-        <div className="flex flex-col">
+      <div className="grid grid-cols-2 gap-16 sm:flex-col items-center my-16 justify-between sm:text-center">
+        <img
+          alt=""
+          src="./illustrations/hands out of laptop.svg"
+          className="cols-span-1 justify-self-center lg:h-[14rem] md:h-[10rem] sm:hidden"
+        />
+        <div className="cols-span-1 flex flex-col">
           <HyperText
             className="lg:text-4xl text-3xl font-bold sm:text-center"
             text="ZK & Smart Contract"
@@ -38,11 +43,6 @@ export default function Residents() {
             </button>
           </Link>
         </div>
-        <img
-          alt=""
-          src="./illustrations/hands out of laptop.svg"
-          className="lg:h-[14rem] md:h-[10rem] sm:hidden"
-        />
       </div>
     </>
   );

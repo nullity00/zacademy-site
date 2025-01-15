@@ -11,7 +11,7 @@ export const block1 = [
     url: "https://twitter.com/0xBebis_",
     promotedToResident: false,
     avatar:
-      "https://pbs.twimg.com/profile_images/1865166724770738176/Pkpusy2U_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1872371692388884480/1BrkL2_T_400x400.jpg",
   },
   {
     name: "Bob the Builder",

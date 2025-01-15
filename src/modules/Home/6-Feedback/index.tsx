@@ -38,7 +38,7 @@ const reviews = [
 export default function Feedback() {
   return (
     <section className="bg-white m-6">
-      <div className="lg:mx-80">
+      <div className="lg:mx-[20vw]">
         <HyperText
           className="lg:text-4xl text-3xl font-bold mb-4 sm:text-center"
           text="Feedback"

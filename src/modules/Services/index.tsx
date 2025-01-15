@@ -4,7 +4,7 @@ import Fellows from "./Fellows";
 
 function Sections() {
   return (
-    <div className="h-full flex flex-col m-3 my-8 lg:mx-80">
+    <div className="h-full flex flex-col m-3 my-8 lg:mx-[20vw]">
       <Residents />
       <Fellows />
       <DueDiligence />

@@ -16,7 +16,7 @@ export default function FellowshipsPage() {
       ) : (
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       )}
-      <div className="lg:mx-80 mx-6 h-full relative">
+      <div className="lg:mx-[20vw] mx-6 h-full relative">
         <Stats />
         <Summary />
       </div>

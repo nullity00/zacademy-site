@@ -5,15 +5,15 @@ import Image from "next/image";
 export default function Fellows() {
   return (
     <>
-      <div className="flex flex-row gap-16 sm:flex-col items-center my-8 justify-between sm:text-center">
-        <div className="sm:hidden">
+      <div className="grid grid-cols-2 gap-16 sm:flex-col items-center my-8 justify-between sm:text-center">
+        <div className="sm:hidden cols-span-1">
           <img
             alt=""
             src="./illustrations/hands on shield.svg"
-            className="h-[20rem]"
+            className="h-[20rem] justify-self-center"
           />
         </div>
-        <div className="flex flex-col sm:items-center">
+        <div className="cols-span-1 flex flex-col sm:items-center">
           <HyperText
             className="lg:text-4xl text-3xl font-bold sm:text-center"
             text="Boosted Audits"

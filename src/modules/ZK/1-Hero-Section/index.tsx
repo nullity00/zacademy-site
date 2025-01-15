@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function HeroSection() {
   return (
-    <div className="h-full relative sm:my-8 lg:mx-80 lg:mt-24 flex flex-row sm:text-center justify-between">
+    <div className="h-full relative sm:my-8 lg:mx-[20vw] lg:mt-24 flex flex-row sm:text-center justify-between">
       <div className="my-8">
         <h1 className="lg:leading-normal lg:text-5xl md:text-3xl sm:text-3xl font-bold">
           <Typewriter
