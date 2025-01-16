@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://electisec.tech",
     title: "Electisec (previously yAcademy & yAudit)",
     description:
-      "Electisec is focused on smart contracts and zero-knowledge security: auditing, research, and increasingly tooling.",
+      "Electisec is focused on smart contracts and zero-knowledge security: auditing, research, and increasingly tooling. We launched late 2020 to help make DeFi more secure and have since then secured contracts holding billions in TVL.",
     siteName: "Electisec",
     images: [
       {
