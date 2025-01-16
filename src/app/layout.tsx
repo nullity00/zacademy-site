@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
-import GoogleAnalytics from '@/app/gtag';
+import GoogleAnalytics from "@/app/gtag";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
 });
-
 
 export default function RootLayout({
   children,
@@ -40,7 +39,9 @@ export const metadata: Metadata = {
     siteName: "Electisec",
     images: [
       {
-        url: "https://electisec.tech/logo.svg",
+        url: "https://electisec.tech/twitter.png",
+        width: 1200,
+        height: 630,
       },
     ],
   },
@@ -48,7 +49,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@electisec",
     creator: "@electisec",
-    images: "https://electisec.tech/logo.svg",
+    images: "https://electisec.tech/twitter.png",
   },
 };
-
