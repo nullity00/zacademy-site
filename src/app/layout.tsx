@@ -35,7 +35,8 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://electisec.tech",
     title: "Electisec (previously yAcademy & yAudit)",
-    description: "ZK & Smart Contract Security",
+    description:
+      "Electisec is focused on smart contracts and zero-knowledge security: auditing, research, and increasingly tooling.",
     siteName: "Electisec",
     images: [
       {
