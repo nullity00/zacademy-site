@@ -44,11 +44,11 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
       },
-      {
-        url: "https://electisec.tech/icon.png",
-        width: 400,
-        height: 400,
-      },
+      // {
+      //   url: "https://electisec.tech/icon.png",
+      //   width: 400,
+      //   height: 400,
+      // },
     ],
   },
   twitter: {
