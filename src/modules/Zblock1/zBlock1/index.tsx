@@ -13,6 +13,7 @@ import {
   m3report,
   m3guestLectures,
 } from "../Data/zblock1";
+import { electiteam, fellows, pseteam, guest } from "../Data/zblock1";
 import { Discussion, VideoSection, Report, Notes } from "../utils";
 import Image from "next/image";
 
@@ -85,7 +86,116 @@ function ZBlock1Modules() {
           </p>
         </div>
       </div>
-
+      <h1
+        className="text-4xl  font-bold text-center mt-40 mb-20"
+        id="module-1"
+      >
+        Participants
+      </h1>
+      <div className="grid lg:grid-cols-5 gap-8">
+        <div className="lg:col-span-1 flex flex-col p-4 px-12 rounded-xl bg-[#E8FFF8]">
+          <img alt="" src="/logo.svg" className="h-16 mb-2" />
+          <ul className="list-disc text-zinc-700">
+            {electiteam.map((member) => {
+              return (
+                <li key={member.name}>
+                  <a
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" hover:underline duration-700"
+                  >
+                    {member.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="lg:col-span-2 flex flex-col p-4 px-12 rounded-xl bg-[#E8FFF8]">
+          <h4 className="text-xl py-4 text-center font-semibold mb-4">
+            Fellows
+          </h4>
+          <div className="flex flex-row sm:flex-col justify-between">
+            <ul className="list-disc text-zinc-700">
+              {fellows.slice(0, 7).map((member) => {
+                return (
+                  <li key={member.name}>
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline duration-700"
+                    >
+                      {member.name}
+                      {member.isResident ? "*" : ""}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+            <ul className="list-disc text-zinc-700">
+              {fellows.slice(7, 14).map((member) => {
+                return (
+                  <li key={member.name}>
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline duration-700"
+                    >
+                      {member.name}
+                      {member.isResident ? "*" : ""}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <p className="text-center p-4 text-zinc-700"> * Top Fellows</p>
+        </div>
+        <div className="lg:col-span-1 flex flex-col p-6 px-12 rounded-xl bg-[#E8FFF8]">
+          <img alt="" src="/zblock/pse.svg" className="h-10 mb-6" />
+          <img alt="" src="/zblock/0xParc.svg" className="h-10 mb-6" />
+          <ul className="list-disc text-zinc-700">
+            {pseteam.map((member) => {
+              return (
+                <li key={member.name}>
+                  <a
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" hover:underline duration-700"
+                  >
+                    {member.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="lg:col-span-1 flex flex-col p-4 px-8 rounded-xl bg-[#E8FFF8]">
+          <h4 className="text-xl py-4 text-center font-semibold">
+            Guest Speakers
+          </h4>
+          <ul className="list-disc text-zinc-700">
+            {guest.map((member) => {
+              return (
+                <li key={member.name}>
+                  <a
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" hover:underline duration-700"
+                  >
+                    {member.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
       <h1 className="text-4xl font-bold text-center mt-20" id="module-1">
         Module 1
       </h1>
