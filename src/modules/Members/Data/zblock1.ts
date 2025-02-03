@@ -58,7 +58,7 @@ export const zblock1 = [
   {
     name: "Antonio Viggiano",
     url: "https://github.com/aviggiano",
-    promotedToResident: true,
+    promotedToResident: false,
   },
   {
     name: "whoismatthewmc",

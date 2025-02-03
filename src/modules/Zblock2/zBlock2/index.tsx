@@ -161,7 +161,7 @@ function ZBlock2Modules() {
             <p className="text-center p-4 text-zinc-700"> * Top Fellows</p>
           </div>
           <div className="lg:col-span-1 flex flex-col p-6 px-12 rounded-xl bg-[#E8FFF8]">
-            <img alt="" src="/zblock/summa.svg" className="h-10 mb-6" />
+            <img alt="" src="/zblock/pse.svg" className="h-10 mb-6" />
             <ul className="list-disc text-zinc-700">
               {summateam.map((member) => {
                 return (
